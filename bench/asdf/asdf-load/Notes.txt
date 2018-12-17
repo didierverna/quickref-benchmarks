@@ -1,0 +1,10 @@
+0.007 <= 1688 libraries <= 17.056
+Average: 0.07437632
+Standard deviation: 0.47083098
+
+Only 11 libraries with load time > 1s:
+(FEMLISP 1.09 HEMLOCK.QT 2.528 HU.DWIM.BLUEZ 1.082 HU.DWIM.PRESENTATION 5.708
+ HU.DWIM.SDL 1.791 HU.DWIM.WEB-SERVER 1.653 NINEVEH 17.056 REPAIR 4.016 SCRIPTL
+ 2.977 THE-COST-OF-NOTHING 2.223 VARJO 1.301)
+
+The weirdos are reproducible (nineveh notably).

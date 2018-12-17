@@ -1,0 +1,10 @@
+0.009 <= 1688 libraries <= 77.88
+Average: 0.62344533
+Standard deviation: 2.9172335
+
+Only 24 libraries with compile/load-time > 10s:
+(3B-SWF 16.105 CL-VHDL 31.159 CLEM 21.014 CLML 29.668 GSLL 11.746 IRONCLAD
+ 31.044 NINEVEH 19.052 ORG.MIDDLEANGLE.CL-BLAPACK 18.721 RACER 49.518 STMX
+ 17.573 TEEPEEDEE2 77.88 WEBLOCKS 13.687)
+
+The weirdos are reproducible.

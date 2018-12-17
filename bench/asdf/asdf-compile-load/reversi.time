@@ -1,0 +1,11 @@
+;; Recompiling edge-table, this make take several minutes
+Evaluation took:
+  0.921 seconds of real time
+  0.900000 seconds of total run time (0.880000 user, 0.020000 system)
+  [ Run times consist of 0.008 seconds GC time, and 0.892 seconds non-GC time. ]
+  97.72% CPU
+  1,010 forms interpreted
+  1,471 lambdas converted
+  3,031,701,268 processor cycles
+  191,178,064 bytes consed
+  
