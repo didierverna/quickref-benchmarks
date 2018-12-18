@@ -1,0 +1,6 @@
+0.11656564 <= 1688 Declt/Makeinfo ratios <= 29.27134
+Average: 1.8046219
+Standard deviation: 1.603852
+
+1243 libraries have Makeinfo faster than Declt.
+445 libraries have Declt faster than Makeinfo.
