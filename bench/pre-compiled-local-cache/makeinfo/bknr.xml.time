@@ -1,8 +1,8 @@
 Evaluation took:
-  0.454 seconds of real time
-  0.008000 seconds of total run time (0.008000 user, 0.000000 system)
-  1.76% CPU
+  0.375 seconds of real time
+  0.012000 seconds of total run time (0.004000 user, 0.008000 system)
+  3.20% CPU
   1 form interpreted
-  1,493,992,312 processor cycles
-  1,091,584 bytes consed
+  1,234,471,581 processor cycles
+  1,030,208 bytes consed
   
