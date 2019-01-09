@@ -1,0 +1,41 @@
+Unhandled TYPE-ERROR in thread #<SB-THREAD:THREAD "main thread" RUNNING
+                                  {1001B76E63}>:
+  The value
+    ("Clesh is a very short program that provides
+  mechanisms for running and composing Unix shell commands and
+  constructs from Common Lisp.
+
+Essentially, it provides a '!' syntax that you can use to run commands
+and a '[]' embedded mode where you can enter bash scripts and obtain
+the standard output as a lisp string, and some other features.
+
+Lisp expressions can be included in any command or script using a '?'
+syntax.
+
+Clesh works on every implementation of Common Lisp that is supported
+by trivial-shell.")
+
+  is not of type
+    VECTOR
+
+Backtrace for: #<SB-THREAD:THREAD "main thread" RUNNING {1001B76E63}>
+0: (NET.DIDIERVERNA.DECLT:DECLT "clesh" :LIBRARY-NAME NIL :TAGLINE NIL :VERSION NIL :CONTACT NIL :COPYRIGHT-YEARS NIL :LICENSE NIL :INTRODUCTION "" :CONCLUSION NIL :TEXI-NAME NIL :TEXI-DIRECTORY "/home/didier/quickref/texinfo/" :INFO-NAME NIL :HYPERLINKS NIL :DECLT-NOTICE :LONG)
+1: (SB-INT:SIMPLE-EVAL-IN-LEXENV (NET.DIDIERVERNA.DECLT:DECLT *SYSTEM-NAME* :INTRODUCTION (WHEN *INTRODUCTION* "") :TEXI-DIRECTORY *TEXINFO-DIRECTORY*) #<NULL-LEXENV>)
+2: (EVAL-TLF (NET.DIDIERVERNA.DECLT:DECLT *SYSTEM-NAME* :INTRODUCTION (WHEN *INTRODUCTION* "") :TEXI-DIRECTORY *TEXINFO-DIRECTORY*) 13 NIL)
+3: ((LABELS SB-FASL::EVAL-FORM :IN SB-INT:LOAD-AS-SOURCE) (NET.DIDIERVERNA.DECLT:DECLT *SYSTEM-NAME* :INTRODUCTION (WHEN *INTRODUCTION* "") :TEXI-DIRECTORY *TEXINFO-DIRECTORY*) 13)
+4: ((LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) (NET.DIDIERVERNA.DECLT:DECLT *SYSTEM-NAME* :INTRODUCTION (WHEN *INTRODUCTION* "") :TEXI-DIRECTORY *TEXINFO-DIRECTORY*) :CURRENT-INDEX 13)
+5: (SB-C::%DO-FORMS-FROM-INFO #<CLOSURE (LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) {1001B8D9BB}> #<SB-C::SOURCE-INFO {1001B8D973}> SB-C::INPUT-ERROR-IN-LOAD)
+6: (SB-INT:LOAD-AS-SOURCE #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/declt" {1001B7EA03}> :VERBOSE NIL :PRINT NIL :CONTEXT "loading")
+7: ((FLET SB-FASL::THUNK :IN LOAD))
+8: (SB-FASL::CALL-WITH-LOAD-BINDINGS #<CLOSURE (FLET SB-FASL::THUNK :IN LOAD) {7FFFF6E0F6BB}> #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/declt" {1001B7EA03}>)
+9: ((FLET SB-FASL::LOAD-STREAM :IN LOAD) #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/declt" {1001B7EA03}> NIL)
+10: (LOAD #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/declt" {1001B7EA03}> :VERBOSE NIL :PRINT NIL :IF-DOES-NOT-EXIST T :EXTERNAL-FORMAT :DEFAULT)
+11: ((FLET SB-IMPL::LOAD-SCRIPT :IN SB-IMPL::PROCESS-SCRIPT) #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/declt" {1001B7EA03}>)
+12: ((FLET "WITHOUT-INTERRUPTS-BODY-3" :IN SB-IMPL::PROCESS-SCRIPT))
+13: (SB-IMPL::PROCESS-SCRIPT "/home/didier/share/common-lisp/source/quickref/bin/declt")
+14: (SB-IMPL::TOPLEVEL-INIT)
+15: ((FLET "WITHOUT-INTERRUPTS-BODY-35" :IN SAVE-LISP-AND-DIE))
+16: ((LABELS SB-IMPL::RESTART-LISP :IN SAVE-LISP-AND-DIE))
+
+unhandled condition in --disable-debugger mode, quitting
+

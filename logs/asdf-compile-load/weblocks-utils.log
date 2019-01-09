@@ -1,0 +1,170 @@
+WARNING: Invalid :version specifier (:READ-FROM-FILE "version.lisp-expr") for component "weblocks-utils" from file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/weblocks-utils-20170124-git/weblocks-utils.asd", using NIL instead
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/hunchentoot-v1.2.38/hunchentoot.asd" contains definition for system "hunchentoot-test". Please only define "hunchentoot" and secondary systems with a name starting with "hunchentoot/" (e.g. "hunchentoot/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/hunchentoot-v1.2.38/hunchentoot.asd" contains definition for system "hunchentoot-dev". Please only define "hunchentoot" and secondary systems with a name starting with "hunchentoot/" (e.g. "hunchentoot/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl-base64-20150923-git/cl-base64.asd" contains definition for system "cl-base64-tests". Please only define "cl-base64" and secondary systems with a name starting with "cl-base64/" (e.g. "cl-base64/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl-fad-20180430-git/cl-fad.asd" contains definition for system "cl-fad-test". Please only define "cl-fad" and secondary systems with a name starting with "cl-fad/" (e.g. "cl-fad/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/flexi-streams-20190107-git/flexi-streams.asd" contains definition for system "flexi-streams-test". Please only define "flexi-streams" and secondary systems with a name starting with "flexi-streams/" (e.g. "flexi-streams/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl+ssl-20181018-git/cl+ssl.asd" contains definition for system "openssl-1.1.0". Please only define "cl+ssl" and secondary systems with a name starting with "cl+ssl/" (e.g. "cl+ssl/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/trivial-garbage-20181018-git/trivial-garbage.asd" contains definition for system "trivial-garbage-tests". Please only define "trivial-garbage" and secondary systems with a name starting with "trivial-garbage/" (e.g. "trivial-garbage/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/puri-20180228-git/puri.asd" contains definition for system "puri-tests". Please only define "puri" and secondary systems with a name starting with "puri/" (e.g. "puri/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl-json-20141217-git/cl-json.asd" contains definition for system "cl-json.test". Please only define "cl-json" and secondary systems with a name starting with "cl-json/" (e.g. "cl-json/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl-who-20171130-git/cl-who.asd" contains definition for system "cl-who-test". Please only define "cl-who" and secondary systems with a name starting with "cl-who/" (e.g. "cl-who/test") in that file.
+WARNING: Invalid :version specifier (:READ-FROM-FILE "version.lisp-expr") for component "clache" from file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/clache-20171130-git/clache.asd", using NIL instead
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl-store-20180328-git/cl-store.asd" contains definition for system "cl-store-tests". Please only define "cl-store" and secondary systems with a name starting with "cl-store/" (e.g. "cl-store/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/collectors-20161204-git/collectors.asd" contains definition for system "collectors-test". Please only define "collectors" and secondary systems with a name starting with "collectors/" (e.g. "collectors/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/symbol-munger-20150407-git/symbol-munger.asd" contains definition for system "symbol-munger-test". Please only define "symbol-munger" and secondary systems with a name starting with "symbol-munger/" (e.g. "symbol-munger/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl-tidy-20170830-git/cl-tidy.asd" contains definition for system "cl-tidy.doc". Please only define "cl-tidy" and secondary systems with a name starting with "cl-tidy/" (e.g. "cl-tidy/test") in that file.
+
+; file: /usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/Parenscript-2.7.1/src/utils.lisp
+; in: DEFUN PARENSCRIPT::JS-TARGET-AT-LEAST
+;     (PARENSCRIPT::PARSE-SEMVER PARENSCRIPT:*JS-TARGET-VERSION*)
+; 
+; caught WARNING:
+;   undefined variable: PARENSCRIPT:*JS-TARGET-VERSION*
+
+
+; file: /usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/weblocks-20180228-git/src/utils/html-parts.lisp
+; in: DEFUN WEBLOCKS-UTIL:UPDATE-HTML-PARTS-CONNECTIONS
+;     (SETF METABANG.CL-CONTAINERS:CHILDREN
+;             (WEBLOCKS-UTIL::GET-HTML-PART-CHILDREN WEBLOCKS-UTIL::CHILD-KEY))
+; ==>
+;   (SETQ METABANG.CL-CONTAINERS:CHILDREN
+;           (WEBLOCKS-UTIL::GET-HTML-PART-CHILDREN WEBLOCKS-UTIL::CHILD-KEY))
+; 
+; caught WARNING:
+;   undefined variable: METABANG.CL-CONTAINERS:CHILDREN
+
+
+; file: /usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/weblocks-20180228-git/src/views/formview/template-form-view.lisp
+; in: CLOSER-MOP:DEFMETHOD WEBLOCKS:WITH-VIEW-HEADER
+;     `((PARENSCRIPT:@ (WEBLOCKS::$ ,WEBLOCKS::FORM-ID)
+;        WEBLOCKS::FOCUS-FIRST-ELEMENT))
+; --> SB-IMPL::|List| SB-IMPL::|List*| 
+; ==>
+;   (SB-IMPL::|List| 'WEBLOCKS::$ WEBLOCKS::FORM-ID)
+; 
+; caught WARNING:
+;   undefined variable: WEBLOCKS::FORM-ID
+
+
+; file: /usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/weblocks-20180228-git/src/page-template.lisp
+; in: DEFUN WEBLOCKS::PAGE-HEADERS-WT
+;     (FORMAT NIL "~{~A~^,~}" ANAPHORA:IT)
+; 
+; caught WARNING:
+;   undefined variable: ANAPHORA:IT
+; 
+; compilation unit finished
+;   Undefined functions:
+;     PS-JS-SYMBOLS:CALL WEBLOCKS:DATASEQ-OPERATIONS-ACTION WEBLOCKS:DO-CHOICE WEBLOCKS:DO-CONFIRMATION WEBLOCKS:DO-DIALOG WEBLOCKS::DO-ROOT-WIDGET WEBLOCKS:DO-WIDGET WEBLOCKS::DO-WIDGET-AUX WEBLOCKS-TREE-WIDGET::JOIN WEBLOCKS::RENDER-TEMPLATE-TO-STRING
+;   Undefined variables:
+;     PARENSCRIPT:*JS-TARGET-VERSION* METABANG.CL-CONTAINERS:CHILDREN WEBLOCKS::FORM-ID ANAPHORA:IT
+;   caught 4 WARNING conditions
+
+; file: /usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/weblocks-stores-20161208-git/src/package.lisp
+; in: DEFPACKAGE #:WEBLOCKS-STORES
+;     (DEFPACKAGE #:WEBLOCKS-STORES
+;       (:USE :CL :WEBLOCKS-UTIL :METATILITIES :ANAPHORA)
+;       (:DOCUMENTATION "Base for weblocks store drivers"))
+; --> EVAL-WHEN 
+; ==>
+;   (SB-IMPL::%DEFPACKAGE "WEBLOCKS-STORES" 'NIL 'NIL 'NIL 'NIL
+;                         '("CL" "WEBLOCKS-UTIL" "METATILITIES" "ANAPHORA") 'NIL
+;                         'NIL 'NIL '("WEBLOCKS-STORES") 'NIL ...)
+; 
+; caught WARNING:
+;   WEBLOCKS-STORES also exports the following symbols:
+;     (WEBLOCKS-STORES:MAPSTORES WEBLOCKS-STORES:OBJECT-ID-SLOT-NAME
+;                                WEBLOCKS-STORES:COMMIT-TRANSACTION
+;                                WEBLOCKS-STORES:STORE-TYPE
+;                                WEBLOCKS-STORES:CLEAN-STORE
+;                                WEBLOCKS-STORES:DYNAMIC-TRANSACTION
+;                                WEBLOCKS-STORES:REPLACE-ON-REDEFINE-P
+;                                WEBLOCKS-STORES:CLASS-ID-SLOT-NAME
+;                                WEBLOCKS-STORES:DELETE-PERSISTENT-OBJECT
+;                                WEBLOCKS-STORES:OBJECT-STORE WEBLOCKS-STORES:ID
+;                                WEBLOCKS-STORES:PERSIST-OBJECTS
+;                                WEBLOCKS-STORES:BEGIN-TRANSACTION
+;                                WEBLOCKS-STORES:COUNT-PERSISTENT-OBJECTS
+;                                WEBLOCKS-STORES:REGISTER-STORE-TYPE
+;                                WEBLOCKS-STORES:DELETE-PERSISTENT-OBJECT-BY-ID
+;                                WEBLOCKS-STORES:FIND-PERSISTENT-OBJECT-BY-ID
+;                                WEBLOCKS-STORES:OBJECT-ID
+;                                WEBLOCKS-STORES:CLASS-VISIBLE-SLOTS
+;                                WEBLOCKS-STORES:LIST-STORE-TYPES
+;                                WEBLOCKS-STORES:*DEBUG-STORES*
+;                                WEBLOCKS-STORES:SERIALIZE
+;                                WEBLOCKS-STORES:CLOSE-STORE
+;                                WEBLOCKS-STORES:FIND-PERSISTENT-OBJECTS
+;                                WEBLOCKS-STORES:CLASS-VISIBLE-SLOTS-IMPL
+;                                WEBLOCKS-STORES:OPEN-STORE
+;                                WEBLOCKS-STORES:DELETE-MODEL-CLASS
+;                                WEBLOCKS-STORES:DEFSTORE
+;                                WEBLOCKS-STORES:*DEFAULT-SERIALIZATION-FORMAT*
+;                                WEBLOCKS-STORES:OPEN-STORES
+;                                WEBLOCKS-STORES:UNSERIALIZE
+;                                WEBLOCKS-STORES:USE-DYNAMIC-TRANSACTION-P
+;                                WEBLOCKS-STORES:ROLLBACK-TRANSACTION
+;                                WEBLOCKS-STORES:LIST-MODEL-CLASSES
+;                                WEBLOCKS-STORES:PERSIST-OBJECT
+;                                WEBLOCKS-STORES:CLASS-STORE
+;                                WEBLOCKS-STORES:*STORE-NAMES*
+;                                WEBLOCKS-STORES:*DEFAULT-STORE*
+;                                WEBLOCKS-STORES:CLOSE-STORES)
+;   See also:
+;     The ANSI Standard, Macro DEFPACKAGE
+;     The SBCL Manual, Variable *ON-PACKAGE-VARIANCE*
+Unhandled UIOP/LISP-BUILD:COMPILE-FILE-ERROR in thread #<SB-THREAD:THREAD "main thread" RUNNING
+                                                          {1001B76DF3}>:
+  COMPILE-FILE-ERROR while
+  compiling #<CL-SOURCE-FILE "weblocks-stores" "src" "package">
+
+Backtrace for: #<SB-THREAD:THREAD "main thread" RUNNING {1001B76DF3}>
+0: (SB-DEBUG::DEBUGGER-DISABLED-HOOK #<UIOP/LISP-BUILD:COMPILE-FILE-ERROR {100D470DB3}> #<unused argument>)
+1: (SB-DEBUG::RUN-HOOK *INVOKE-DEBUGGER-HOOK* #<UIOP/LISP-BUILD:COMPILE-FILE-ERROR {100D470DB3}>)
+2: (INVOKE-DEBUGGER #<UIOP/LISP-BUILD:COMPILE-FILE-ERROR {100D470DB3}>)
+3: (ERROR UIOP/LISP-BUILD:COMPILE-FILE-ERROR :CONTEXT-FORMAT "~/asdf-action::format-action/" :CONTEXT-ARGUMENTS ((#<ASDF/LISP-ACTION:COMPILE-OP > . #<ASDF/LISP-ACTION:CL-SOURCE-FILE "weblocks-stores" "src" "package">)))
+4: (UIOP/LISP-BUILD:CHECK-LISP-COMPILE-RESULTS NIL T T "~/asdf-action::format-action/" ((#<ASDF/LISP-ACTION:COMPILE-OP > . #<ASDF/LISP-ACTION:CL-SOURCE-FILE "weblocks-stores" "src" "package">)))
+5: ((SB-PCL::EMF ASDF/ACTION:PERFORM) #<unused argument> #<unused argument> #<ASDF/LISP-ACTION:COMPILE-OP > #<ASDF/LISP-ACTION:CL-SOURCE-FILE "weblocks-stores" "src" "package">)
+6: ((LAMBDA NIL :IN ASDF/ACTION:CALL-WHILE-VISITING-ACTION))
+7: ((:METHOD ASDF/ACTION:PERFORM-WITH-RESTARTS :AROUND (T T)) #<ASDF/LISP-ACTION:COMPILE-OP > #<ASDF/LISP-ACTION:CL-SOURCE-FILE "weblocks-stores" "src" "package">) [fast-method]
+8: ((:METHOD ASDF/PLAN:PERFORM-PLAN (T)) #<unknown pointer object, lowtag=#x3 {100B4F37F3}>) [fast-method]
+9: ((FLET SB-C::WITH-IT :IN SB-C::%WITH-COMPILATION-UNIT))
+10: ((:METHOD ASDF/PLAN:PERFORM-PLAN :AROUND (T)) #<unknown pointer object, lowtag=#x3 {100B4F37F3}>) [fast-method]
+11: ((:METHOD ASDF/OPERATE:OPERATE (ASDF/OPERATION:OPERATION ASDF/COMPONENT:COMPONENT)) #<ASDF/OPERATE:BUILD-OP > #<ASDF/SYSTEM:SYSTEM "weblocks-utils"> :PLAN-CLASS NIL :PLAN-OPTIONS NIL) [fast-method]
+12: ((SB-PCL::EMF ASDF/OPERATE:OPERATE) #<unused argument> #<unused argument> #<ASDF/OPERATE:BUILD-OP > #<ASDF/SYSTEM:SYSTEM "weblocks-utils">)
+13: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+14: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) #<ASDF/OPERATE:BUILD-OP > #<ASDF/SYSTEM:SYSTEM "weblocks-utils">) [fast-method]
+15: ((SB-PCL::EMF ASDF/OPERATE:OPERATE) #<unused argument> #<unused argument> ASDF/OPERATE:BUILD-OP "weblocks-utils")
+16: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+17: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) ASDF/OPERATE:BUILD-OP "weblocks-utils") [fast-method]
+18: (ASDF/SESSION:CALL-WITH-ASDF-SESSION #<CLOSURE (LAMBDA NIL :IN ASDF/OPERATE:OPERATE) {100B4D0BBB}> :OVERRIDE T :KEY NIL :OVERRIDE-CACHE T :OVERRIDE-FORCING NIL)
+19: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+20: (ASDF/SESSION:CALL-WITH-ASDF-SESSION #<CLOSURE (LAMBDA NIL :IN ASDF/OPERATE:OPERATE) {100ACD6F4B}> :OVERRIDE NIL :KEY NIL :OVERRIDE-CACHE NIL :OVERRIDE-FORCING NIL)
+21: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) ASDF/OPERATE:BUILD-OP "weblocks-utils") [fast-method]
+22: (ASDF/OPERATE:MAKE "weblocks-utils")
+23: (CALL-WITH-TIMING #<FUNCTION SB-IMPL::PRINT-TIME> #<FUNCTION (LAMBDA NIL :IN #:DROP-THRU-TAG-1) {100ACD412B}>)
+24: ((LAMBDA NIL :IN "/home/didier/share/common-lisp/source/quickref/bin/asdf"))
+25: (SB-INT:SIMPLE-EVAL-IN-LEXENV (WITH-OPEN-FILE (*TRACE-OUTPUT* (MERGE-PATHNAMES (MAKE-PATHNAME :NAME *SYSTEM-NAME* :TYPE "time") *BENCH-DIRECTORY*) :DIRECTION :OUTPUT :IF-EXISTS :SUPERSEDE :IF-DOES-NOT-EXIST :CREATE) (TIME (ASDF/OPERATE:MAKE *SYSTEM-NAME*))) #<NULL-LEXENV>)
+26: (EVAL-TLF (WITH-OPEN-FILE (*TRACE-OUTPUT* (MERGE-PATHNAMES (MAKE-PATHNAME :NAME *SYSTEM-NAME* :TYPE "time") *BENCH-DIRECTORY*) :DIRECTION :OUTPUT :IF-EXISTS :SUPERSEDE :IF-DOES-NOT-EXIST :CREATE) (TIME (ASDF/OPERATE:MAKE *SYSTEM-NAME*))) 11 NIL)
+27: ((LABELS SB-FASL::EVAL-FORM :IN SB-INT:LOAD-AS-SOURCE) (WITH-OPEN-FILE (*TRACE-OUTPUT* (MERGE-PATHNAMES (MAKE-PATHNAME :NAME *SYSTEM-NAME* :TYPE "time") *BENCH-DIRECTORY*) :DIRECTION :OUTPUT :IF-EXISTS :SUPERSEDE :IF-DOES-NOT-EXIST :CREATE) (TIME (ASDF/OPERATE:MAKE *SYSTEM-NAME*))) 11)
+28: ((LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) (WITH-OPEN-FILE (*TRACE-OUTPUT* (MERGE-PATHNAMES (MAKE-PATHNAME :NAME *SYSTEM-NAME* :TYPE "time") *BENCH-DIRECTORY*) :DIRECTION :OUTPUT :IF-EXISTS :SUPERSEDE :IF-DOES-NOT-EXIST :CREATE) (TIME (ASDF/OPERATE:MAKE *SYSTEM-NAME*))) :CURRENT-INDEX 11)
+29: (SB-C::%DO-FORMS-FROM-INFO #<CLOSURE (LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) {1001B8D99B}> #<SB-C::SOURCE-INFO {1001B8D953}> SB-C::INPUT-ERROR-IN-LOAD)
+30: (SB-INT:LOAD-AS-SOURCE #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}> :VERBOSE NIL :PRINT NIL :CONTEXT "loading")
+31: ((FLET SB-FASL::THUNK :IN LOAD))
+32: (SB-FASL::CALL-WITH-LOAD-BINDINGS #<CLOSURE (FLET SB-FASL::THUNK :IN LOAD) {7FFFF6E0F6BB}> #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}>)
+33: ((FLET SB-FASL::LOAD-STREAM :IN LOAD) #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}> NIL)
+34: (LOAD #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}> :VERBOSE NIL :PRINT NIL :IF-DOES-NOT-EXIST T :EXTERNAL-FORMAT :DEFAULT)
+35: ((FLET SB-IMPL::LOAD-SCRIPT :IN SB-IMPL::PROCESS-SCRIPT) #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}>)
+36: ((FLET "WITHOUT-INTERRUPTS-BODY-3" :IN SB-IMPL::PROCESS-SCRIPT))
+37: (SB-IMPL::PROCESS-SCRIPT "/home/didier/share/common-lisp/source/quickref/bin/asdf")
+38: (SB-IMPL::TOPLEVEL-INIT)
+39: ((FLET "WITHOUT-INTERRUPTS-BODY-35" :IN SAVE-LISP-AND-DIE))
+40: ((LABELS SB-IMPL::RESTART-LISP :IN SAVE-LISP-AND-DIE))
+
+unhandled condition in --disable-debugger mode, quitting
+; 
+; compilation unit aborted
+;   caught 1 fatal ERROR condition
+;   caught 1 WARNING condition
+

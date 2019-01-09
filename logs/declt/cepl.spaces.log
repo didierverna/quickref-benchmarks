@@ -1,0 +1,3578 @@
+Unhandled PRINT-NOT-READABLE in thread #<error printing a SB-THREAD:THREAD: #<PRINT-NOT-READABLE {100AE50A33}>>: #<VARI.TYPES:V-VEC3 {10068C73E3}> cannot be printed readably.
+
+Backtrace for: #<SB-THREAD:THREAD "main thread" RUNNING {1001B76E73}>
+0: (SB-DEBUG::DEBUGGER-DISABLED-HOOK #<PRINT-NOT-READABLE {100AE4F023}> #<unused argument>)
+1: (SB-DEBUG::RUN-HOOK *INVOKE-DEBUGGER-HOOK* #<PRINT-NOT-READABLE {100AE4F023}>)
+2: (INVOKE-DEBUGGER #<PRINT-NOT-READABLE {100AE4F023}>)
+3: (ERROR #<PRINT-NOT-READABLE {100AE4F023}>)
+4: (SB-KERNEL:WITH-SIMPLE-CONDITION-RESTARTS ERROR NIL PRINT-NOT-READABLE :OBJECT #<VARI.TYPES:V-VEC3 {10068C73E3}>)
+5: (SB-INT:PRINT-NOT-READABLE-ERROR #<VARI.TYPES:V-VEC3 {10068C73E3}> #<SB-IMPL::CASE-FROB-STREAM {100AE4EBF3}>)
+6: (SB-IMPL::%PRINT-UNREADABLE-OBJECT #<VARI.TYPES:V-VEC3 {10068C73E3}> #<SB-IMPL::CASE-FROB-STREAM {100AE4EBF3}> T T NIL)
+7: ((LABELS SB-IMPL::HANDLE-IT :IN SB-KERNEL:OUTPUT-OBJECT) #<SB-IMPL::CASE-FROB-STREAM {100AE4EBF3}>)
+8: (PRIN1 #<VARI.TYPES:V-VEC3 {10068C73E3}> #<SB-IMPL::CASE-FROB-STREAM {100AE4EBF3}>)
+9: ((LAMBDA (NET.DIDIERVERNA.DECLT::VALUE) :IN "/home/didier/share/common-lisp/source/declt/core/src/doc/symbol.lisp") #<VARI.TYPES:V-VEC3 {10068C73E3}>)
+10: (NET.DIDIERVERNA.DECLT::RENDER-SLOT #S(NET.DIDIERVERNA.DECLT::SLOT-DEFINITION :SYMBOL VARJO.INTERNALS::SHADOWED-TYPE :FOREIGNP NIL :SLOT #<SB-MOP:STANDARD-DIRECT-SLOT-DEFINITION VARJO.INTERNALS::SHADOWED-TYPE> :READERS NIL :WRITERS NIL))
+11: (NET.DIDIERVERNA.DECLT::RENDER-SLOTS #S(NET.DIDIERVERNA.DECLT::CLASS-DEFINITION :SYMBOL CEPL.SPACES::SVEC3-G :FOREIGNP NIL :PARENTS (#S(NET.DIDIERVERNA.DECLT::CLASS-DEFINITION :SYMBOL VARI.TYPES:V-SHADOW-TYPE :FOREIGNP T :PARENTS NIL :CHILDREN NIL :METHODS NIL :SLOTS NIL)) :CHILDREN NIL :METHODS (#S(NET.DIDIERVERNA.DECLT::METHOD-DEFINITION :SYMBOL VARJO.INTERNALS::INFER-META-BY-TYPE :FOREIGNP T :METHOD NIL) #S(NET.DIDIERVERNA.DECLT::METHOD-DEFINITION :SYMBOL VARJO.INTERNALS::META-KINDS-TO-INFER :FOREIGNP T :METHOD NIL)) :SLOTS (#S(NET.DIDIERVERNA.DECLT::SLOT-DEFINITION :SYMBOL VARJO.INTERNALS::TYPE-NAME :FOREIGNP NIL :SLOT #<SB-MOP:STANDARD-DIRECT-SLOT-DEFINITION VARJO.INTERNALS::TYPE-NAME> :READERS NIL :WRITERS NIL) #S(NET.DIDIERVERNA.DECLT::SLOT-DEFINITION :SYMBOL VARJO.INTERNALS::SUPERCLASS :FOREIGNP NIL :SLOT #<SB-MOP:STANDARD-DIRECT-SLOT-DEFINITION VARJO.INTERNALS::SUPERCLASS> :READERS NIL :WRITERS NIL) #S(NET.DIDIERVERNA.DECLT::SLOT-DEFINITION :SYMBOL VARJO.INTERNALS::SHADOWED-TYPE :FOREIGNP NIL :SLOT #<SB-MOP:STANDARD-DIRECT-SLOT-DEFINITION VARJO.INTERNALS::SHADOWED-TYPE> :READERS NIL :WRITERS NIL) #S(NET.DIDIERVERNA.DECLT::SLOT-DEFINITION :SYMBOL VARJO.INTERNALS:GLSL-STRING :FOREIGNP NIL :SLOT #<SB-MOP:STANDARD-DIRECT-SLOT-DEFINITION VARJO.INTERNALS:GLSL-STRING> :READERS NIL :WRITERS NIL))))
+12: ((:METHOD NET.DIDIERVERNA.DECLT::DOCUMENT (NET.DIDIERVERNA.DECLT::CLASS-DEFINITION T)) #S(NET.DIDIERVERNA.DECLT::CLASS-DEFINITION :SYMBOL CEPL.SPACES::SVEC3-G :FOREIGNP NIL :PARENTS (#S(NET.DIDIERVERNA.DECLT::CLASS-DEFINITION :SYMBOL VARI.TYPES:V-SHADOW-TYPE :FOREIGNP T :PARENTS NIL :CHILDREN NIL :METHODS NIL :SLOTS NIL)) :CHILDREN NIL :METHODS (#S(NET.DIDIERVERNA.DECLT::METHOD-DEFINITION :SYMBOL VARJO.INTERNALS::INFER-META-BY-TYPE :FOREIGNP T :METHOD NIL) #S(NET.DIDIERVERNA.DECLT::METHOD-DEFINITION :SYMBOL VARJO.INTERNALS::META-KINDS-TO-INFER :FOREIGNP T :METHOD NIL)) :SLOTS (#S(NET.DIDIERVERNA.DECLT::SLOT-DEFINITION :SYMBOL VARJO.INTERNALS::TYPE-NAME :FOREIGNP NIL :SLOT #<SB-MOP:STANDARD-DIRECT-SLOT-DEFINITION VARJO.INTERNALS::TYPE-NAME> :READERS NIL :WRITERS NIL) #S(NET.DIDIERVERNA.DECLT::SLOT-DEFINITION :SYMBOL VARJO.INTERNALS::SUPERCLASS :FOREIGNP NIL :SLOT #<SB-MOP:STANDARD-DIRECT-SLOT-DEFINITION VARJO.INTERNALS::SUPERCLASS> :READERS NIL :WRITERS NIL) #S(NET.DIDIERVERNA.DECLT::SLOT-DEFINITION :SYMBOL VARJO.INTERNALS::SHADOWED-TYPE :FOREIGNP NIL :SLOT #<SB-MOP:STANDARD-DIRECT-SLOT-DEFINITION VARJO.INTERNALS::SHADOWED-TYPE> :READERS NIL :WRITERS NIL) #S(NET.DIDIERVERNA.DECLT::SLOT-DEFINITION :SYMBOL VARJO.INTERNALS:GLSL-STRING :FOREIGNP NIL :SLOT #<SB-MOP:STANDARD-DIRECT-SLOT-DEFINITION VARJO.INTERNALS:GLSL-STRING> :READERS NIL :WRITERS NIL))) #S(NET.DIDIERVERNA.DECLT::CONTEXT :SYSTEMS (#<ASDF/SYSTEM:SYSTEM "cepl.spaces">) :PACKAGES (#<PACKAGE "CEPL.SPACES"> #<PACKAGE "CEPL.SPACES.ROUTES">) :EXTERNAL-DEFINITIONS #<HASH-TABLE :TEST EQUAL :COUNT 23 {10084BD563}> :INTERNAL-DEFINITIONS #<HASH-TABLE :TEST EQUAL :COUNT 142 {10084BD993}> :HYPERLINKSP NIL)) [fast-method]
+13: (NET.DIDIERVERNA.DECLT::ADD-CATEGORY-NODE #1=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Internal definitions" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME NIL :NEXT NIL :PREVIOUS #2=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Exported definitions" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME NIL :NEXT #1# :PREVIOUS NIL :UP #3=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Definitions" :SYNOPSIS "The symbols documentation" :SECTION-TYPE :NUMBERED :SECTION-NAME NIL :NEXT NIL :PREVIOUS #4=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Packages" :SYNOPSIS "The packages documentation" :SECTION-TYPE :NUMBERED :SECTION-NAME NIL :NEXT #3# :PREVIOUS #S(NET.DIDIERVERNA.DECLT::NODE :NAME "Files" :SYNOPSIS "The files documentation" :SECTION-TYPE :NUMBERED :SECTION-NAME NIL :NEXT #4# :PREVIOUS # :UP #5=# :CHILDREN # :BEFORE-MENU-CONTENTS "Files are sorted by type and then listed depth-first from the systems
+components trees." :AFTER-MENU-CONTENTS NIL) :UP #5# :CHILDREN (# #) :BEFORE-MENU-CONTENTS "Packages are listed by definition order." :AFTER-MENU-CONTENTS NIL) :UP #5# :CHILDREN (#2# #1#) :BEFORE-MENU-CONTENTS "Definitions are sorted by export status, category, package, and then by
+lexicographic order." :AFTER-MENU-CONTENTS NIL) :CHILDREN (#6=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Exported special variables" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Special variables" :NEXT #7=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Exported macros" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Macros" :NEXT #8=# :PREVIOUS #6# :UP #2# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@deffn {Macro} {in} SPACE &body BODY
+@anchor{go to the CEPL<dot>SPACES<colon><colon>IN macro}@c
+@macrosubindex{in}@c
+
+This macro is only valid inside gpu functions.@*
+
+It defines a scope which is said to be 'in the vec-space' given as the first
+argument. This means that any spatial-vectors created in this scope will be
+declared in this space.@*
+
+If the value that is returned from the scope of the 'in' is a spatial-vector
+then the vector is transformed from the space of the inner scope to the space of
+the outer scope.@*
+
+For example:@*
+
+    (in *clip-space*@*
+      (let ((z (in *world-space*@*
+                   (let ((x (sv! 0 1 2 3)))@*
+                     ...@*
+                     x))))@*
+        z))@*
+
+In the code above the spatial-vector x is defined in *world-space*. However
+as it is used in the tail position of the innermost let, it will leave the
+*world-space* scope and enter the *clip-space* scope. At that point the
+spatial-vector will be multiplied with the mat4 that describes the
+*world-space* → *clip-space* transform.@*
+
+All of this information is resolved statically at compile-time by CEPL. The 'in'
+forms are removed and the spatial-vectors are replaced with regular ones. CEPL
+will calculate the mat4 transforms between the used spaces on the CPU and upload
+them as uniforms.@*
+
+This means that the final glsl will only contain standard glsl vectors and
+matrices and will perform as well as any other handwritten glsl code.
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/gpu<dot>lisp file, , @t{gpu.lisp}} (file)
+@end table
+@end deffn
+@deffn {Macro} {with-space-routing-via} VIA-SPACE &body BODY
+@anchor{go to the CEPL<dot>SPACES<colon><colon>WITH-SPACE-ROUTING-VIA macro}@c
+@macrosubindex{with-space-routing-via}@c
+
+This macro ensures that all routes calculated between spaces go via the specifed
+vec-space.@*
+
+This behaves as if all the calls to #'get-transform were actually called to
+#'get-transform-via with the given vec-space used as the via-space.
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+" :AFTER-MENU-CONTENTS NIL) :PREVIOUS NIL :UP #2# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@defvr {Special Variable} *clip-space*
+@anchor{go to the CEPL<dot>SPACES<colon><colon>*CLIP-SPACE* special variable}@c
+@specialsubindex{*clip-space*}@c
+
+This is the vec-space that describes clip-space in CEPL.
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/predefined-spaces<dot>lisp file, , @t{predefined-spaces.lisp}} (file)
+@end table
+@end defvr
+@defvr {Special Variable} *ndc-space*
+@anchor{go to the CEPL<dot>SPACES<colon><colon>*NDC-SPACE* special variable}@c
+@specialsubindex{*ndc-space*}@c
+
+This is the vec-space that describes ndc-space in CEPL.
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/predefined-spaces<dot>lisp file, , @t{predefined-spaces.lisp}} (file)
+@end table
+@end defvr
+@defvr {Special Variable} *screen-space*
+@anchor{go to the CEPL<dot>SPACES<colon><colon>*SCREEN-SPACE* special variable}@c
+@specialsubindex{*screen-space*}@c
+
+This is the vec-space that describes screen-space in CEPL.@*
+
+It could also be thought of as FBO space when you are not rendering into the
+default framebuffer object.
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/predefined-spaces<dot>lisp file, , @t{predefined-spaces.lisp}} (file)
+@end table
+@end defvr
+@defvr {Special Variable} *world-space*
+@anchor{go to the CEPL<dot>SPACES<colon><colon>*WORLD-SPACE* special variable}@c
+@specialsubindex{*world-space*}@c
+
+This is the vec-space that describes world-space in CEPL.@*
+
+Whilst it is perfectly possible to use CEPL's vec-space feature to define your
+own world-space, we strongly suggest you do not as CEPL has some specific
+optimizations it can do you you use *world-space* instead of your own.
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/predefined-spaces<dot>lisp file, , @t{predefined-spaces.lisp}} (file)
+@end table
+@end defvr
+" :AFTER-MENU-CONTENTS NIL) #7# #8# #S(NET.DIDIERVERNA.DECLT::NODE :NAME "Exported structures" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Structures" :NEXT NIL :PREVIOUS #8# :UP #2# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@deftp {Structure} {svec4} ()
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SVEC4 structure}@c
+@structuresubindex{svec4}@c
+
+This is a 4 component spatial vector type. A spatial vector is a vector that
+also stores which vector-space it is in.
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@item Direct superclasses
+@ref{go to the CEPL<dot>SPACES<colon><colon>POS structure, , @t{pos}} (structure)
+@item Direct slots
+@defvr {Slot} point
+@slotsubindex{point}@c
+@table @strong
+@item Type
+@t{(simple-array single-float (4))}
+@item Initform
+@t{(rtg-math.base-vectors:v! 0 0 0 0)}
+@item Readers
+@ref{go to the CEPL<dot>SPACES<colon><colon>SVEC4-POINT function, , @t{svec4-point}} (function)
+@item Writers
+@ref{go to the CEPL<dot>SPACES<colon><colon>(SETF SVEC4-POINT) function, , @t{(setf svec4-point)}} (function)
+@end table
+@end defvr
+@end table
+@end deftp
+@deftp {Structure} {vec-space} ()
+@anchor{go to the CEPL<dot>SPACES<colon><colon>VEC-SPACE structure}@c
+@structuresubindex{vec-space}@c
+
+This type is an abstraction over the concept of a vector-space.@*
+
+In graphics programming we are very used to using matrices to describe
+transforms. The matrix describes the transform for any given point in
+vector-space to a point in another vector-space.@*
+
+Some spaces are very commonly mentioned when discuss rendering, spaces like
+world-space, camera-space, clip-space, etc. However when it comes to our
+programs we have to work with the transform (matrix) rather the space directly.
+
+In CEPL we have a feature to allow working with vector spaces as a first class
+object, the vec-space. We uses these vec-spaces in our GPU code and CEPL
+statically analyses our code to work out what matrices are needed and uploads
+them as uniforms.@*
+
+By doing this, our GPU ends up running code that only has the 'normal'@*
+types (matrices and vectors) which means we pay no performace cost for the
+features@*
+
+Working with vec-spaces directly means our code more closely reflects how we
+talk about the problems we are trying to solve. As we will see below it also
+makes it much harder to perform 'invalid' spatial calculations.@*
+
+
+-- Lexical Space --@*
+
+In many graphics related texts we talk about performing a calculation in a
+certain space.@*
+
+In CEPL we express this with the 'in' macro@*
+
+    (in *world-space*@*
+      (some-calculation)@*
+      (more-calculations))@*
+
+Everything that is happening in this scope is happening 'in *world-space*'@*
+
+the 'in' macro can be nested:@*
+
+    (in *clip-space*@*
+      (let ((z (in *world-space*@*
+                 (let ((x (sv! 0 1 2 3)))@*
+                   ...@*
+                   x))))@*
+        z))@*
+
+Here z is in *clip-space* and x is in *world-space*@*
+
+
+-- Spatial Vectors --@*
+
+In the above example we also introduce another type: spatial-vectors@*
+
+sv! behave exactly the same as v! in that it produces a vector, however
+instead of making a regular vector the code above will make a spatial-vector.
+
+Spatial vectors are vectors which store which space they were created in.@*
+
+The advantage of this is that CEPL can detect if they leave that space and enter
+a different space. When that happens CEPL will automatically transform the
+vector to the new space.@*
+
+We can see this in the example above. The value in 'x' is a spatial vector that
+was created in world space, however as the value moves up the stack to be
+stored in 'z' it leaves the scope of *world-space* and enters *clip-space*.
+At this point CEPL will multiply the vector with a
+'world-space-to-clip-space matrix'.@*
+
+This is awesome as it means that if you are working with spatial vectors in the
+same scope, you are guarenteed that they are in the same space.@*
+
+Another advantage is that in most case CEPL can calculate these transform
+matrices on the CPU and upload them as uniforms, which makes this code very
+fast.@*
+
+
+-- Defining Spaces --@*
+
+Currently vec-spaces can only be defined in cpu code. They must be passed to
+gpu functions as uniforms.@*
+
+All spaces are defined relative to another space. A vec-space is either a
+hierarchical-space, relational-space or a model-space.@*
+
+A hierarchical-space is a space which is a child of another space. When the
+parent space is transformed, the child space is also transformed. You can
+see this relationship as how your hand has a position and orientation but will
+be transformed by the parent, the lower-arm. The lower arm in turn is a child
+of the upper arm, and so on. Hierarchical spaces are WIP and not currently
+exposed in CEPL@*
+
+A relational-space x is a space whose relationship to another space can be
+defined with a matrix, but which is not affected by changes to that other space.
+
+A relational-space can have any number of spaces as neighbours, however@*
+in the case where there is only one neighbour space, the space is known as a
+model-space.@*
+
+Making a model space is very easy.@*
+
+    (make-space neighbour-space
+                transform-to-neighbour-matrix4
+                transform-from-neighbour-matrix4)@*
+
+the transform-from-neighbour-matrix4 transform is optional where the inverse can
+be calculated.@*
+
+To make a relational space you use #'make-space* and pass in a list where the
+sublists are the same as the arguments to make-space@*
+
+
+-- Spaces & Implicit-Uniforms@*
+
+If the vec-space is stored in a variable with global scope then CEPL's
+implicit-uniforms feature means you can use the space without explicitly adding
+the uniform argument yourself.@*
+
+See the docstring for defun-g for more details on implicit-uniforms.@*
+
+
+-- Immutable Relationships --@*
+
+Whilst the transforms between neighbouring spaces are mutable.@*
+It is not possible to add new neighbours to an existing vec-space x, except by
+making a new vec-space as specifying x as its neighbour.@*
+
+
+-- Predefined Spaces --@*
+
+CEPL defines a few commonly used spaces for you. Other than *world-space* they
+are all spaces used in the GLSL pipeline:@*
+
+ *world-space*@*
+ *clip-space*@*
+ *ndc-space*@*
+ *screen-space*@*
+
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@item Direct superclasses
+@t{structure-object} (structure)
+@item Direct methods
+@itemize @bullet
+@item
+@t{infer-implicit-uniform-type} (method)
+@item
+@t{free} (method)
+@item
+@t{print-object} (method)
+@end itemize
+@item Direct slots
+@defvr {Slot} uid
+@slotsubindex{uid}@c
+@table @strong
+@item Type
+@t{fixnum}
+@item Initform
+@t{(incf cepl.spaces::*last-space-id*)}
+@item Readers
+@ref{go to the CEPL<dot>SPACES<colon><colon>%SPACE-UID function, , @t{%space-uid}} (function)
+@item Writers
+@t{(setf %space-uid)} (function)
+@end table
+@end defvr
+@defvr {Slot} nht-id
+@slotsubindex{nht-id}@c
+@table @strong
+@item Type
+@t{fixnum}
+@item Initform
+@t{(error \"id must be provided\")}
+@item Readers
+@ref{go to the CEPL<dot>SPACES<colon><colon>%SPACE-NHT-ID function, , @t{%space-nht-id}} (function)
+@item Writers
+@t{(setf %space-nht-id)} (function)
+@end table
+@end defvr
+@defvr {Slot} kind
+@slotsubindex{kind}@c
+@table @strong
+@item Type
+@t{(mod 3)}
+@item Initform
+@t{(error \"space kind must be provided\")}
+@item Readers
+@ref{go to the CEPL<dot>SPACES<colon><colon>%SPACE-KIND function, , @t{%space-kind}} (function)
+@item Writers
+@t{(setf %space-kind)} (function)
+@end table
+@end defvr
+@defvr {Slot} parent
+@slotsubindex{parent}@c
+@table @strong
+@item Type
+@t{(or null cepl.spaces:vec-space)}
+@item Readers
+@ref{go to the CEPL<dot>SPACES<colon><colon>%SPACE-PARENT function, , @t{%space-parent}} (function)
+@item Writers
+@t{(setf %space-parent)} (function)
+@end table
+@end defvr
+@defvr {Slot} children
+@slotsubindex{children}@c
+@table @strong
+@item Type
+@t{(or null (array cepl.spaces:vec-space (*)))}
+@item Readers
+@ref{go to the CEPL<dot>SPACES<colon><colon>%SPACE-CHILDREN function, , @t{%space-children}} (function)
+@item Writers
+@t{(setf %space-children)} (function)
+@end table
+@end defvr
+@defvr {Slot} root
+@slotsubindex{root}@c
+@table @strong
+@item Type
+@t{(or null cepl.spaces:vec-space)}
+@item Readers
+@ref{go to the CEPL<dot>SPACES<colon><colon>%SPACE-ROOT function, , @t{%space-root}} (function)
+@item Writers
+@t{(setf %space-root)} (function)
+@end table
+@end defvr
+@defvr {Slot} neighbours
+@slotsubindex{neighbours}@c
+@table @strong
+@item Type
+@t{(array cepl.spaces::spatial-relationship (*))}
+@item Initform
+@t{(make-array 0 :element-type (quote cepl.spaces::spatial-relationship) :initial-element (cepl.spaces::%make-sr))}
+@item Readers
+@ref{go to the CEPL<dot>SPACES<colon><colon>%SPACE-NEIGHBOURS function, , @t{%space-neighbours}} (function)
+@item Writers
+@t{(setf %space-neighbours)} (function)
+@end table
+@end defvr
+@defvr {Slot} depth
+@slotsubindex{depth}@c
+@table @strong
+@item Type
+@t{fixnum}
+@item Initform
+@t{(error \"space depth must be provided\")}
+@item Readers
+@ref{go to the CEPL<dot>SPACES<colon><colon>%SPACE-DEPTH function, , @t{%space-depth}} (function)
+@item Writers
+@ref{go to the CEPL<dot>SPACES<colon><colon>(SETF %SPACE-DEPTH) function, , @t{(setf %space-depth)}} (function)
+@end table
+@end defvr
+@end table
+@end deftp
+" :AFTER-MENU-CONTENTS NIL)) :BEFORE-MENU-CONTENTS NIL :AFTER-MENU-CONTENTS NIL) :UP #3# :CHILDREN (#9=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Internal constants" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Constants" :NEXT #10=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Internal special variables" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Special variables" :NEXT #11=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Internal macros" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Macros" :NEXT #12=# :PREVIOUS #10# :UP #1# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@deffn {Macro} {kind-case} (SPACE &key ERROR) &key M R H
+@anchor{go to the CEPL<dot>SPACES<colon><colon>KIND-CASE macro}@c
+@macrosubindex{kind-case}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Macro} {kind-case*} (FROM TO &key ERROR) &key M->M M->R M->H R->M R->R R->H H->M H->R H->H
+@anchor{go to the CEPL<dot>SPACES<colon><colon>KIND-CASE* macro}@c
+@macrosubindex{kind-case*}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Macro} {with-sparse-elem} (&key NEXT LEN CREATE-IF-MISSING) (ROUTE-TABLE INDEX) &body BODY
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>WITH-SPARSE-ELEM macro}@c
+@macrosubindex{with-sparse-elem}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+" :AFTER-MENU-CONTENTS NIL) :PREVIOUS #9# :UP #1# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@defvr {Special Variable} *default-pos-space*
+@anchor{go to the CEPL<dot>SPACES<colon><colon>*DEFAULT-POS-SPACE* special variable}@c
+@specialsubindex{*default-pos-space*}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end defvr
+@defvr {Special Variable} *identity-eye-space*
+@anchor{go to the CEPL<dot>SPACES<colon><colon>*IDENTITY-EYE-SPACE* special variable}@c
+@specialsubindex{*identity-eye-space*}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/predefined-spaces<dot>lisp file, , @t{predefined-spaces.lisp}} (file)
+@end table
+@end defvr
+@defvr {Special Variable} *last-space-id*
+@anchor{go to the CEPL<dot>SPACES<colon><colon>*LAST-SPACE-ID* special variable}@c
+@specialsubindex{*last-space-id*}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end defvr
+@defvr {Special Variable} *spaces-array-growth-rate*
+@anchor{go to the CEPL<dot>SPACES<colon><colon>*SPACES-ARRAY-GROWTH-RATE* special variable}@c
+@specialsubindex{*spaces-array-growth-rate*}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end defvr
+@defvr {Special Variable} spaces
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SPACES special variable}@c
+@specialsubindex{spaces}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end defvr
+" :AFTER-MENU-CONTENTS NIL) :PREVIOUS NIL :UP #1# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@defvr {Constant} +default-subtable-count+
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>+DEFAULT-SUBTABLE-COUNT+ constant}@c
+@constantsubindex{+default-subtable-count+}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/constants<dot>lisp file, , @t{constants.lisp}} (file)
+@end table
+@end defvr
+@defvr {Constant} +hierachical-space+
+@anchor{go to the CEPL<dot>SPACES<colon><colon>+HIERACHICAL-SPACE+ constant}@c
+@constantsubindex{+hierachical-space+}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end defvr
+@defvr {Constant} +model-space+
+@anchor{go to the CEPL<dot>SPACES<colon><colon>+MODEL-SPACE+ constant}@c
+@constantsubindex{+model-space+}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end defvr
+@defvr {Constant} +relational-space+
+@anchor{go to the CEPL<dot>SPACES<colon><colon>+RELATIONAL-SPACE+ constant}@c
+@constantsubindex{+relational-space+}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end defvr
+@defvr {Constant} +subtable-length+
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>+SUBTABLE-LENGTH+ constant}@c
+@constantsubindex{+subtable-length+}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/constants<dot>lisp file, , @t{constants.lisp}} (file)
+@end table
+@end defvr
+" :AFTER-MENU-CONTENTS NIL) #10# #11# #12# #13=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Internal functions" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Functions" :NEXT #14=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Internal generic functions" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Generic functions" :NEXT #15=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Internal conditions" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Conditions" :NEXT #16=# :PREVIOUS #14# :UP #1# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@deftp {Condition} {not-ancestor} ()
+@anchor{go to the CEPL<dot>SPACES<colon><colon>NOT-ANCESTOR condition}@c
+@conditionsubindex{not-ancestor}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-errors<dot>lisp file, , @t{space-errors.lisp}} (file)
+@item Direct superclasses
+@t{error} (condition)
+@item Direct slots
+@defvr {Slot} start-space
+@slotsubindex{start-space}@c
+@table @strong
+@item Initargs
+@t{:start-space}
+@end table
+@end defvr
+@defvr {Slot} ancestor-space
+@slotsubindex{ancestor-space}@c
+@table @strong
+@item Initargs
+@t{:ancestor-space}
+@end table
+@end defvr
+@end table
+@end deftp
+@deftp {Condition} {position->no-space} ()
+@anchor{go to the CEPL<dot>SPACES<colon><colon>POSITION->NO-SPACE condition}@c
+@conditionsubindex{position->no-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-errors<dot>lisp file, , @t{space-errors.lisp}} (file)
+@item Direct superclasses
+@t{error} (condition)
+@item Direct slots
+@defvr {Slot} start-space
+@slotsubindex{start-space}@c
+@table @strong
+@item Initargs
+@t{:start-space}
+@end table
+@end defvr
+@end table
+@end deftp
+" :AFTER-MENU-CONTENTS NIL) :PREVIOUS #13# :UP #1# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@deffn {Generic Function} {in-space} METADATA
+@anchor{go to the CEPL<dot>SPACES<colon><colon>IN-SPACE generic function}@c
+@genericsubindex{in-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/spatial-vector<dot>lisp file, , @t{spatial-vector.lisp}} (file)
+@item Methods
+@deffn {Method} {in-space} (METADATA @t{spatial-meta})
+@anchor{go to the CEPL<dot>SPACES<colon><colon>IN-SPACE CEPL<dot>SPACES<colon><colon>SPATIAL-META method}@c
+@methodsubindex{in-space}@c
+@end deffn
+@deffn {Method} {in-space} (METADATA-COLLECTION @t{list})
+@anchor{go to the CEPL<dot>SPACES<colon><colon>IN-SPACE COMMON-LISP<colon><colon>LIST method}@c
+@methodsubindex{in-space}@c
+@end deffn
+@end table
+@end deffn
+" :AFTER-MENU-CONTENTS NIL) :PREVIOUS #12# :UP #1# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@deffn {Function} {%%-svec3!} &key (SPACE SPACE) (POINT POINT)
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%%-SVEC3! function}@c
+@functionsubindex{%%-svec3!}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%%-svec4!} &key (SPACE SPACE) (POINT POINT)
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%%-SVEC4! function}@c
+@functionsubindex{%%-svec4!}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%add-space-to-array} SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%ADD-SPACE-TO-ARRAY function}@c
+@functionsubindex{%add-space-to-array}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%check-not-illegal-space} SPACE-ID FROM?
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%CHECK-NOT-ILLEGAL-SPACE function}@c
+@functionsubindex{%check-not-illegal-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%get-hierarchical-transform} FROM-SPACE TO-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%GET-HIERARCHICAL-TRANSFORM function}@c
+@functionsubindex{%get-hierarchical-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%has-route} FROM-ID TO-ID
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>%HAS-ROUTE function}@c
+@functionsubindex{%has-route}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%hspace-inverse-transform} SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%HSPACE-INVERSE-TRANSFORM function}@c
+@functionsubindex{%hspace-inverse-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%hspace-to-hspace-transform} FROM-SPACE TO-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%HSPACE-TO-HSPACE-TRANSFORM function}@c
+@functionsubindex{%hspace-to-hspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%hspace-to-mspace-transform} FROM-SPACE TO-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%HSPACE-TO-MSPACE-TRANSFORM function}@c
+@functionsubindex{%hspace-to-mspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%hspace-to-rspace-transform} FROM-SPACE TO-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%HSPACE-TO-RSPACE-TRANSFORM function}@c
+@functionsubindex{%hspace-to-rspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%hspace-transform} HSPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%HSPACE-TRANSFORM function}@c
+@functionsubindex{%hspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%make-heirarchical-space} PARENT &optional TRANSFORM
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%MAKE-HEIRARCHICAL-SPACE function}@c
+@functionsubindex{%make-heirarchical-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%make-model-space} TARGET-SPACE TRANSFORM-TO &optional TRANSFORM-FROM
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%MAKE-MODEL-SPACE function}@c
+@functionsubindex{%make-model-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%make-relational-space} RELATIONSHIPS
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%MAKE-RELATIONAL-SPACE function}@c
+@functionsubindex{%make-relational-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%make-route-table} &key (SPARSE-PART SPARSE-PART)
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>%MAKE-ROUTE-TABLE function}@c
+@functionsubindex{%make-route-table}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%make-routes-array} ()
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>%MAKE-ROUTES-ARRAY function}@c
+@functionsubindex{%make-routes-array}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%make-space} &key (UID UID) (NHT-ID NHT-ID) (KIND KIND) (PARENT PARENT) (CHILDREN CHILDREN) (ROOT ROOT) (NEIGHBOURS NEIGHBOURS) (DEPTH DEPTH)
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%MAKE-SPACE function}@c
+@functionsubindex{%make-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%make-sr} &key (SOURCE-ID SOURCE-ID) (TARGET-ID TARGET-ID) (TO TO) (FROM FROM)
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%MAKE-SR function}@c
+@functionsubindex{%make-sr}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%mspace-only-sr} MSPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%MSPACE-ONLY-SR function}@c
+@functionsubindex{%mspace-only-sr}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%mspace-to-hspace-transform} FROM-SPACE TO-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%MSPACE-TO-HSPACE-TRANSFORM function}@c
+@functionsubindex{%mspace-to-hspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%mspace-to-mspace-transform} MSPACE-A MSPACE-B
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%MSPACE-TO-MSPACE-TRANSFORM function}@c
+@functionsubindex{%mspace-to-mspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%mspace-to-rspace-transform} MSPACE RSPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%MSPACE-TO-RSPACE-TRANSFORM function}@c
+@functionsubindex{%mspace-to-rspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%mspace-transform} MSPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%MSPACE-TRANSFORM function}@c
+@functionsubindex{%mspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%next-step} FROM-ID TO-ID
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>%NEXT-STEP function}@c
+@functionsubindex{%next-step}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%reduce-ancestors} FUNCTION OF-SPACE INITIAL-VALUE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%REDUCE-ANCESTORS function}@c
+@functionsubindex{%reduce-ancestors}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-walking<dot>lisp file, , @t{space-walking.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%reduce-ancestors-until-space} FUNCTION OF-SPACE UNTIL-SPACE INITIAL-VALUE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%REDUCE-ANCESTORS-UNTIL-SPACE function}@c
+@functionsubindex{%reduce-ancestors-until-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-walking<dot>lisp file, , @t{space-walking.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%route-len} FROM-ID TO-ID
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>%ROUTE-LEN function}@c
+@functionsubindex{%route-len}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%rspace-to-hspace-transform} FROM-SPACE TO-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%RSPACE-TO-HSPACE-TRANSFORM function}@c
+@functionsubindex{%rspace-to-hspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%rspace-to-mspace-transform} RSPACE MSPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%RSPACE-TO-MSPACE-TRANSFORM function}@c
+@functionsubindex{%rspace-to-mspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%rspace-to-neighbour-relationship} FROM-SPACE TO-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%RSPACE-TO-NEIGHBOUR-RELATIONSHIP function}@c
+@functionsubindex{%rspace-to-neighbour-relationship}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%rspace-to-neighbour-transform} FROM-ID TO-ID
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%RSPACE-TO-NEIGHBOUR-TRANSFORM function}@c
+@functionsubindex{%rspace-to-neighbour-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%rspace-to-rspace-ids-transform} SPACE-A-ID SPACE-B-ID &optional INITIAL-M4
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%RSPACE-TO-RSPACE-IDS-TRANSFORM function}@c
+@functionsubindex{%rspace-to-rspace-ids-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%rspace-to-rspace-transform} SPACE-A SPACE-B &optional INITIAL-M4
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%RSPACE-TO-RSPACE-TRANSFORM function}@c
+@functionsubindex{%rspace-to-rspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%set-hspace-transform} HSPACE TRANSFORM &optional TO-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SET-HSPACE-TRANSFORM function}@c
+@functionsubindex{%set-hspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%set-mspace-transform} MSPACE TRANSFORM &optional TO-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SET-MSPACE-TRANSFORM function}@c
+@functionsubindex{%set-mspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%set-route} FROM-ID TO-ID STEP LENGTH
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>%SET-ROUTE function}@c
+@functionsubindex{%set-route}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%set-rspace-to-neighbour-transform} FROM-SPACE TO-SPACE TRANSFORM
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SET-RSPACE-TO-NEIGHBOUR-TRANSFORM function}@c
+@functionsubindex{%set-rspace-to-neighbour-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%set-rspace-transform} FROM-SPACE TO-SPACE TRANSFORM
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SET-RSPACE-TRANSFORM function}@c
+@functionsubindex{%set-rspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%space-children} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SPACE-CHILDREN function}@c
+@functionsubindex{%space-children}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%space-depth} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SPACE-DEPTH function}@c
+@functionsubindex{%space-depth}@c
+@deffnx {Function} {(setf %space-depth)} VALUE INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>(SETF %SPACE-DEPTH) function}@c
+@functionsubindex{(setf %space-depth)}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%space-kind} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SPACE-KIND function}@c
+@functionsubindex{%space-kind}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%space-neighbours} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SPACE-NEIGHBOURS function}@c
+@functionsubindex{%space-neighbours}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%space-nht-id} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SPACE-NHT-ID function}@c
+@functionsubindex{%space-nht-id}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%space-parent} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SPACE-PARENT function}@c
+@functionsubindex{%space-parent}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%space-ref} ID
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SPACE-REF function}@c
+@functionsubindex{%space-ref}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%space-root} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SPACE-ROOT function}@c
+@functionsubindex{%space-root}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%space-uid} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SPACE-UID function}@c
+@functionsubindex{%space-uid}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%update-mspace-transform} MSPACE TRANSFORM
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%UPDATE-MSPACE-TRANSFORM function}@c
+@functionsubindex{%update-mspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%walk-leaving-trail} MY-ID TO-ID
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>%WALK-LEAVING-TRAIL function}@c
+@functionsubindex{%walk-leaving-trail}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {collect-inverse-to} START-SPACE ANCESTOR-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>COLLECT-INVERSE-TO function}@c
+@functionsubindex{collect-inverse-to}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {collect-transform-to} START-SPACE ANCESTOR-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>COLLECT-TRANSFORM-TO function}@c
+@functionsubindex{collect-transform-to}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {compile-implicit-mat4} FROM-NAME TO-NAME ENV
+@anchor{go to the CEPL<dot>SPACES<colon><colon>COMPILE-IMPLICIT-MAT4 function}@c
+@functionsubindex{compile-implicit-mat4}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/gpu<dot>lisp file, , @t{gpu.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {connect-to-0} ID
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>CONNECT-TO-0 function}@c
+@functionsubindex{connect-to-0}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {connect-to-1} MY-ID NEW-NEIGHBOUR-ID
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>CONNECT-TO-1 function}@c
+@functionsubindex{connect-to-1}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {connect-to-many} MY-ID NEW-NEIGHBOUR-IDS
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>CONNECT-TO-MANY function}@c
+@functionsubindex{connect-to-many}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {convert-between-spaces} FORM FROM-NAME TO-NAME FORM-TYPE ENV
+@anchor{go to the CEPL<dot>SPACES<colon><colon>CONVERT-BETWEEN-SPACES function}@c
+@functionsubindex{convert-between-spaces}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/gpu<dot>lisp file, , @t{gpu.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {copy-pos} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>COPY-POS function}@c
+@functionsubindex{copy-pos}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {copy-route-table} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>COPY-ROUTE-TABLE function}@c
+@functionsubindex{copy-route-table}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {copy-spatial-relationship} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>COPY-SPATIAL-RELATIONSHIP function}@c
+@functionsubindex{copy-spatial-relationship}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {copy-svec3} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>COPY-SVEC3 function}@c
+@functionsubindex{copy-svec3}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {copy-svec4} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>COPY-SVEC4 function}@c
+@functionsubindex{copy-svec4}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {copy-vec-space} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>COPY-VEC-SPACE function}@c
+@functionsubindex{copy-vec-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {disconnect-space} SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>DISCONNECT-SPACE function}@c
+@functionsubindex{disconnect-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {extend-routes} ()
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>EXTEND-ROUTES function}@c
+@functionsubindex{extend-routes}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {fart-route} FROM-ID TO-ID
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>FART-ROUTE function}@c
+@functionsubindex{fart-route}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {find-common-ancestor} SPACE-A SPACE-B
+@anchor{go to the CEPL<dot>SPACES<colon><colon>FIND-COMMON-ANCESTOR function}@c
+@functionsubindex{find-common-ancestor}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {free-space} SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>FREE-SPACE function}@c
+@functionsubindex{free-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {get-current-id-count} ()
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>GET-CURRENT-ID-COUNT function}@c
+@functionsubindex{get-current-id-count}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {get-current-space} ENV
+@anchor{go to the CEPL<dot>SPACES<colon><colon>GET-CURRENT-SPACE function}@c
+@functionsubindex{get-current-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/spatial-vector<dot>lisp file, , @t{spatial-vector.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {get-current-subtable-count} ()
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>GET-CURRENT-SUBTABLE-COUNT function}@c
+@functionsubindex{get-current-subtable-count}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {get-route-cache} ()
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>GET-ROUTE-CACHE function}@c
+@functionsubindex{get-route-cache}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {get-routes} ()
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>GET-ROUTES function}@c
+@functionsubindex{get-routes}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {id-neighbours} ID
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>ID-NEIGHBOURS function}@c
+@functionsubindex{id-neighbours}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {inject-clip-or-ndc-reverse-transform} FORM FROM-NAME TO-NAME FORM-TYPE ENV
+@anchor{go to the CEPL<dot>SPACES<colon><colon>INJECT-CLIP-OR-NDC-REVERSE-TRANSFORM function}@c
+@functionsubindex{inject-clip-or-ndc-reverse-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/gpu<dot>lisp file, , @t{gpu.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {inject-regular-space-transform} FORM FROM-NAME TO-NAME FORM-TYPE ENV
+@anchor{go to the CEPL<dot>SPACES<colon><colon>INJECT-REGULAR-SPACE-TRANSFORM function}@c
+@functionsubindex{inject-regular-space-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/gpu<dot>lisp file, , @t{gpu.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {make-cache} LEN
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>MAKE-CACHE function}@c
+@functionsubindex{make-cache}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {make-pos} &key (SPACE SPACE)
+@anchor{go to the CEPL<dot>SPACES<colon><colon>MAKE-POS function}@c
+@functionsubindex{make-pos}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {make-relational-space} RELATIONSHIPS
+@anchor{go to the CEPL<dot>SPACES<colon><colon>MAKE-RELATIONAL-SPACE function}@c
+@functionsubindex{make-relational-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {make-route-subtable} ()
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>MAKE-ROUTE-SUBTABLE function}@c
+@functionsubindex{make-route-subtable}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {make-route-table} ()
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>MAKE-ROUTE-TABLE function}@c
+@functionsubindex{make-route-table}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {make-space-array} ()
+@anchor{go to the CEPL<dot>SPACES<colon><colon>MAKE-SPACE-ARRAY function}@c
+@functionsubindex{make-space-array}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {make-spatial-relationship} SOURCE-ID TARGET-ID TO-M4 FROM-M4
+@anchor{go to the CEPL<dot>SPACES<colon><colon>MAKE-SPATIAL-RELATIONSHIP function}@c
+@functionsubindex{make-spatial-relationship}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {on-route-p} FROM-ID TO-ID ID-THAT-MIGHT-BE-ON-ROUTE
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>ON-ROUTE-P function}@c
+@functionsubindex{on-route-p}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {parse-relationship} R
+@anchor{go to the CEPL<dot>SPACES<colon><colon>PARSE-RELATIONSHIP function}@c
+@functionsubindex{parse-relationship}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {parse-relationships} RELATIONSHIPS
+@anchor{go to the CEPL<dot>SPACES<colon><colon>PARSE-RELATIONSHIPS function}@c
+@functionsubindex{parse-relationships}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {pos-p} OBJECT
+@anchor{go to the CEPL<dot>SPACES<colon><colon>POS-P function}@c
+@functionsubindex{pos-p}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {pos-space} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>POS-SPACE function}@c
+@functionsubindex{pos-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {propagate-routes} TODO SEEN
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>PROPAGATE-ROUTES function}@c
+@functionsubindex{propagate-routes}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {re-space} NEW-SPACE POS
+@anchor{go to the CEPL<dot>SPACES<colon><colon>RE-SPACE function}@c
+@functionsubindex{re-space}@c
+makes a new point in the same location as the first but relative to the
+   provided new space
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos-funcs<dot>lisp file, , @t{pos-funcs.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {reduce-ancestors} FUNCTION OF-SPACE &optional UNTIL-SPACE INITIAL-VALUE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>REDUCE-ANCESTORS function}@c
+@functionsubindex{reduce-ancestors}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-walking<dot>lisp file, , @t{space-walking.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {reset-ids} ()
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>RESET-IDS function}@c
+@functionsubindex{reset-ids}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {restrict-route} VIA-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>RESTRICT-ROUTE function}@c
+@functionsubindex{restrict-route}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {route-restriction} ()
+@anchor{go to the CEPL<dot>SPACES<colon><colon>ROUTE-RESTRICTION function}@c
+@functionsubindex{route-restriction}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {route-table-p} OBJECT
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>ROUTE-TABLE-P function}@c
+@functionsubindex{route-table-p}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {route-table-sparse-part} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>ROUTE-TABLE-SPARSE-PART function}@c
+@functionsubindex{route-table-sparse-part}@c
+@deffnx {Function} {(setf route-table-sparse-part)} VALUE INSTANCE
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>(SETF ROUTE-TABLE-SPARSE-PART) function}@c
+@functionsubindex{(setf route-table-sparse-part)}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {rt-elem} ROUTE-TABLE X
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>RT-ELEM function}@c
+@functionsubindex{rt-elem}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {rt-elem-len} ROUTE-TABLE X
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>RT-ELEM-LEN function}@c
+@functionsubindex{rt-elem-len}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {rt-elem-step} ROUTE-TABLE X
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>RT-ELEM-STEP function}@c
+@functionsubindex{rt-elem-step}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {set-rt-elem} ROUTE-TABLE X STEP LEN
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>SET-RT-ELEM function}@c
+@functionsubindex{set-rt-elem}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {spatial-relationship-p} OBJECT
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SPATIAL-RELATIONSHIP-P function}@c
+@functionsubindex{spatial-relationship-p}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {sr-from} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SR-FROM function}@c
+@functionsubindex{sr-from}@c
+@deffnx {Function} {(setf sr-from)} VALUE INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>(SETF SR-FROM) function}@c
+@functionsubindex{(setf sr-from)}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {sr-source-id} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SR-SOURCE-ID function}@c
+@functionsubindex{sr-source-id}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {sr-target-id} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SR-TARGET-ID function}@c
+@functionsubindex{sr-target-id}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {sr-to} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SR-TO function}@c
+@functionsubindex{sr-to}@c
+@deffnx {Function} {(setf sr-to)} VALUE INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>(SETF SR-TO) function}@c
+@functionsubindex{(setf sr-to)}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {svec3-p} OBJECT
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SVEC3-P function}@c
+@functionsubindex{svec3-p}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {svec3-point} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SVEC3-POINT function}@c
+@functionsubindex{svec3-point}@c
+@deffnx {Function} {(setf svec3-point)} VALUE INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>(SETF SVEC3-POINT) function}@c
+@functionsubindex{(setf svec3-point)}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {svec3-space} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SVEC3-SPACE function}@c
+@functionsubindex{svec3-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {svec4-p} OBJECT
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SVEC4-P function}@c
+@functionsubindex{svec4-p}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {svec4-point} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SVEC4-POINT function}@c
+@functionsubindex{svec4-point}@c
+@deffnx {Function} {(setf svec4-point)} VALUE INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>(SETF SVEC4-POINT) function}@c
+@functionsubindex{(setf svec4-point)}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {svec4-space} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SVEC4-SPACE function}@c
+@functionsubindex{svec4-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {to-space} DESTINATION-SPACE POS
+@anchor{go to the CEPL<dot>SPACES<colon><colon>TO-SPACE function}@c
+@functionsubindex{to-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos-funcs<dot>lisp file, , @t{pos-funcs.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {un-restrict-routes} ()
+@anchor{go to the CEPL<dot>SPACES<colon><colon>UN-RESTRICT-ROUTES function}@c
+@functionsubindex{un-restrict-routes}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {update-all-route-tables} NEW-SUBTABLE-COUNT
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>UPDATE-ALL-ROUTE-TABLES function}@c
+@functionsubindex{update-all-route-tables}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {upgrade-from-model-space} MODEL-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>UPGRADE-FROM-MODEL-SPACE function}@c
+@functionsubindex{upgrade-from-model-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {vec-space-p} OBJECT
+@anchor{go to the CEPL<dot>SPACES<colon><colon>VEC-SPACE-P function}@c
+@functionsubindex{vec-space-p}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+" :AFTER-MENU-CONTENTS NIL) #14# #15# #16#) :BEFORE-MENU-CONTENTS NIL :AFTER-MENU-CONTENTS NIL) #S(NET.DIDIERVERNA.DECLT::CONTEXT :SYSTEMS (#<ASDF/SYSTEM:SYSTEM "cepl.spaces">) :PACKAGES (#<PACKAGE "CEPL.SPACES"> #<PACKAGE "CEPL.SPACES.ROUTES">) :EXTERNAL-DEFINITIONS #<HASH-TABLE :TEST EQUAL :COUNT 23 {10084BD563}> :INTERNAL-DEFINITIONS #<HASH-TABLE :TEST EQUAL :COUNT 142 {10084BD993}> :HYPERLINKSP NIL) "internal" "classes" (#S(NET.DIDIERVERNA.DECLT::CLASS-DEFINITION :SYMBOL CEPL.SPACES::SVEC3-G :FOREIGNP NIL :PARENTS (#S(NET.DIDIERVERNA.DECLT::CLASS-DEFINITION :SYMBOL VARI.TYPES:V-SHADOW-TYPE :FOREIGNP T :PARENTS NIL :CHILDREN NIL :METHODS NIL :SLOTS NIL)) :CHILDREN NIL :METHODS (#S(NET.DIDIERVERNA.DECLT::METHOD-DEFINITION :SYMBOL VARJO.INTERNALS::INFER-META-BY-TYPE :FOREIGNP T :METHOD NIL) #S(NET.DIDIERVERNA.DECLT::METHOD-DEFINITION :SYMBOL VARJO.INTERNALS::META-KINDS-TO-INFER :FOREIGNP T :METHOD NIL)) :SLOTS (#S(NET.DIDIERVERNA.DECLT::SLOT-DEFINITION :SYMBOL VARJO.INTERNALS::TYPE-NAME :FOREIGNP NIL :SLOT #<SB-MOP:STANDARD-DIRECT-SLOT-DEFINITION VARJO.INTERNALS::TYPE-NAME> :READERS NIL :WRITERS NIL) #S(NET.DIDIERVERNA.DECLT::SLOT-DEFINITION :SYMBOL VARJO.INTERNALS::SUPERCLASS :FOREIGNP NIL :SLOT #<SB-MOP:STANDARD-DIRECT-SLOT-DEFINITION VARJO.INTERNALS::SUPERCLASS> :READERS NIL :WRITERS NIL) #S(NET.DIDIERVERNA.DECLT::SLOT-DEFINITION :SYMBOL VARJO.INTERNALS::SHADOWED-TYPE :FOREIGNP NIL :SLOT #<SB-MOP:STANDARD-DIRECT-SLOT-DEFINITION VARJO.INTERNALS::SHADOWED-TYPE> :READERS NIL :WRITERS NIL) #S(NET.DIDIERVERNA.DECLT::SLOT-DEFINITION :SYMBOL VARJO.INTERNALS:GLSL-STRING :FOREIGNP NIL :SLOT #<SB-MOP:STANDARD-DIRECT-SLOT-DEFINITION VARJO.INTERNALS:GLSL-STRING> :READERS NIL :WRITERS NIL))) #S(NET.DIDIERVERNA.DECLT::CLASS-DEFINITION :SYMBOL CEPL.SPACES::SVEC4-G :FOREIGNP NIL :PARENTS (#S(NET.DIDIERVERNA.DECLT::CLASS-DEFINITION :SYMBOL VARI.TYPES:V-SHADOW-TYPE :FOREIGNP T :PARENTS NIL :CHILDREN NIL :METHODS NIL :SLOTS NIL)) :CHILDREN NIL :METHODS (#S(NET.DIDIERVERNA.DECLT::METHOD-DEFINITION :SYMBOL VARJO.INTERNALS::INFER-META-BY-TYPE :FOREIGNP T :METHOD NIL) #S(NET.DIDIERVERNA.DECLT::METHOD-DEFINITION :SYMBOL VARJO.INTERNALS::META-KINDS-TO-INFER :FOREIGNP T :METHOD NIL)) :SLOTS (#S(NET.DIDIERVERNA.DECLT::SLOT-DEFINITION :SYMBOL VARJO.INTERNALS::TYPE-NAME :FOREIGNP NIL :SLOT #<SB-MOP:STANDARD-DIRECT-SLOT-DEFINITION VARJO.INTERNALS::TYPE-NAME> :READERS NIL :WRITERS NIL) #S(NET.DIDIERVERNA.DECLT::SLOT-DEFINITION :SYMBOL VARJO.INTERNALS::SUPERCLASS :FOREIGNP NIL :SLOT #<SB-MOP:STANDARD-DIRECT-SLOT-DEFINITION VARJO.INTERNALS::SUPERCLASS> :READERS NIL :WRITERS NIL) #S(NET.DIDIERVERNA.DECLT::SLOT-DEFINITION :SYMBOL VARJO.INTERNALS::SHADOWED-TYPE :FOREIGNP NIL :SLOT #<SB-MOP:STANDARD-DIRECT-SLOT-DEFINITION VARJO.INTERNALS::SHADOWED-TYPE> :READERS NIL :WRITERS NIL) #S(NET.DIDIERVERNA.DECLT::SLOT-DEFINITION :SYMBOL VARJO.INTERNALS:GLSL-STRING :FOREIGNP NIL :SLOT #<SB-MOP:STANDARD-DIRECT-SLOT-DEFINITION VARJO.INTERNALS:GLSL-STRING> :READERS NIL :WRITERS NIL))) #S(NET.DIDIERVERNA.DECLT::CLASS-DEFINITION :SYMBOL CEPL.SPACES::VEC-SPACE-G :FOREIGNP NIL :PARENTS (#S(NET.DIDIERVERNA.DECLT::CLASS-DEFINITION :SYMBOL VARI.TYPES:V-EPHEMERAL-TYPE :FOREIGNP T :PARENTS NIL :CHILDREN NIL :METHODS NIL :SLOTS NIL)) :CHILDREN NIL :METHODS (#S(NET.DIDIERVERNA.DECLT::METHOD-DEFINITION :SYMBOL VARJO.INTERNALS::META-KINDS-TO-INFER :FOREIGNP T :METHOD NIL)) :SLOTS (#S(NET.DIDIERVERNA.DECLT::SLOT-DEFINITION :SYMBOL VARJO.INTERNALS::TYPE-NAME :FOREIGNP NIL :SLOT #<SB-MOP:STANDARD-DIRECT-SLOT-DEFINITION VARJO.INTERNALS::TYPE-NAME> :READERS NIL :WRITERS NIL) #S(NET.DIDIERVERNA.DECLT::SLOT-DEFINITION :SYMBOL VARJO.INTERNALS::SUPERCLASS :FOREIGNP NIL :SLOT #<SB-MOP:STANDARD-DIRECT-SLOT-DEFINITION VARJO.INTERNALS::SUPERCLASS> :READERS NIL :WRITERS NIL)))))
+14: (NET.DIDIERVERNA.DECLT::ADD-CATEGORIES-NODE #1=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Internal definitions" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME NIL :NEXT NIL :PREVIOUS #2=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Exported definitions" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME NIL :NEXT #1# :PREVIOUS NIL :UP #3=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Definitions" :SYNOPSIS "The symbols documentation" :SECTION-TYPE :NUMBERED :SECTION-NAME NIL :NEXT NIL :PREVIOUS #4=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Packages" :SYNOPSIS "The packages documentation" :SECTION-TYPE :NUMBERED :SECTION-NAME NIL :NEXT #3# :PREVIOUS #S(NET.DIDIERVERNA.DECLT::NODE :NAME "Files" :SYNOPSIS "The files documentation" :SECTION-TYPE :NUMBERED :SECTION-NAME NIL :NEXT #4# :PREVIOUS # :UP #5=# :CHILDREN # :BEFORE-MENU-CONTENTS "Files are sorted by type and then listed depth-first from the systems
+components trees." :AFTER-MENU-CONTENTS NIL) :UP #5# :CHILDREN (# #) :BEFORE-MENU-CONTENTS "Packages are listed by definition order." :AFTER-MENU-CONTENTS NIL) :UP #5# :CHILDREN (#2# #1#) :BEFORE-MENU-CONTENTS "Definitions are sorted by export status, category, package, and then by
+lexicographic order." :AFTER-MENU-CONTENTS NIL) :CHILDREN (#6=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Exported special variables" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Special variables" :NEXT #7=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Exported macros" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Macros" :NEXT #8=# :PREVIOUS #6# :UP #2# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@deffn {Macro} {in} SPACE &body BODY
+@anchor{go to the CEPL<dot>SPACES<colon><colon>IN macro}@c
+@macrosubindex{in}@c
+
+This macro is only valid inside gpu functions.@*
+
+It defines a scope which is said to be 'in the vec-space' given as the first
+argument. This means that any spatial-vectors created in this scope will be
+declared in this space.@*
+
+If the value that is returned from the scope of the 'in' is a spatial-vector
+then the vector is transformed from the space of the inner scope to the space of
+the outer scope.@*
+
+For example:@*
+
+    (in *clip-space*@*
+      (let ((z (in *world-space*@*
+                   (let ((x (sv! 0 1 2 3)))@*
+                     ...@*
+                     x))))@*
+        z))@*
+
+In the code above the spatial-vector x is defined in *world-space*. However
+as it is used in the tail position of the innermost let, it will leave the
+*world-space* scope and enter the *clip-space* scope. At that point the
+spatial-vector will be multiplied with the mat4 that describes the
+*world-space* → *clip-space* transform.@*
+
+All of this information is resolved statically at compile-time by CEPL. The 'in'
+forms are removed and the spatial-vectors are replaced with regular ones. CEPL
+will calculate the mat4 transforms between the used spaces on the CPU and upload
+them as uniforms.@*
+
+This means that the final glsl will only contain standard glsl vectors and
+matrices and will perform as well as any other handwritten glsl code.
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/gpu<dot>lisp file, , @t{gpu.lisp}} (file)
+@end table
+@end deffn
+@deffn {Macro} {with-space-routing-via} VIA-SPACE &body BODY
+@anchor{go to the CEPL<dot>SPACES<colon><colon>WITH-SPACE-ROUTING-VIA macro}@c
+@macrosubindex{with-space-routing-via}@c
+
+This macro ensures that all routes calculated between spaces go via the specifed
+vec-space.@*
+
+This behaves as if all the calls to #'get-transform were actually called to
+#'get-transform-via with the given vec-space used as the via-space.
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+" :AFTER-MENU-CONTENTS NIL) :PREVIOUS NIL :UP #2# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@defvr {Special Variable} *clip-space*
+@anchor{go to the CEPL<dot>SPACES<colon><colon>*CLIP-SPACE* special variable}@c
+@specialsubindex{*clip-space*}@c
+
+This is the vec-space that describes clip-space in CEPL.
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/predefined-spaces<dot>lisp file, , @t{predefined-spaces.lisp}} (file)
+@end table
+@end defvr
+@defvr {Special Variable} *ndc-space*
+@anchor{go to the CEPL<dot>SPACES<colon><colon>*NDC-SPACE* special variable}@c
+@specialsubindex{*ndc-space*}@c
+
+This is the vec-space that describes ndc-space in CEPL.
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/predefined-spaces<dot>lisp file, , @t{predefined-spaces.lisp}} (file)
+@end table
+@end defvr
+@defvr {Special Variable} *screen-space*
+@anchor{go to the CEPL<dot>SPACES<colon><colon>*SCREEN-SPACE* special variable}@c
+@specialsubindex{*screen-space*}@c
+
+This is the vec-space that describes screen-space in CEPL.@*
+
+It could also be thought of as FBO space when you are not rendering into the
+default framebuffer object.
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/predefined-spaces<dot>lisp file, , @t{predefined-spaces.lisp}} (file)
+@end table
+@end defvr
+@defvr {Special Variable} *world-space*
+@anchor{go to the CEPL<dot>SPACES<colon><colon>*WORLD-SPACE* special variable}@c
+@specialsubindex{*world-space*}@c
+
+This is the vec-space that describes world-space in CEPL.@*
+
+Whilst it is perfectly possible to use CEPL's vec-space feature to define your
+own world-space, we strongly suggest you do not as CEPL has some specific
+optimizations it can do you you use *world-space* instead of your own.
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/predefined-spaces<dot>lisp file, , @t{predefined-spaces.lisp}} (file)
+@end table
+@end defvr
+" :AFTER-MENU-CONTENTS NIL) #7# #8# #S(NET.DIDIERVERNA.DECLT::NODE :NAME "Exported structures" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Structures" :NEXT NIL :PREVIOUS #8# :UP #2# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@deftp {Structure} {svec4} ()
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SVEC4 structure}@c
+@structuresubindex{svec4}@c
+
+This is a 4 component spatial vector type. A spatial vector is a vector that
+also stores which vector-space it is in.
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@item Direct superclasses
+@ref{go to the CEPL<dot>SPACES<colon><colon>POS structure, , @t{pos}} (structure)
+@item Direct slots
+@defvr {Slot} point
+@slotsubindex{point}@c
+@table @strong
+@item Type
+@t{(simple-array single-float (4))}
+@item Initform
+@t{(rtg-math.base-vectors:v! 0 0 0 0)}
+@item Readers
+@ref{go to the CEPL<dot>SPACES<colon><colon>SVEC4-POINT function, , @t{svec4-point}} (function)
+@item Writers
+@ref{go to the CEPL<dot>SPACES<colon><colon>(SETF SVEC4-POINT) function, , @t{(setf svec4-point)}} (function)
+@end table
+@end defvr
+@end table
+@end deftp
+@deftp {Structure} {vec-space} ()
+@anchor{go to the CEPL<dot>SPACES<colon><colon>VEC-SPACE structure}@c
+@structuresubindex{vec-space}@c
+
+This type is an abstraction over the concept of a vector-space.@*
+
+In graphics programming we are very used to using matrices to describe
+transforms. The matrix describes the transform for any given point in
+vector-space to a point in another vector-space.@*
+
+Some spaces are very commonly mentioned when discuss rendering, spaces like
+world-space, camera-space, clip-space, etc. However when it comes to our
+programs we have to work with the transform (matrix) rather the space directly.
+
+In CEPL we have a feature to allow working with vector spaces as a first class
+object, the vec-space. We uses these vec-spaces in our GPU code and CEPL
+statically analyses our code to work out what matrices are needed and uploads
+them as uniforms.@*
+
+By doing this, our GPU ends up running code that only has the 'normal'@*
+types (matrices and vectors) which means we pay no performace cost for the
+features@*
+
+Working with vec-spaces directly means our code more closely reflects how we
+talk about the problems we are trying to solve. As we will see below it also
+makes it much harder to perform 'invalid' spatial calculations.@*
+
+
+-- Lexical Space --@*
+
+In many graphics related texts we talk about performing a calculation in a
+certain space.@*
+
+In CEPL we express this with the 'in' macro@*
+
+    (in *world-space*@*
+      (some-calculation)@*
+      (more-calculations))@*
+
+Everything that is happening in this scope is happening 'in *world-space*'@*
+
+the 'in' macro can be nested:@*
+
+    (in *clip-space*@*
+      (let ((z (in *world-space*@*
+                 (let ((x (sv! 0 1 2 3)))@*
+                   ...@*
+                   x))))@*
+        z))@*
+
+Here z is in *clip-space* and x is in *world-space*@*
+
+
+-- Spatial Vectors --@*
+
+In the above example we also introduce another type: spatial-vectors@*
+
+sv! behave exactly the same as v! in that it produces a vector, however
+instead of making a regular vector the code above will make a spatial-vector.
+
+Spatial vectors are vectors which store which space they were created in.@*
+
+The advantage of this is that CEPL can detect if they leave that space and enter
+a different space. When that happens CEPL will automatically transform the
+vector to the new space.@*
+
+We can see this in the example above. The value in 'x' is a spatial vector that
+was created in world space, however as the value moves up the stack to be
+stored in 'z' it leaves the scope of *world-space* and enters *clip-space*.
+At this point CEPL will multiply the vector with a
+'world-space-to-clip-space matrix'.@*
+
+This is awesome as it means that if you are working with spatial vectors in the
+same scope, you are guarenteed that they are in the same space.@*
+
+Another advantage is that in most case CEPL can calculate these transform
+matrices on the CPU and upload them as uniforms, which makes this code very
+fast.@*
+
+
+-- Defining Spaces --@*
+
+Currently vec-spaces can only be defined in cpu code. They must be passed to
+gpu functions as uniforms.@*
+
+All spaces are defined relative to another space. A vec-space is either a
+hierarchical-space, relational-space or a model-space.@*
+
+A hierarchical-space is a space which is a child of another space. When the
+parent space is transformed, the child space is also transformed. You can
+see this relationship as how your hand has a position and orientation but will
+be transformed by the parent, the lower-arm. The lower arm in turn is a child
+of the upper arm, and so on. Hierarchical spaces are WIP and not currently
+exposed in CEPL@*
+
+A relational-space x is a space whose relationship to another space can be
+defined with a matrix, but which is not affected by changes to that other space.
+
+A relational-space can have any number of spaces as neighbours, however@*
+in the case where there is only one neighbour space, the space is known as a
+model-space.@*
+
+Making a model space is very easy.@*
+
+    (make-space neighbour-space
+                transform-to-neighbour-matrix4
+                transform-from-neighbour-matrix4)@*
+
+the transform-from-neighbour-matrix4 transform is optional where the inverse can
+be calculated.@*
+
+To make a relational space you use #'make-space* and pass in a list where the
+sublists are the same as the arguments to make-space@*
+
+
+-- Spaces & Implicit-Uniforms@*
+
+If the vec-space is stored in a variable with global scope then CEPL's
+implicit-uniforms feature means you can use the space without explicitly adding
+the uniform argument yourself.@*
+
+See the docstring for defun-g for more details on implicit-uniforms.@*
+
+
+-- Immutable Relationships --@*
+
+Whilst the transforms between neighbouring spaces are mutable.@*
+It is not possible to add new neighbours to an existing vec-space x, except by
+making a new vec-space as specifying x as its neighbour.@*
+
+
+-- Predefined Spaces --@*
+
+CEPL defines a few commonly used spaces for you. Other than *world-space* they
+are all spaces used in the GLSL pipeline:@*
+
+ *world-space*@*
+ *clip-space*@*
+ *ndc-space*@*
+ *screen-space*@*
+
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@item Direct superclasses
+@t{structure-object} (structure)
+@item Direct methods
+@itemize @bullet
+@item
+@t{infer-implicit-uniform-type} (method)
+@item
+@t{free} (method)
+@item
+@t{print-object} (method)
+@end itemize
+@item Direct slots
+@defvr {Slot} uid
+@slotsubindex{uid}@c
+@table @strong
+@item Type
+@t{fixnum}
+@item Initform
+@t{(incf cepl.spaces::*last-space-id*)}
+@item Readers
+@ref{go to the CEPL<dot>SPACES<colon><colon>%SPACE-UID function, , @t{%space-uid}} (function)
+@item Writers
+@t{(setf %space-uid)} (function)
+@end table
+@end defvr
+@defvr {Slot} nht-id
+@slotsubindex{nht-id}@c
+@table @strong
+@item Type
+@t{fixnum}
+@item Initform
+@t{(error \"id must be provided\")}
+@item Readers
+@ref{go to the CEPL<dot>SPACES<colon><colon>%SPACE-NHT-ID function, , @t{%space-nht-id}} (function)
+@item Writers
+@t{(setf %space-nht-id)} (function)
+@end table
+@end defvr
+@defvr {Slot} kind
+@slotsubindex{kind}@c
+@table @strong
+@item Type
+@t{(mod 3)}
+@item Initform
+@t{(error \"space kind must be provided\")}
+@item Readers
+@ref{go to the CEPL<dot>SPACES<colon><colon>%SPACE-KIND function, , @t{%space-kind}} (function)
+@item Writers
+@t{(setf %space-kind)} (function)
+@end table
+@end defvr
+@defvr {Slot} parent
+@slotsubindex{parent}@c
+@table @strong
+@item Type
+@t{(or null cepl.spaces:vec-space)}
+@item Readers
+@ref{go to the CEPL<dot>SPACES<colon><colon>%SPACE-PARENT function, , @t{%space-parent}} (function)
+@item Writers
+@t{(setf %space-parent)} (function)
+@end table
+@end defvr
+@defvr {Slot} children
+@slotsubindex{children}@c
+@table @strong
+@item Type
+@t{(or null (array cepl.spaces:vec-space (*)))}
+@item Readers
+@ref{go to the CEPL<dot>SPACES<colon><colon>%SPACE-CHILDREN function, , @t{%space-children}} (function)
+@item Writers
+@t{(setf %space-children)} (function)
+@end table
+@end defvr
+@defvr {Slot} root
+@slotsubindex{root}@c
+@table @strong
+@item Type
+@t{(or null cepl.spaces:vec-space)}
+@item Readers
+@ref{go to the CEPL<dot>SPACES<colon><colon>%SPACE-ROOT function, , @t{%space-root}} (function)
+@item Writers
+@t{(setf %space-root)} (function)
+@end table
+@end defvr
+@defvr {Slot} neighbours
+@slotsubindex{neighbours}@c
+@table @strong
+@item Type
+@t{(array cepl.spaces::spatial-relationship (*))}
+@item Initform
+@t{(make-array 0 :element-type (quote cepl.spaces::spatial-relationship) :initial-element (cepl.spaces::%make-sr))}
+@item Readers
+@ref{go to the CEPL<dot>SPACES<colon><colon>%SPACE-NEIGHBOURS function, , @t{%space-neighbours}} (function)
+@item Writers
+@t{(setf %space-neighbours)} (function)
+@end table
+@end defvr
+@defvr {Slot} depth
+@slotsubindex{depth}@c
+@table @strong
+@item Type
+@t{fixnum}
+@item Initform
+@t{(error \"space depth must be provided\")}
+@item Readers
+@ref{go to the CEPL<dot>SPACES<colon><colon>%SPACE-DEPTH function, , @t{%space-depth}} (function)
+@item Writers
+@ref{go to the CEPL<dot>SPACES<colon><colon>(SETF %SPACE-DEPTH) function, , @t{(setf %space-depth)}} (function)
+@end table
+@end defvr
+@end table
+@end deftp
+" :AFTER-MENU-CONTENTS NIL)) :BEFORE-MENU-CONTENTS NIL :AFTER-MENU-CONTENTS NIL) :UP #3# :CHILDREN (#9=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Internal constants" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Constants" :NEXT #10=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Internal special variables" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Special variables" :NEXT #11=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Internal macros" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Macros" :NEXT #12=# :PREVIOUS #10# :UP #1# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@deffn {Macro} {kind-case} (SPACE &key ERROR) &key M R H
+@anchor{go to the CEPL<dot>SPACES<colon><colon>KIND-CASE macro}@c
+@macrosubindex{kind-case}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Macro} {kind-case*} (FROM TO &key ERROR) &key M->M M->R M->H R->M R->R R->H H->M H->R H->H
+@anchor{go to the CEPL<dot>SPACES<colon><colon>KIND-CASE* macro}@c
+@macrosubindex{kind-case*}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Macro} {with-sparse-elem} (&key NEXT LEN CREATE-IF-MISSING) (ROUTE-TABLE INDEX) &body BODY
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>WITH-SPARSE-ELEM macro}@c
+@macrosubindex{with-sparse-elem}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+" :AFTER-MENU-CONTENTS NIL) :PREVIOUS #9# :UP #1# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@defvr {Special Variable} *default-pos-space*
+@anchor{go to the CEPL<dot>SPACES<colon><colon>*DEFAULT-POS-SPACE* special variable}@c
+@specialsubindex{*default-pos-space*}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end defvr
+@defvr {Special Variable} *identity-eye-space*
+@anchor{go to the CEPL<dot>SPACES<colon><colon>*IDENTITY-EYE-SPACE* special variable}@c
+@specialsubindex{*identity-eye-space*}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/predefined-spaces<dot>lisp file, , @t{predefined-spaces.lisp}} (file)
+@end table
+@end defvr
+@defvr {Special Variable} *last-space-id*
+@anchor{go to the CEPL<dot>SPACES<colon><colon>*LAST-SPACE-ID* special variable}@c
+@specialsubindex{*last-space-id*}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end defvr
+@defvr {Special Variable} *spaces-array-growth-rate*
+@anchor{go to the CEPL<dot>SPACES<colon><colon>*SPACES-ARRAY-GROWTH-RATE* special variable}@c
+@specialsubindex{*spaces-array-growth-rate*}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end defvr
+@defvr {Special Variable} spaces
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SPACES special variable}@c
+@specialsubindex{spaces}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end defvr
+" :AFTER-MENU-CONTENTS NIL) :PREVIOUS NIL :UP #1# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@defvr {Constant} +default-subtable-count+
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>+DEFAULT-SUBTABLE-COUNT+ constant}@c
+@constantsubindex{+default-subtable-count+}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/constants<dot>lisp file, , @t{constants.lisp}} (file)
+@end table
+@end defvr
+@defvr {Constant} +hierachical-space+
+@anchor{go to the CEPL<dot>SPACES<colon><colon>+HIERACHICAL-SPACE+ constant}@c
+@constantsubindex{+hierachical-space+}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end defvr
+@defvr {Constant} +model-space+
+@anchor{go to the CEPL<dot>SPACES<colon><colon>+MODEL-SPACE+ constant}@c
+@constantsubindex{+model-space+}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end defvr
+@defvr {Constant} +relational-space+
+@anchor{go to the CEPL<dot>SPACES<colon><colon>+RELATIONAL-SPACE+ constant}@c
+@constantsubindex{+relational-space+}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end defvr
+@defvr {Constant} +subtable-length+
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>+SUBTABLE-LENGTH+ constant}@c
+@constantsubindex{+subtable-length+}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/constants<dot>lisp file, , @t{constants.lisp}} (file)
+@end table
+@end defvr
+" :AFTER-MENU-CONTENTS NIL) #10# #11# #12# #13=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Internal functions" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Functions" :NEXT #14=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Internal generic functions" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Generic functions" :NEXT #15=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Internal conditions" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Conditions" :NEXT #16=# :PREVIOUS #14# :UP #1# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@deftp {Condition} {not-ancestor} ()
+@anchor{go to the CEPL<dot>SPACES<colon><colon>NOT-ANCESTOR condition}@c
+@conditionsubindex{not-ancestor}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-errors<dot>lisp file, , @t{space-errors.lisp}} (file)
+@item Direct superclasses
+@t{error} (condition)
+@item Direct slots
+@defvr {Slot} start-space
+@slotsubindex{start-space}@c
+@table @strong
+@item Initargs
+@t{:start-space}
+@end table
+@end defvr
+@defvr {Slot} ancestor-space
+@slotsubindex{ancestor-space}@c
+@table @strong
+@item Initargs
+@t{:ancestor-space}
+@end table
+@end defvr
+@end table
+@end deftp
+@deftp {Condition} {position->no-space} ()
+@anchor{go to the CEPL<dot>SPACES<colon><colon>POSITION->NO-SPACE condition}@c
+@conditionsubindex{position->no-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-errors<dot>lisp file, , @t{space-errors.lisp}} (file)
+@item Direct superclasses
+@t{error} (condition)
+@item Direct slots
+@defvr {Slot} start-space
+@slotsubindex{start-space}@c
+@table @strong
+@item Initargs
+@t{:start-space}
+@end table
+@end defvr
+@end table
+@end deftp
+" :AFTER-MENU-CONTENTS NIL) :PREVIOUS #13# :UP #1# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@deffn {Generic Function} {in-space} METADATA
+@anchor{go to the CEPL<dot>SPACES<colon><colon>IN-SPACE generic function}@c
+@genericsubindex{in-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/spatial-vector<dot>lisp file, , @t{spatial-vector.lisp}} (file)
+@item Methods
+@deffn {Method} {in-space} (METADATA @t{spatial-meta})
+@anchor{go to the CEPL<dot>SPACES<colon><colon>IN-SPACE CEPL<dot>SPACES<colon><colon>SPATIAL-META method}@c
+@methodsubindex{in-space}@c
+@end deffn
+@deffn {Method} {in-space} (METADATA-COLLECTION @t{list})
+@anchor{go to the CEPL<dot>SPACES<colon><colon>IN-SPACE COMMON-LISP<colon><colon>LIST method}@c
+@methodsubindex{in-space}@c
+@end deffn
+@end table
+@end deffn
+" :AFTER-MENU-CONTENTS NIL) :PREVIOUS #12# :UP #1# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@deffn {Function} {%%-svec3!} &key (SPACE SPACE) (POINT POINT)
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%%-SVEC3! function}@c
+@functionsubindex{%%-svec3!}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%%-svec4!} &key (SPACE SPACE) (POINT POINT)
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%%-SVEC4! function}@c
+@functionsubindex{%%-svec4!}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%add-space-to-array} SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%ADD-SPACE-TO-ARRAY function}@c
+@functionsubindex{%add-space-to-array}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%check-not-illegal-space} SPACE-ID FROM?
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%CHECK-NOT-ILLEGAL-SPACE function}@c
+@functionsubindex{%check-not-illegal-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%get-hierarchical-transform} FROM-SPACE TO-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%GET-HIERARCHICAL-TRANSFORM function}@c
+@functionsubindex{%get-hierarchical-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%has-route} FROM-ID TO-ID
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>%HAS-ROUTE function}@c
+@functionsubindex{%has-route}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%hspace-inverse-transform} SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%HSPACE-INVERSE-TRANSFORM function}@c
+@functionsubindex{%hspace-inverse-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%hspace-to-hspace-transform} FROM-SPACE TO-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%HSPACE-TO-HSPACE-TRANSFORM function}@c
+@functionsubindex{%hspace-to-hspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%hspace-to-mspace-transform} FROM-SPACE TO-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%HSPACE-TO-MSPACE-TRANSFORM function}@c
+@functionsubindex{%hspace-to-mspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%hspace-to-rspace-transform} FROM-SPACE TO-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%HSPACE-TO-RSPACE-TRANSFORM function}@c
+@functionsubindex{%hspace-to-rspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%hspace-transform} HSPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%HSPACE-TRANSFORM function}@c
+@functionsubindex{%hspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%make-heirarchical-space} PARENT &optional TRANSFORM
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%MAKE-HEIRARCHICAL-SPACE function}@c
+@functionsubindex{%make-heirarchical-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%make-model-space} TARGET-SPACE TRANSFORM-TO &optional TRANSFORM-FROM
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%MAKE-MODEL-SPACE function}@c
+@functionsubindex{%make-model-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%make-relational-space} RELATIONSHIPS
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%MAKE-RELATIONAL-SPACE function}@c
+@functionsubindex{%make-relational-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%make-route-table} &key (SPARSE-PART SPARSE-PART)
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>%MAKE-ROUTE-TABLE function}@c
+@functionsubindex{%make-route-table}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%make-routes-array} ()
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>%MAKE-ROUTES-ARRAY function}@c
+@functionsubindex{%make-routes-array}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%make-space} &key (UID UID) (NHT-ID NHT-ID) (KIND KIND) (PARENT PARENT) (CHILDREN CHILDREN) (ROOT ROOT) (NEIGHBOURS NEIGHBOURS) (DEPTH DEPTH)
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%MAKE-SPACE function}@c
+@functionsubindex{%make-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%make-sr} &key (SOURCE-ID SOURCE-ID) (TARGET-ID TARGET-ID) (TO TO) (FROM FROM)
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%MAKE-SR function}@c
+@functionsubindex{%make-sr}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%mspace-only-sr} MSPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%MSPACE-ONLY-SR function}@c
+@functionsubindex{%mspace-only-sr}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%mspace-to-hspace-transform} FROM-SPACE TO-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%MSPACE-TO-HSPACE-TRANSFORM function}@c
+@functionsubindex{%mspace-to-hspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%mspace-to-mspace-transform} MSPACE-A MSPACE-B
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%MSPACE-TO-MSPACE-TRANSFORM function}@c
+@functionsubindex{%mspace-to-mspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%mspace-to-rspace-transform} MSPACE RSPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%MSPACE-TO-RSPACE-TRANSFORM function}@c
+@functionsubindex{%mspace-to-rspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%mspace-transform} MSPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%MSPACE-TRANSFORM function}@c
+@functionsubindex{%mspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%next-step} FROM-ID TO-ID
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>%NEXT-STEP function}@c
+@functionsubindex{%next-step}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%reduce-ancestors} FUNCTION OF-SPACE INITIAL-VALUE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%REDUCE-ANCESTORS function}@c
+@functionsubindex{%reduce-ancestors}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-walking<dot>lisp file, , @t{space-walking.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%reduce-ancestors-until-space} FUNCTION OF-SPACE UNTIL-SPACE INITIAL-VALUE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%REDUCE-ANCESTORS-UNTIL-SPACE function}@c
+@functionsubindex{%reduce-ancestors-until-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-walking<dot>lisp file, , @t{space-walking.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%route-len} FROM-ID TO-ID
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>%ROUTE-LEN function}@c
+@functionsubindex{%route-len}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%rspace-to-hspace-transform} FROM-SPACE TO-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%RSPACE-TO-HSPACE-TRANSFORM function}@c
+@functionsubindex{%rspace-to-hspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%rspace-to-mspace-transform} RSPACE MSPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%RSPACE-TO-MSPACE-TRANSFORM function}@c
+@functionsubindex{%rspace-to-mspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%rspace-to-neighbour-relationship} FROM-SPACE TO-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%RSPACE-TO-NEIGHBOUR-RELATIONSHIP function}@c
+@functionsubindex{%rspace-to-neighbour-relationship}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%rspace-to-neighbour-transform} FROM-ID TO-ID
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%RSPACE-TO-NEIGHBOUR-TRANSFORM function}@c
+@functionsubindex{%rspace-to-neighbour-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%rspace-to-rspace-ids-transform} SPACE-A-ID SPACE-B-ID &optional INITIAL-M4
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%RSPACE-TO-RSPACE-IDS-TRANSFORM function}@c
+@functionsubindex{%rspace-to-rspace-ids-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%rspace-to-rspace-transform} SPACE-A SPACE-B &optional INITIAL-M4
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%RSPACE-TO-RSPACE-TRANSFORM function}@c
+@functionsubindex{%rspace-to-rspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%set-hspace-transform} HSPACE TRANSFORM &optional TO-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SET-HSPACE-TRANSFORM function}@c
+@functionsubindex{%set-hspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%set-mspace-transform} MSPACE TRANSFORM &optional TO-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SET-MSPACE-TRANSFORM function}@c
+@functionsubindex{%set-mspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%set-route} FROM-ID TO-ID STEP LENGTH
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>%SET-ROUTE function}@c
+@functionsubindex{%set-route}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%set-rspace-to-neighbour-transform} FROM-SPACE TO-SPACE TRANSFORM
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SET-RSPACE-TO-NEIGHBOUR-TRANSFORM function}@c
+@functionsubindex{%set-rspace-to-neighbour-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%set-rspace-transform} FROM-SPACE TO-SPACE TRANSFORM
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SET-RSPACE-TRANSFORM function}@c
+@functionsubindex{%set-rspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%space-children} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SPACE-CHILDREN function}@c
+@functionsubindex{%space-children}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%space-depth} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SPACE-DEPTH function}@c
+@functionsubindex{%space-depth}@c
+@deffnx {Function} {(setf %space-depth)} VALUE INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>(SETF %SPACE-DEPTH) function}@c
+@functionsubindex{(setf %space-depth)}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%space-kind} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SPACE-KIND function}@c
+@functionsubindex{%space-kind}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%space-neighbours} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SPACE-NEIGHBOURS function}@c
+@functionsubindex{%space-neighbours}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%space-nht-id} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SPACE-NHT-ID function}@c
+@functionsubindex{%space-nht-id}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%space-parent} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SPACE-PARENT function}@c
+@functionsubindex{%space-parent}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%space-ref} ID
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SPACE-REF function}@c
+@functionsubindex{%space-ref}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%space-root} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SPACE-ROOT function}@c
+@functionsubindex{%space-root}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%space-uid} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%SPACE-UID function}@c
+@functionsubindex{%space-uid}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%update-mspace-transform} MSPACE TRANSFORM
+@anchor{go to the CEPL<dot>SPACES<colon><colon>%UPDATE-MSPACE-TRANSFORM function}@c
+@functionsubindex{%update-mspace-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {%walk-leaving-trail} MY-ID TO-ID
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>%WALK-LEAVING-TRAIL function}@c
+@functionsubindex{%walk-leaving-trail}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {collect-inverse-to} START-SPACE ANCESTOR-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>COLLECT-INVERSE-TO function}@c
+@functionsubindex{collect-inverse-to}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {collect-transform-to} START-SPACE ANCESTOR-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>COLLECT-TRANSFORM-TO function}@c
+@functionsubindex{collect-transform-to}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {compile-implicit-mat4} FROM-NAME TO-NAME ENV
+@anchor{go to the CEPL<dot>SPACES<colon><colon>COMPILE-IMPLICIT-MAT4 function}@c
+@functionsubindex{compile-implicit-mat4}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/gpu<dot>lisp file, , @t{gpu.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {connect-to-0} ID
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>CONNECT-TO-0 function}@c
+@functionsubindex{connect-to-0}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {connect-to-1} MY-ID NEW-NEIGHBOUR-ID
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>CONNECT-TO-1 function}@c
+@functionsubindex{connect-to-1}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {connect-to-many} MY-ID NEW-NEIGHBOUR-IDS
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>CONNECT-TO-MANY function}@c
+@functionsubindex{connect-to-many}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {convert-between-spaces} FORM FROM-NAME TO-NAME FORM-TYPE ENV
+@anchor{go to the CEPL<dot>SPACES<colon><colon>CONVERT-BETWEEN-SPACES function}@c
+@functionsubindex{convert-between-spaces}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/gpu<dot>lisp file, , @t{gpu.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {copy-pos} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>COPY-POS function}@c
+@functionsubindex{copy-pos}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {copy-route-table} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>COPY-ROUTE-TABLE function}@c
+@functionsubindex{copy-route-table}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {copy-spatial-relationship} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>COPY-SPATIAL-RELATIONSHIP function}@c
+@functionsubindex{copy-spatial-relationship}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {copy-svec3} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>COPY-SVEC3 function}@c
+@functionsubindex{copy-svec3}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {copy-svec4} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>COPY-SVEC4 function}@c
+@functionsubindex{copy-svec4}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {copy-vec-space} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>COPY-VEC-SPACE function}@c
+@functionsubindex{copy-vec-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {disconnect-space} SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>DISCONNECT-SPACE function}@c
+@functionsubindex{disconnect-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {extend-routes} ()
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>EXTEND-ROUTES function}@c
+@functionsubindex{extend-routes}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {fart-route} FROM-ID TO-ID
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>FART-ROUTE function}@c
+@functionsubindex{fart-route}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {find-common-ancestor} SPACE-A SPACE-B
+@anchor{go to the CEPL<dot>SPACES<colon><colon>FIND-COMMON-ANCESTOR function}@c
+@functionsubindex{find-common-ancestor}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {free-space} SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>FREE-SPACE function}@c
+@functionsubindex{free-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {get-current-id-count} ()
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>GET-CURRENT-ID-COUNT function}@c
+@functionsubindex{get-current-id-count}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {get-current-space} ENV
+@anchor{go to the CEPL<dot>SPACES<colon><colon>GET-CURRENT-SPACE function}@c
+@functionsubindex{get-current-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/spatial-vector<dot>lisp file, , @t{spatial-vector.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {get-current-subtable-count} ()
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>GET-CURRENT-SUBTABLE-COUNT function}@c
+@functionsubindex{get-current-subtable-count}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {get-route-cache} ()
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>GET-ROUTE-CACHE function}@c
+@functionsubindex{get-route-cache}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {get-routes} ()
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>GET-ROUTES function}@c
+@functionsubindex{get-routes}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {id-neighbours} ID
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>ID-NEIGHBOURS function}@c
+@functionsubindex{id-neighbours}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {inject-clip-or-ndc-reverse-transform} FORM FROM-NAME TO-NAME FORM-TYPE ENV
+@anchor{go to the CEPL<dot>SPACES<colon><colon>INJECT-CLIP-OR-NDC-REVERSE-TRANSFORM function}@c
+@functionsubindex{inject-clip-or-ndc-reverse-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/gpu<dot>lisp file, , @t{gpu.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {inject-regular-space-transform} FORM FROM-NAME TO-NAME FORM-TYPE ENV
+@anchor{go to the CEPL<dot>SPACES<colon><colon>INJECT-REGULAR-SPACE-TRANSFORM function}@c
+@functionsubindex{inject-regular-space-transform}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/gpu<dot>lisp file, , @t{gpu.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {make-cache} LEN
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>MAKE-CACHE function}@c
+@functionsubindex{make-cache}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {make-pos} &key (SPACE SPACE)
+@anchor{go to the CEPL<dot>SPACES<colon><colon>MAKE-POS function}@c
+@functionsubindex{make-pos}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {make-relational-space} RELATIONSHIPS
+@anchor{go to the CEPL<dot>SPACES<colon><colon>MAKE-RELATIONAL-SPACE function}@c
+@functionsubindex{make-relational-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {make-route-subtable} ()
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>MAKE-ROUTE-SUBTABLE function}@c
+@functionsubindex{make-route-subtable}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {make-route-table} ()
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>MAKE-ROUTE-TABLE function}@c
+@functionsubindex{make-route-table}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {make-space-array} ()
+@anchor{go to the CEPL<dot>SPACES<colon><colon>MAKE-SPACE-ARRAY function}@c
+@functionsubindex{make-space-array}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {make-spatial-relationship} SOURCE-ID TARGET-ID TO-M4 FROM-M4
+@anchor{go to the CEPL<dot>SPACES<colon><colon>MAKE-SPATIAL-RELATIONSHIP function}@c
+@functionsubindex{make-spatial-relationship}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {on-route-p} FROM-ID TO-ID ID-THAT-MIGHT-BE-ON-ROUTE
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>ON-ROUTE-P function}@c
+@functionsubindex{on-route-p}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {parse-relationship} R
+@anchor{go to the CEPL<dot>SPACES<colon><colon>PARSE-RELATIONSHIP function}@c
+@functionsubindex{parse-relationship}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {parse-relationships} RELATIONSHIPS
+@anchor{go to the CEPL<dot>SPACES<colon><colon>PARSE-RELATIONSHIPS function}@c
+@functionsubindex{parse-relationships}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {pos-p} OBJECT
+@anchor{go to the CEPL<dot>SPACES<colon><colon>POS-P function}@c
+@functionsubindex{pos-p}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {pos-space} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>POS-SPACE function}@c
+@functionsubindex{pos-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {propagate-routes} TODO SEEN
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>PROPAGATE-ROUTES function}@c
+@functionsubindex{propagate-routes}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {re-space} NEW-SPACE POS
+@anchor{go to the CEPL<dot>SPACES<colon><colon>RE-SPACE function}@c
+@functionsubindex{re-space}@c
+makes a new point in the same location as the first but relative to the
+   provided new space
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos-funcs<dot>lisp file, , @t{pos-funcs.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {reduce-ancestors} FUNCTION OF-SPACE &optional UNTIL-SPACE INITIAL-VALUE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>REDUCE-ANCESTORS function}@c
+@functionsubindex{reduce-ancestors}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-walking<dot>lisp file, , @t{space-walking.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {reset-ids} ()
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>RESET-IDS function}@c
+@functionsubindex{reset-ids}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {restrict-route} VIA-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>RESTRICT-ROUTE function}@c
+@functionsubindex{restrict-route}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {route-restriction} ()
+@anchor{go to the CEPL<dot>SPACES<colon><colon>ROUTE-RESTRICTION function}@c
+@functionsubindex{route-restriction}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {route-table-p} OBJECT
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>ROUTE-TABLE-P function}@c
+@functionsubindex{route-table-p}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {route-table-sparse-part} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>ROUTE-TABLE-SPARSE-PART function}@c
+@functionsubindex{route-table-sparse-part}@c
+@deffnx {Function} {(setf route-table-sparse-part)} VALUE INSTANCE
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>(SETF ROUTE-TABLE-SPARSE-PART) function}@c
+@functionsubindex{(setf route-table-sparse-part)}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {rt-elem} ROUTE-TABLE X
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>RT-ELEM function}@c
+@functionsubindex{rt-elem}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {rt-elem-len} ROUTE-TABLE X
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>RT-ELEM-LEN function}@c
+@functionsubindex{rt-elem-len}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {rt-elem-step} ROUTE-TABLE X
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>RT-ELEM-STEP function}@c
+@functionsubindex{rt-elem-step}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {set-rt-elem} ROUTE-TABLE X STEP LEN
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>SET-RT-ELEM function}@c
+@functionsubindex{set-rt-elem}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {spatial-relationship-p} OBJECT
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SPATIAL-RELATIONSHIP-P function}@c
+@functionsubindex{spatial-relationship-p}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {sr-from} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SR-FROM function}@c
+@functionsubindex{sr-from}@c
+@deffnx {Function} {(setf sr-from)} VALUE INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>(SETF SR-FROM) function}@c
+@functionsubindex{(setf sr-from)}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {sr-source-id} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SR-SOURCE-ID function}@c
+@functionsubindex{sr-source-id}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {sr-target-id} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SR-TARGET-ID function}@c
+@functionsubindex{sr-target-id}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {sr-to} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SR-TO function}@c
+@functionsubindex{sr-to}@c
+@deffnx {Function} {(setf sr-to)} VALUE INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>(SETF SR-TO) function}@c
+@functionsubindex{(setf sr-to)}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {svec3-p} OBJECT
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SVEC3-P function}@c
+@functionsubindex{svec3-p}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {svec3-point} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SVEC3-POINT function}@c
+@functionsubindex{svec3-point}@c
+@deffnx {Function} {(setf svec3-point)} VALUE INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>(SETF SVEC3-POINT) function}@c
+@functionsubindex{(setf svec3-point)}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {svec3-space} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SVEC3-SPACE function}@c
+@functionsubindex{svec3-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {svec4-p} OBJECT
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SVEC4-P function}@c
+@functionsubindex{svec4-p}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {svec4-point} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SVEC4-POINT function}@c
+@functionsubindex{svec4-point}@c
+@deffnx {Function} {(setf svec4-point)} VALUE INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>(SETF SVEC4-POINT) function}@c
+@functionsubindex{(setf svec4-point)}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {svec4-space} INSTANCE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>SVEC4-SPACE function}@c
+@functionsubindex{svec4-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos<dot>lisp file, , @t{pos.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {to-space} DESTINATION-SPACE POS
+@anchor{go to the CEPL<dot>SPACES<colon><colon>TO-SPACE function}@c
+@functionsubindex{to-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/pos-funcs<dot>lisp file, , @t{pos-funcs.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {un-restrict-routes} ()
+@anchor{go to the CEPL<dot>SPACES<colon><colon>UN-RESTRICT-ROUTES function}@c
+@functionsubindex{un-restrict-routes}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space-transforms<dot>lisp file, , @t{space-transforms.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {update-all-route-tables} NEW-SUBTABLE-COUNT
+@anchor{go to the CEPL<dot>SPACES<dot>ROUTES<colon><colon>UPDATE-ALL-ROUTE-TABLES function}@c
+@functionsubindex{update-all-route-tables}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES<dot>ROUTES package, , @t{cepl.spaces.routes}}
+@item Source
+@ref{go to the cepl<dot>spaces/nht-routes<dot>lisp file, , @t{nht-routes.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {upgrade-from-model-space} MODEL-SPACE
+@anchor{go to the CEPL<dot>SPACES<colon><colon>UPGRADE-FROM-MODEL-SPACE function}@c
+@functionsubindex{upgrade-from-model-space}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+@deffn {Function} {vec-space-p} OBJECT
+@anchor{go to the CEPL<dot>SPACES<colon><colon>VEC-SPACE-P function}@c
+@functionsubindex{vec-space-p}@c
+@table @strong
+@item Package
+@ref{go to the CEPL<dot>SPACES package, , @t{cepl.spaces}}
+@item Source
+@ref{go to the cepl<dot>spaces/space<dot>lisp file, , @t{space.lisp}} (file)
+@end table
+@end deffn
+" :AFTER-MENU-CONTENTS NIL) #14# #15# #16#) :BEFORE-MENU-CONTENTS NIL :AFTER-MENU-CONTENTS NIL) #S(NET.DIDIERVERNA.DECLT::CONTEXT :SYSTEMS (#<ASDF/SYSTEM:SYSTEM "cepl.spaces">) :PACKAGES (#<PACKAGE "CEPL.SPACES"> #<PACKAGE "CEPL.SPACES.ROUTES">) :EXTERNAL-DEFINITIONS #<HASH-TABLE :TEST EQUAL :COUNT 23 {10084BD563}> :INTERNAL-DEFINITIONS #<HASH-TABLE :TEST EQUAL :COUNT 142 {10084BD993}> :HYPERLINKSP NIL) "internal" #<HASH-TABLE :TEST EQUAL :COUNT 142 {10084BD993}>)
+15: ((FLET "THUNK" :IN NET.DIDIERVERNA.DECLT:DECLT))
+16: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN NET.DIDIERVERNA.DECLT:DECLT) {7FFFF6E0EC0B}>)
+17: (NET.DIDIERVERNA.DECLT:DECLT "cepl.spaces" :LIBRARY-NAME NIL :TAGLINE NIL :VERSION NIL :CONTACT NIL :COPYRIGHT-YEARS NIL :LICENSE NIL :INTRODUCTION "" :CONCLUSION NIL :TEXI-NAME NIL :TEXI-DIRECTORY "/home/didier/quickref/texinfo/" :INFO-NAME NIL :HYPERLINKS NIL :DECLT-NOTICE :LONG)
+18: (SB-INT:SIMPLE-EVAL-IN-LEXENV (NET.DIDIERVERNA.DECLT:DECLT *SYSTEM-NAME* :INTRODUCTION (WHEN *INTRODUCTION* "") :TEXI-DIRECTORY *TEXINFO-DIRECTORY*) #<NULL-LEXENV>)
+19: (EVAL-TLF (NET.DIDIERVERNA.DECLT:DECLT *SYSTEM-NAME* :INTRODUCTION (WHEN *INTRODUCTION* "") :TEXI-DIRECTORY *TEXINFO-DIRECTORY*) 13 NIL)
+20: ((LABELS SB-FASL::EVAL-FORM :IN SB-INT:LOAD-AS-SOURCE) (NET.DIDIERVERNA.DECLT:DECLT *SYSTEM-NAME* :INTRODUCTION (WHEN *INTRODUCTION* "") :TEXI-DIRECTORY *TEXINFO-DIRECTORY*) 13)
+21: ((LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) (NET.DIDIERVERNA.DECLT:DECLT *SYSTEM-NAME* :INTRODUCTION (WHEN *INTRODUCTION* "") :TEXI-DIRECTORY *TEXINFO-DIRECTORY*) :CURRENT-INDEX 13)
+22: (SB-C::%DO-FORMS-FROM-INFO #<CLOSURE (LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) {1001B8D9BB}> #<SB-C::SOURCE-INFO {1001B8D973}> SB-C::INPUT-ERROR-IN-LOAD)
+23: (SB-INT:LOAD-AS-SOURCE #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/declt" {1001B7EA03}> :VERBOSE NIL :PRINT NIL :CONTEXT "loading")
+24: ((FLET SB-FASL::THUNK :IN LOAD))
+25: (SB-FASL::CALL-WITH-LOAD-BINDINGS #<CLOSURE (FLET SB-FASL::THUNK :IN LOAD) {7FFFF6E0F6BB}> #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/declt" {1001B7EA03}>)
+26: ((FLET SB-FASL::LOAD-STREAM :IN LOAD) #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/declt" {1001B7EA03}> NIL)
+27: (LOAD #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/declt" {1001B7EA03}> :VERBOSE NIL :PRINT NIL :IF-DOES-NOT-EXIST T :EXTERNAL-FORMAT :DEFAULT)
+28: ((FLET SB-IMPL::LOAD-SCRIPT :IN SB-IMPL::PROCESS-SCRIPT) #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/declt" {1001B7EA03}>)
+29: ((FLET "WITHOUT-INTERRUPTS-BODY-3" :IN SB-IMPL::PROCESS-SCRIPT))
+30: (SB-IMPL::PROCESS-SCRIPT "/home/didier/share/common-lisp/source/quickref/bin/declt")
+31: (SB-IMPL::TOPLEVEL-INIT)
+32: ((FLET "WITHOUT-INTERRUPTS-BODY-35" :IN SAVE-LISP-AND-DIE))
+33: ((LABELS SB-IMPL::RESTART-LISP :IN SAVE-LISP-AND-DIE))
+
+unhandled condition in --disable-debugger mode, quitting
+

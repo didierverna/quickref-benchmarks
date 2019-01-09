@@ -1,0 +1,50 @@
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/array-operations-20180328-git/array-operations.asd" contains definition for system "array-operations-tests". Please only define "array-operations" and secondary systems with a name starting with "array-operations/" (e.g. "array-operations/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/lla-20180328-git/lla.asd" contains definition for system "lla-tests". Please only define "lla" and secondary systems with a name starting with "lla/" (e.g. "lla/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl-num-utils-20131211-git/cl-num-utils.asd" contains definition for system "cl-num-utils-tests". Please only define "cl-num-utils" and secondary systems with a name starting with "cl-num-utils/" (e.g. "cl-num-utils/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl-slice-20171130-git/cl-slice.asd" contains definition for system "cl-slice-tests". Please only define "cl-slice" and secondary systems with a name starting with "cl-slice/" (e.g. "cl-slice/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/external-program-20160825-git/external-program.asd" contains definition for system "external-program-test". Please only define "external-program" and secondary systems with a name starting with "external-program/" (e.g. "external-program/test") in that file.
+Unhandled ASDF/FIND-COMPONENT:MISSING-DEPENDENCY in thread #<SB-THREAD:THREAD "main thread" RUNNING
+                                                              {1001B76DC3}>:
+  Component #:MGL-MAT not found, required by #<SYSTEM "mgl">
+
+Backtrace for: #<SB-THREAD:THREAD "main thread" RUNNING {1001B76DC3}>
+0: (SB-DEBUG::DEBUGGER-DISABLED-HOOK Component #:MGL-MAT not found, required by #<SYSTEM "mgl"> #<unused argument>)
+1: (SB-DEBUG::RUN-HOOK *INVOKE-DEBUGGER-HOOK* Component #:MGL-MAT not found, required by #<SYSTEM "mgl">)
+2: (INVOKE-DEBUGGER Component #:MGL-MAT not found, required by #<SYSTEM "mgl">)
+3: (ERROR ASDF/FIND-COMPONENT:MISSING-DEPENDENCY :REQUIRED-BY #<ASDF/SYSTEM:SYSTEM "mgl"> :REQUIRES #:MGL-MAT)
+4: (ASDF/FIND-COMPONENT:RESOLVE-DEPENDENCY-NAME #<ASDF/SYSTEM:SYSTEM "mgl"> #:MGL-MAT NIL)
+5: (ASDF/PLAN:MAP-DIRECT-DEPENDENCIES #<ASDF/LISP-ACTION:PREPARE-OP > #<ASDF/SYSTEM:SYSTEM "mgl"> #<CLOSURE (LAMBDA (ASDF/PLAN::O ASDF/PLAN::C) :IN ASDF/PLAN:TRAVERSE-ACTION) {10066F82FB}>)
+6: ((LAMBDA NIL :IN ASDF/PLAN:TRAVERSE-ACTION))
+7: ((LAMBDA NIL :IN ASDF/ACTION:CALL-WHILE-VISITING-ACTION))
+8: (ASDF/PLAN:TRAVERSE-ACTION #<ASDF/PLAN:SEQUENTIAL-PLAN {10066F4643}> #<ASDF/LISP-ACTION:PREPARE-OP > #<ASDF/SYSTEM:SYSTEM "mgl"> T)
+9: ((LAMBDA NIL :IN ASDF/PLAN:MAKE-PLAN))
+10: ((:METHOD ASDF/OPERATE:OPERATE (ASDF/OPERATION:OPERATION ASDF/COMPONENT:COMPONENT)) #<ASDF/LISP-ACTION:PREPARE-OP > #<ASDF/SYSTEM:SYSTEM "mgl"> :PLAN-CLASS NIL :PLAN-OPTIONS NIL) [fast-method]
+11: ((SB-PCL::EMF ASDF/OPERATE:OPERATE) #<unused argument> #<unused argument> #<ASDF/LISP-ACTION:PREPARE-OP > #<ASDF/SYSTEM:SYSTEM "mgl">)
+12: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+13: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) #<ASDF/LISP-ACTION:PREPARE-OP > #<ASDF/SYSTEM:SYSTEM "mgl">) [fast-method]
+14: ((SB-PCL::EMF ASDF/OPERATE:OPERATE) #<unused argument> #<unused argument> :PREPARE-OP "mgl")
+15: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+16: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) :PREPARE-OP "mgl") [fast-method]
+17: (ASDF/SESSION:CALL-WITH-ASDF-SESSION #<CLOSURE (LAMBDA NIL :IN ASDF/OPERATE:OPERATE) {100611E7FB}> :OVERRIDE T :KEY NIL :OVERRIDE-CACHE T :OVERRIDE-FORCING NIL)
+18: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+19: (ASDF/SESSION:CALL-WITH-ASDF-SESSION #<CLOSURE (LAMBDA NIL :IN ASDF/OPERATE:OPERATE) {1003FE7B6B}> :OVERRIDE NIL :KEY NIL :OVERRIDE-CACHE NIL :OVERRIDE-FORCING NIL)
+20: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) :PREPARE-OP "mgl") [fast-method]
+21: (SB-INT:SIMPLE-EVAL-IN-LEXENV (ASDF/OPERATE:OPERATE :PREPARE-OP *SYSTEM-NAME*) #<NULL-LEXENV>)
+22: (EVAL-TLF (ASDF/OPERATE:OPERATE :PREPARE-OP *SYSTEM-NAME*) 10 NIL)
+23: ((LABELS SB-FASL::EVAL-FORM :IN SB-INT:LOAD-AS-SOURCE) (ASDF/OPERATE:OPERATE :PREPARE-OP *SYSTEM-NAME*) 10)
+24: ((LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) (ASDF/OPERATE:OPERATE :PREPARE-OP *SYSTEM-NAME*) :CURRENT-INDEX 10)
+25: (SB-C::%DO-FORMS-FROM-INFO #<CLOSURE (LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) {1001B8D99B}> #<SB-C::SOURCE-INFO {1001B8D953}> SB-C::INPUT-ERROR-IN-LOAD)
+26: (SB-INT:LOAD-AS-SOURCE #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}> :VERBOSE NIL :PRINT NIL :CONTEXT "loading")
+27: ((FLET SB-FASL::THUNK :IN LOAD))
+28: (SB-FASL::CALL-WITH-LOAD-BINDINGS #<CLOSURE (FLET SB-FASL::THUNK :IN LOAD) {7FFFF6E0F6BB}> #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}>)
+29: ((FLET SB-FASL::LOAD-STREAM :IN LOAD) #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}> NIL)
+30: (LOAD #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}> :VERBOSE NIL :PRINT NIL :IF-DOES-NOT-EXIST T :EXTERNAL-FORMAT :DEFAULT)
+31: ((FLET SB-IMPL::LOAD-SCRIPT :IN SB-IMPL::PROCESS-SCRIPT) #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}>)
+32: ((FLET "WITHOUT-INTERRUPTS-BODY-3" :IN SB-IMPL::PROCESS-SCRIPT))
+33: (SB-IMPL::PROCESS-SCRIPT "/home/didier/share/common-lisp/source/quickref/bin/asdf")
+34: (SB-IMPL::TOPLEVEL-INIT)
+35: ((FLET "WITHOUT-INTERRUPTS-BODY-35" :IN SAVE-LISP-AND-DIE))
+36: ((LABELS SB-IMPL::RESTART-LISP :IN SAVE-LISP-AND-DIE))
+
+unhandled condition in --disable-debugger mode, quitting
+

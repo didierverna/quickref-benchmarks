@@ -1,0 +1,75 @@
+WARNING:
+   Deprecated recursive use of (ASDF/OPERATE:OPERATE 'ASDF/LISP-ACTION:LOAD-OP
+   '("drakma")) while visiting (ASDF/LISP-ACTION:LOAD-OP "qt-libs") - please
+   use proper dependencies instead
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/puri-20180228-git/puri.asd" contains definition for system "puri-tests". Please only define "puri" and secondary systems with a name starting with "puri/" (e.g. "puri/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl-base64-20150923-git/cl-base64.asd" contains definition for system "cl-base64-tests". Please only define "cl-base64" and secondary systems with a name starting with "cl-base64/" (e.g. "cl-base64/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/flexi-streams-20190107-git/flexi-streams.asd" contains definition for system "flexi-streams-test". Please only define "flexi-streams" and secondary systems with a name starting with "flexi-streams/" (e.g. "flexi-streams/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl+ssl-20181018-git/cl+ssl.asd" contains definition for system "openssl-1.1.0". Please only define "cl+ssl" and secondary systems with a name starting with "cl+ssl/" (e.g. "cl+ssl/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/trivial-garbage-20181018-git/trivial-garbage.asd" contains definition for system "trivial-garbage-tests". Please only define "trivial-garbage" and secondary systems with a name starting with "trivial-garbage/" (e.g. "trivial-garbage/test") in that file.
+Unhandled USOCKET:NS-HOST-NOT-FOUND-ERROR in thread #<SB-THREAD:THREAD "main thread" RUNNING
+                                                       {1001B76DD3}>:
+  Condition USOCKET:NS-HOST-NOT-FOUND-ERROR was signalled.
+
+Backtrace for: #<SB-THREAD:THREAD "main thread" RUNNING {1001B76DD3}>
+0: (SB-DEBUG::DEBUGGER-DISABLED-HOOK #<USOCKET:NS-HOST-NOT-FOUND-ERROR {100B57BC83}> #<unused argument>)
+1: (SB-DEBUG::RUN-HOOK *INVOKE-DEBUGGER-HOOK* #<USOCKET:NS-HOST-NOT-FOUND-ERROR {100B57BC83}>)
+2: (INVOKE-DEBUGGER #<USOCKET:NS-HOST-NOT-FOUND-ERROR {100B57BC83}>)
+3: (ERROR USOCKET:NS-HOST-NOT-FOUND-ERROR :SOCKET NIL)
+4: (USOCKET::HANDLE-CONDITION #<SB-BSD-SOCKETS:HOST-NOT-FOUND-ERROR {100B57BBC3}> NIL)
+5: (SB-KERNEL::%SIGNAL #<SB-BSD-SOCKETS:HOST-NOT-FOUND-ERROR {100B57BBC3}>)
+6: (ERROR SB-BSD-SOCKETS:HOST-NOT-FOUND-ERROR :ERROR-CODE -2 :SYSCALL "getaddrinfo")
+7: (SB-BSD-SOCKETS::ADDRINFO-ERROR "getaddrinfo" -2)
+8: (SB-BSD-SOCKETS:GET-HOST-BY-NAME #<unavailable argument>)
+9: (USOCKET:GET-HOSTS-BY-NAME "github.com")
+10: (USOCKET:SOCKET-CONNECT "github.com" 443 :PROTOCOL :STREAM :ELEMENT-TYPE FLEXI-STREAMS:OCTET :TIMEOUT 20 :DEADLINE NIL :NODELAY :IF-SUPPORTED :LOCAL-HOST NIL :LOCAL-PORT NIL)
+11: (DRAKMA:HTTP-REQUEST #<PURI:URI https://github.com/Shinmera/qt4/releases/download/qt-libs2.0.1/lin64-qt4.zip> :WANT-STREAM T)
+12: (QT-LIB-GENERATOR:DOWNLOAD-FILE "https://github.com/Shinmera/qt4/releases/download/qt-libs2.0.1/lin64-qt4.zip" #P"/home/didier/quickref/cache/qt-libs/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/qt-libs-20180831-git/qt4/binaries.zip")
+13: ((SB-PCL::EMF QT-LIB-GENERATOR:STAGE) #<unused argument> #<unused argument> :DOWNLOAD-BINARIES #<QT-LIB-GENERATOR:QT4 {10023D1E03}> :FORCE NIL)
+14: ((:METHOD QT-LIB-GENERATOR:STAGE :AROUND (T QT-LIB-GENERATOR:FOREIGN-LIBRARY)) :DOWNLOAD-BINARIES #<QT-LIB-GENERATOR:QT4 {10023D1E03}> :FORCE NIL) [fast-method]
+15: ((:METHOD QT-LIB-GENERATOR:STAGE ((EQL :INSTALL-BINARIES) QT-LIB-GENERATOR:DOWNLOAD-LIBRARY)) #<unused argument> #<QT-LIB-GENERATOR:QT4 {10023D1E03}> :FORCE NIL) [fast-method]
+16: ((:METHOD QT-LIB-GENERATOR:STAGE :AROUND (T QT-LIB-GENERATOR:FOREIGN-LIBRARY)) :INSTALL-BINARIES #<QT-LIB-GENERATOR:QT4 {10023D1E03}> :FORCE NIL) [fast-method]
+17: ((FLET QT-LIBS::ENSURE-INSTALLED :IN QT-LIBS:ENSURE-STANDALONE-LIBS) "QtCore" QT-LIB-GENERATOR:QT4)
+18: (QT-LIBS:ENSURE-STANDALONE-LIBS :METHOD :INSTALL-BINARIES :FORCE NIL :STANDALONE-DIR NIL)
+19: ((SB-PCL::EMF ASDF/ACTION:PERFORM) #<unused argument> #<unused argument> #<ASDF/LISP-ACTION:LOAD-OP > #<ASDF/SYSTEM:SYSTEM "qt-libs">)
+20: ((LAMBDA NIL :IN ASDF/ACTION:CALL-WHILE-VISITING-ACTION))
+21: ((:METHOD ASDF/ACTION:PERFORM-WITH-RESTARTS :AROUND (T T)) #<ASDF/LISP-ACTION:LOAD-OP > #<ASDF/SYSTEM:SYSTEM "qt-libs">) [fast-method]
+22: ((:METHOD ASDF/PLAN:PERFORM-PLAN (T)) #<ASDF/PLAN:SEQUENTIAL-PLAN {10094B9753}>) [fast-method]
+23: ((FLET SB-C::WITH-IT :IN SB-C::%WITH-COMPILATION-UNIT))
+24: ((:METHOD ASDF/PLAN:PERFORM-PLAN :AROUND (T)) #<ASDF/PLAN:SEQUENTIAL-PLAN {10094B9753}>) [fast-method]
+25: ((:METHOD ASDF/OPERATE:OPERATE (ASDF/OPERATION:OPERATION ASDF/COMPONENT:COMPONENT)) #<ASDF/OPERATE:BUILD-OP > #<ASDF/SYSTEM:SYSTEM "qt-libs"> :PLAN-CLASS NIL :PLAN-OPTIONS NIL) [fast-method]
+26: ((SB-PCL::EMF ASDF/OPERATE:OPERATE) #<unused argument> #<unused argument> #<ASDF/OPERATE:BUILD-OP > #<ASDF/SYSTEM:SYSTEM "qt-libs">)
+27: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+28: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) #<ASDF/OPERATE:BUILD-OP > #<ASDF/SYSTEM:SYSTEM "qt-libs">) [fast-method]
+29: ((SB-PCL::EMF ASDF/OPERATE:OPERATE) #<unused argument> #<unused argument> ASDF/OPERATE:BUILD-OP "qt-libs")
+30: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+31: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) ASDF/OPERATE:BUILD-OP "qt-libs") [fast-method]
+32: (ASDF/SESSION:CALL-WITH-ASDF-SESSION #<CLOSURE (LAMBDA NIL :IN ASDF/OPERATE:OPERATE) {100935CDFB}> :OVERRIDE T :KEY NIL :OVERRIDE-CACHE T :OVERRIDE-FORCING NIL)
+33: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+34: (ASDF/SESSION:CALL-WITH-ASDF-SESSION #<CLOSURE (LAMBDA NIL :IN ASDF/OPERATE:OPERATE) {100917C23B}> :OVERRIDE NIL :KEY NIL :OVERRIDE-CACHE NIL :OVERRIDE-FORCING NIL)
+35: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) ASDF/OPERATE:BUILD-OP "qt-libs") [fast-method]
+36: (ASDF/OPERATE:MAKE "qt-libs")
+37: (CALL-WITH-TIMING #<FUNCTION SB-IMPL::PRINT-TIME> #<FUNCTION (LAMBDA NIL :IN #:DROP-THRU-TAG-1) {100917996B}>)
+38: ((LAMBDA NIL :IN "/home/didier/share/common-lisp/source/quickref/bin/asdf"))
+39: (SB-INT:SIMPLE-EVAL-IN-LEXENV (WITH-OPEN-FILE (*TRACE-OUTPUT* (MERGE-PATHNAMES (MAKE-PATHNAME :NAME *SYSTEM-NAME* :TYPE "time") *BENCH-DIRECTORY*) :DIRECTION :OUTPUT :IF-EXISTS :SUPERSEDE :IF-DOES-NOT-EXIST :CREATE) (TIME (ASDF/OPERATE:MAKE *SYSTEM-NAME*))) #<NULL-LEXENV>)
+40: (EVAL-TLF (WITH-OPEN-FILE (*TRACE-OUTPUT* (MERGE-PATHNAMES (MAKE-PATHNAME :NAME *SYSTEM-NAME* :TYPE "time") *BENCH-DIRECTORY*) :DIRECTION :OUTPUT :IF-EXISTS :SUPERSEDE :IF-DOES-NOT-EXIST :CREATE) (TIME (ASDF/OPERATE:MAKE *SYSTEM-NAME*))) 11 NIL)
+41: ((LABELS SB-FASL::EVAL-FORM :IN SB-INT:LOAD-AS-SOURCE) (WITH-OPEN-FILE (*TRACE-OUTPUT* (MERGE-PATHNAMES (MAKE-PATHNAME :NAME *SYSTEM-NAME* :TYPE "time") *BENCH-DIRECTORY*) :DIRECTION :OUTPUT :IF-EXISTS :SUPERSEDE :IF-DOES-NOT-EXIST :CREATE) (TIME (ASDF/OPERATE:MAKE *SYSTEM-NAME*))) 11)
+42: ((LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) (WITH-OPEN-FILE (*TRACE-OUTPUT* (MERGE-PATHNAMES (MAKE-PATHNAME :NAME *SYSTEM-NAME* :TYPE "time") *BENCH-DIRECTORY*) :DIRECTION :OUTPUT :IF-EXISTS :SUPERSEDE :IF-DOES-NOT-EXIST :CREATE) (TIME (ASDF/OPERATE:MAKE *SYSTEM-NAME*))) :CURRENT-INDEX 11)
+43: (SB-C::%DO-FORMS-FROM-INFO #<CLOSURE (LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) {1001B8D99B}> #<SB-C::SOURCE-INFO {1001B8D953}> SB-C::INPUT-ERROR-IN-LOAD)
+44: (SB-INT:LOAD-AS-SOURCE #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}> :VERBOSE NIL :PRINT NIL :CONTEXT "loading")
+45: ((FLET SB-FASL::THUNK :IN LOAD))
+46: (SB-FASL::CALL-WITH-LOAD-BINDINGS #<CLOSURE (FLET SB-FASL::THUNK :IN LOAD) {7FFFF6E0F6BB}> #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}>)
+47: ((FLET SB-FASL::LOAD-STREAM :IN LOAD) #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}> NIL)
+48: (LOAD #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}> :VERBOSE NIL :PRINT NIL :IF-DOES-NOT-EXIST T :EXTERNAL-FORMAT :DEFAULT)
+49: ((FLET SB-IMPL::LOAD-SCRIPT :IN SB-IMPL::PROCESS-SCRIPT) #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}>)
+50: ((FLET "WITHOUT-INTERRUPTS-BODY-3" :IN SB-IMPL::PROCESS-SCRIPT))
+51: (SB-IMPL::PROCESS-SCRIPT "/home/didier/share/common-lisp/source/quickref/bin/asdf")
+52: (SB-IMPL::TOPLEVEL-INIT)
+53: ((FLET "WITHOUT-INTERRUPTS-BODY-35" :IN SAVE-LISP-AND-DIE))
+54: ((LABELS SB-IMPL::RESTART-LISP :IN SAVE-LISP-AND-DIE))
+
+unhandled condition in --disable-debugger mode, quitting
+; 
+; compilation unit aborted
+;   caught 1 fatal ERROR condition
+

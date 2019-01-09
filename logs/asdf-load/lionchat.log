@@ -1,0 +1,107 @@
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/trivial-garbage-20181018-git/trivial-garbage.asd" contains definition for system "trivial-garbage-tests". Please only define "trivial-garbage" and secondary systems with a name starting with "trivial-garbage/" (e.g. "trivial-garbage/test") in that file.
+WARNING: Deprecated recursive use of (OPERATE 'LOAD-OP '("drakma")) while visiting (LOAD-OP "qt-libs") - please use proper dependencies instead
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/puri-20180228-git/puri.asd" contains definition for system "puri-tests". Please only define "puri" and secondary systems with a name starting with "puri/" (e.g. "puri/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl-base64-20150923-git/cl-base64.asd" contains definition for system "cl-base64-tests". Please only define "cl-base64" and secondary systems with a name starting with "cl-base64/" (e.g. "cl-base64/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/flexi-streams-20190107-git/flexi-streams.asd" contains definition for system "flexi-streams-test". Please only define "flexi-streams" and secondary systems with a name starting with "flexi-streams/" (e.g. "flexi-streams/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl+ssl-20181018-git/cl+ssl.asd" contains definition for system "openssl-1.1.0". Please only define "cl+ssl" and secondary systems with a name starting with "cl+ssl/" (e.g. "cl+ssl/test") in that file.
+While evaluating the form starting at line 7, column 0
+  of #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/lionchat-20180831-git/lionchat.asd":
+Unhandled LOAD-SYSTEM-DEFINITION-ERROR in thread #<SB-THREAD:THREAD "main thread" RUNNING {1001B76DE3}>: Error while trying to load definition for system lionchat from pathname /usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/lionchat-20180831-git/lionchat.asd: Condition USOCKET:NS-HOST-NOT-FOUND-ERROR was signalled.
+
+Backtrace for: #<SB-THREAD:THREAD "main thread" RUNNING {1001B76DE3}>
+0: (SB-DEBUG::DEBUGGER-DISABLED-HOOK #<LOAD-SYSTEM-DEFINITION-ERROR {1005651BD3}> #<unused argument>)
+1: (SB-DEBUG::RUN-HOOK SB-EXT:*INVOKE-DEBUGGER-HOOK* #<LOAD-SYSTEM-DEFINITION-ERROR {1005651BD3}>)
+2: (INVOKE-DEBUGGER #<LOAD-SYSTEM-DEFINITION-ERROR {1005651BD3}>)
+3: (ERROR LOAD-SYSTEM-DEFINITION-ERROR :NAME "lionchat" :PATHNAME #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/lionchat-20180831-git/lionchat.asd" :CONDITION #<USOCKET:NS-HOST-NOT-FOUND-ERROR {1005650933}>)
+4: ((FLET "H0" :IN PERFORM) #<USOCKET:NS-HOST-NOT-FOUND-ERROR {1005650933}>)
+5: (SB-KERNEL::%SIGNAL #<USOCKET:NS-HOST-NOT-FOUND-ERROR {1005650933}>)
+6: (ERROR USOCKET:NS-HOST-NOT-FOUND-ERROR :SOCKET NIL)
+7: (USOCKET::HANDLE-CONDITION #<SB-BSD-SOCKETS:HOST-NOT-FOUND-ERROR {1005650873}> NIL)
+8: (SB-KERNEL::%SIGNAL #<SB-BSD-SOCKETS:HOST-NOT-FOUND-ERROR {1005650873}>)
+9: (ERROR SB-BSD-SOCKETS:HOST-NOT-FOUND-ERROR :ERROR-CODE -2 :SYSCALL "getaddrinfo")
+10: (SB-BSD-SOCKETS::ADDRINFO-ERROR "getaddrinfo" -2)
+11: (SB-BSD-SOCKETS:GET-HOST-BY-NAME #<unavailable argument>)
+12: (USOCKET:GET-HOSTS-BY-NAME "github.com")
+13: (USOCKET:SOCKET-CONNECT "github.com" 443 :PROTOCOL :STREAM :ELEMENT-TYPE FLEXI-STREAMS:OCTET :TIMEOUT 20 :DEADLINE NIL :NODELAY :IF-SUPPORTED :LOCAL-HOST NIL :LOCAL-PORT NIL)
+14: (DRAKMA:HTTP-REQUEST #<PURI:URI https://github.com/Shinmera/qt4/releases/download/qt-libs2.0.1/lin64-qt4.zip> :WANT-STREAM T)
+15: (QT-LIB-GENERATOR:DOWNLOAD-FILE "https://github.com/Shinmera/qt4/releases/download/qt-libs2.0.1/lin64-qt4.zip" #P"/home/didier/quickref/cache/lionchat/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/qt-libs-20180831-git/qt4/binaries.zip")
+16: ((SB-PCL::EMF QT-LIB-GENERATOR:STAGE) #<unused argument> #<unused argument> :DOWNLOAD-BINARIES #<QT-LIB-GENERATOR:QT4 {10029F1063}> :FORCE NIL)
+17: ((:METHOD QT-LIB-GENERATOR:STAGE :AROUND (T QT-LIB-GENERATOR:FOREIGN-LIBRARY)) :DOWNLOAD-BINARIES #<QT-LIB-GENERATOR:QT4 {10029F1063}> :FORCE NIL) [fast-method]
+18: ((:METHOD QT-LIB-GENERATOR:STAGE ((EQL :INSTALL-BINARIES) QT-LIB-GENERATOR:DOWNLOAD-LIBRARY)) #<unused argument> #<QT-LIB-GENERATOR:QT4 {10029F1063}> :FORCE NIL) [fast-method]
+19: ((:METHOD QT-LIB-GENERATOR:STAGE :AROUND (T QT-LIB-GENERATOR:FOREIGN-LIBRARY)) :INSTALL-BINARIES #<QT-LIB-GENERATOR:QT4 {10029F1063}> :FORCE NIL) [fast-method]
+20: ((FLET QT-LIBS::ENSURE-INSTALLED :IN QT-LIBS:ENSURE-STANDALONE-LIBS) "QtCore" QT-LIB-GENERATOR:QT4)
+21: (QT-LIBS:ENSURE-STANDALONE-LIBS :METHOD :INSTALL-BINARIES :FORCE NIL :STANDALONE-DIR NIL)
+22: ((SB-PCL::EMF PERFORM) #<unused argument> #<unused argument> #<LOAD-OP > #<SYSTEM "qt-libs">)
+23: ((LAMBDA NIL :IN ASDF/ACTION:CALL-WHILE-VISITING-ACTION))
+24: ((:METHOD PERFORM-WITH-RESTARTS :AROUND (T T)) #<LOAD-OP > #<SYSTEM "qt-libs">) [fast-method]
+25: ((:METHOD PERFORM-PLAN (T)) #<SEQUENTIAL-PLAN {10066DDB63}>) [fast-method]
+26: ((FLET SB-C::WITH-IT :IN SB-C::%WITH-COMPILATION-UNIT))
+27: ((:METHOD PERFORM-PLAN :AROUND (T)) #<SEQUENTIAL-PLAN {10066DDB63}>) [fast-method]
+28: ((:METHOD OPERATE (OPERATION COMPONENT)) #<LOAD-OP > #<SYSTEM "qtools"> :PLAN-CLASS NIL :PLAN-OPTIONS NIL) [fast-method]
+29: ((SB-PCL::EMF OPERATE) #<unused argument> #<unused argument> #<LOAD-OP > #<SYSTEM "qtools">)
+30: ((LAMBDA NIL :IN OPERATE))
+31: ((:METHOD OPERATE :AROUND (T T)) #<LOAD-OP > #<SYSTEM "qtools">) [fast-method]
+32: ((SB-PCL::EMF OPERATE) #<unused argument> #<unused argument> LOAD-OP #<SYSTEM "qtools">)
+33: ((LAMBDA NIL :IN OPERATE))
+34: ((:METHOD OPERATE :AROUND (T T)) LOAD-OP #<SYSTEM "qtools">) [fast-method]
+35: (LOAD-SYSTEM #<SYSTEM "qtools">)
+36: (LOAD-SYSTEMS* (#<SYSTEM "qtools">))
+37: ((LAMBDA NIL :IN ASDF/PARSE-DEFSYSTEM:REGISTER-SYSTEM-DEFINITION))
+38: (SB-INT:SIMPLE-EVAL-IN-LEXENV (DEFSYSTEM LIONCHAT :VERSION "1.0.0" :LICENSE "Artistic" :AUTHOR "Nicolas Hafner <shinmera@tymoon.eu>" :MAINTAINER "Nicolas Hafner <shinmera@tymoon.eu>" :DESCRIPTION "A GUI client for the Lichat protocol" ...) #<NULL-LEXENV>)
+39: (SB-EXT:EVAL-TLF (DEFSYSTEM LIONCHAT :VERSION "1.0.0" :LICENSE "Artistic" :AUTHOR "Nicolas Hafner <shinmera@tymoon.eu>" :MAINTAINER "Nicolas Hafner <shinmera@tymoon.eu>" :DESCRIPTION "A GUI client for the Lichat protocol" ...) 0 NIL)
+40: ((LABELS SB-FASL::EVAL-FORM :IN SB-INT:LOAD-AS-SOURCE) (DEFSYSTEM LIONCHAT :VERSION "1.0.0" :LICENSE "Artistic" :AUTHOR "Nicolas Hafner <shinmera@tymoon.eu>" :MAINTAINER "Nicolas Hafner <shinmera@tymoon.eu>" :DESCRIPTION "A GUI client for the Lichat protocol" ...) 0)
+41: ((LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) (DEFSYSTEM LIONCHAT :VERSION "1.0.0" :LICENSE "Artistic" :AUTHOR "Nicolas Hafner <shinmera@tymoon.eu>" :MAINTAINER "Nicolas Hafner <shinmera@tymoon.eu>" :DESCRIPTION "A GUI client for the Lichat protocol" ...) :CURRENT-INDEX 0)
+42: (SB-C::%DO-FORMS-FROM-INFO #<CLOSURE (LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) {100666708B}> #<SB-C::SOURCE-INFO {1006667043}> SB-C::INPUT-ERROR-IN-LOAD)
+43: (SB-INT:LOAD-AS-SOURCE #<SB-INT:FORM-TRACKING-STREAM for "file /usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/lionchat-20180831-git/lionchat.asd" {1006664553}> :VERBOSE NIL :PRINT NIL :CONTEXT "loading")
+44: ((FLET SB-FASL::THUNK :IN LOAD))
+45: (SB-FASL::CALL-WITH-LOAD-BINDINGS #<CLOSURE (FLET SB-FASL::THUNK :IN LOAD) {7FFFF6E0D9EB}> #<SB-INT:FORM-TRACKING-STREAM for "file /usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/lionchat-20180831-git/lionchat.asd" {1006664553}>)
+46: ((FLET SB-FASL::LOAD-STREAM :IN LOAD) #<SB-INT:FORM-TRACKING-STREAM for "file /usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/lionchat-20180831-git/lionchat.asd" {1006664553}> NIL)
+47: (LOAD #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/lionchat-20180831-git/lionchat.asd" :VERBOSE NIL :PRINT NIL :IF-DOES-NOT-EXIST T :EXTERNAL-FORMAT :UTF-8)
+48: (CALL-WITH-MUFFLED-CONDITIONS #<CLOSURE (LAMBDA NIL :IN LOAD*) {1006660E5B}> ("Overwriting already existing readtable ~S." #(#:FINALIZERS-OFF-WARNING :ASDF-FINALIZERS)))
+49: ((FLET "THUNK" :IN PERFORM))
+50: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN PERFORM) {7FFFF6E0DD6B}>)
+51: ((:METHOD PERFORM (DEFINE-OP SYSTEM)) #<DEFINE-OP > #<ASDF/SYSTEM:UNDEFINED-SYSTEM "lionchat">) [fast-method]
+52: ((SB-PCL::EMF PERFORM) #<unused argument> #<unused argument> #<DEFINE-OP > #<ASDF/SYSTEM:UNDEFINED-SYSTEM "lionchat">)
+53: ((LAMBDA NIL :IN ASDF/ACTION:CALL-WHILE-VISITING-ACTION))
+54: ((:METHOD PERFORM-WITH-RESTARTS :AROUND (T T)) #<DEFINE-OP > #<ASDF/SYSTEM:UNDEFINED-SYSTEM "lionchat">) [fast-method]
+55: ((:METHOD PERFORM-PLAN (T)) #<SEQUENTIAL-PLAN {100664C9F3}>) [fast-method]
+56: ((FLET SB-C::WITH-IT :IN SB-C::%WITH-COMPILATION-UNIT))
+57: ((:METHOD PERFORM-PLAN :AROUND (T)) #<SEQUENTIAL-PLAN {100664C9F3}>) [fast-method]
+58: ((:METHOD OPERATE (OPERATION COMPONENT)) #<DEFINE-OP > #<ASDF/SYSTEM:UNDEFINED-SYSTEM "lionchat"> :PLAN-CLASS NIL :PLAN-OPTIONS NIL) [fast-method]
+59: ((SB-PCL::EMF OPERATE) #<unused argument> #<unused argument> #<DEFINE-OP > #<ASDF/SYSTEM:UNDEFINED-SYSTEM "lionchat">)
+60: ((LAMBDA NIL :IN OPERATE))
+61: ((:METHOD OPERATE :AROUND (T T)) #<DEFINE-OP > #<ASDF/SYSTEM:UNDEFINED-SYSTEM "lionchat">) [fast-method]
+62: ((LAMBDA NIL :IN LOAD-ASD))
+63: ((LAMBDA NIL :IN FIND-SYSTEM))
+64: (ASDF/SESSION:CONSULT-ASDF-CACHE (FIND-SYSTEM "lionchat") #<CLOSURE (LAMBDA NIL :IN FIND-SYSTEM) {10061270CB}>)
+65: ((:METHOD FIND-COMPONENT (STRING T)) "lionchat" NIL :REGISTERED NIL) [fast-method]
+66: ((:METHOD OPERATE (SYMBOL T)) :PREPARE-OP "lionchat") [fast-method]
+67: ((SB-PCL::EMF OPERATE) #<unused argument> #<unused argument> :PREPARE-OP "lionchat")
+68: ((LAMBDA NIL :IN OPERATE))
+69: ((:METHOD OPERATE :AROUND (T T)) :PREPARE-OP "lionchat") [fast-method]
+70: (ASDF/SESSION:CALL-WITH-ASDF-SESSION #<CLOSURE (LAMBDA NIL :IN OPERATE) {100611E7FB}> :OVERRIDE T :KEY NIL :OVERRIDE-CACHE T :OVERRIDE-FORCING NIL)
+71: ((LAMBDA NIL :IN OPERATE))
+72: (ASDF/SESSION:CALL-WITH-ASDF-SESSION #<CLOSURE (LAMBDA NIL :IN OPERATE) {1003FE786B}> :OVERRIDE NIL :KEY NIL :OVERRIDE-CACHE NIL :OVERRIDE-FORCING NIL)
+73: ((:METHOD OPERATE :AROUND (T T)) :PREPARE-OP "lionchat") [fast-method]
+74: (SB-INT:SIMPLE-EVAL-IN-LEXENV (OPERATE :PREPARE-OP COMMON-LISP-USER::*SYSTEM-NAME*) #<NULL-LEXENV>)
+75: (SB-EXT:EVAL-TLF (OPERATE :PREPARE-OP COMMON-LISP-USER::*SYSTEM-NAME*) 10 NIL)
+76: ((LABELS SB-FASL::EVAL-FORM :IN SB-INT:LOAD-AS-SOURCE) (OPERATE :PREPARE-OP COMMON-LISP-USER::*SYSTEM-NAME*) 10)
+77: ((LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) (OPERATE :PREPARE-OP COMMON-LISP-USER::*SYSTEM-NAME*) :CURRENT-INDEX 10)
+78: (SB-C::%DO-FORMS-FROM-INFO #<CLOSURE (LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) {1001B8D99B}> #<SB-C::SOURCE-INFO {1001B8D953}> SB-C::INPUT-ERROR-IN-LOAD)
+79: (SB-INT:LOAD-AS-SOURCE #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}> :VERBOSE NIL :PRINT NIL :CONTEXT "loading")
+80: ((FLET SB-FASL::THUNK :IN LOAD))
+81: (SB-FASL::CALL-WITH-LOAD-BINDINGS #<CLOSURE (FLET SB-FASL::THUNK :IN LOAD) {7FFFF6E0F6BB}> #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}>)
+82: ((FLET SB-FASL::LOAD-STREAM :IN LOAD) #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}> NIL)
+83: (LOAD #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}> :VERBOSE NIL :PRINT NIL :IF-DOES-NOT-EXIST T :EXTERNAL-FORMAT :DEFAULT)
+84: ((FLET SB-IMPL::LOAD-SCRIPT :IN SB-IMPL::PROCESS-SCRIPT) #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}>)
+85: ((FLET "WITHOUT-INTERRUPTS-BODY-3" :IN SB-IMPL::PROCESS-SCRIPT))
+86: (SB-IMPL::PROCESS-SCRIPT "/home/didier/share/common-lisp/source/quickref/bin/asdf")
+87: (SB-IMPL::TOPLEVEL-INIT)
+88: ((FLET "WITHOUT-INTERRUPTS-BODY-35" :IN SB-EXT:SAVE-LISP-AND-DIE))
+89: ((LABELS SB-IMPL::RESTART-LISP :IN SB-EXT:SAVE-LISP-AND-DIE))
+
+unhandled condition in --disable-debugger mode, quitting
+; 
+; compilation unit aborted
+;   caught 2 fatal ERROR conditions
+

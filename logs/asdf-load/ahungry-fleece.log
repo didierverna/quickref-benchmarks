@@ -1,0 +1,66 @@
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl-json-20141217-git/cl-json.asd" contains definition for system "cl-json.test". Please only define "cl-json" and secondary systems with a name starting with "cl-json/" (e.g. "cl-json/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl-fad-20180430-git/cl-fad.asd" contains definition for system "cl-fad-test". Please only define "cl-fad" and secondary systems with a name starting with "cl-fad/" (e.g. "cl-fad/test") in that file.
+; 
+; caught ERROR:
+;   READ error during COMPILE-FILE:
+;   
+;     Lock on package SB-C violated when interning COVERAGE-MAP while in package
+;     AF.CONTRIB.SB-COVER.
+;   See also:
+;     The SBCL Manual, Node "Package Locks"
+;   
+;     (in form starting at line: 23, column: 0, position: 832)
+Unhandled UIOP/LISP-BUILD:COMPILE-FILE-ERROR in thread #<SB-THREAD:THREAD "main thread" RUNNING
+                                                          {1001B76DF3}>:
+  COMPILE-FILE-ERROR while
+  compiling #<CL-SOURCE-FILE "ahungry-fleece" "af.contrib.sb-cover" "cover">
+
+Backtrace for: #<SB-THREAD:THREAD "main thread" RUNNING {1001B76DF3}>
+0: (SB-DEBUG::DEBUGGER-DISABLED-HOOK #<UIOP/LISP-BUILD:COMPILE-FILE-ERROR {1006EB1BE3}> #<unused argument>)
+1: (SB-DEBUG::RUN-HOOK *INVOKE-DEBUGGER-HOOK* #<UIOP/LISP-BUILD:COMPILE-FILE-ERROR {1006EB1BE3}>)
+2: (INVOKE-DEBUGGER #<UIOP/LISP-BUILD:COMPILE-FILE-ERROR {1006EB1BE3}>)
+3: (ERROR UIOP/LISP-BUILD:COMPILE-FILE-ERROR :CONTEXT-FORMAT "~/asdf-action::format-action/" :CONTEXT-ARGUMENTS ((#<ASDF/LISP-ACTION:COMPILE-OP > . #<ASDF/LISP-ACTION:CL-SOURCE-FILE "ahungry-fleece" "af.contrib.sb-cover" "cover">)))
+4: (UIOP/LISP-BUILD:CHECK-LISP-COMPILE-RESULTS NIL T T "~/asdf-action::format-action/" ((#<ASDF/LISP-ACTION:COMPILE-OP > . #<ASDF/LISP-ACTION:CL-SOURCE-FILE "ahungry-fleece" "af.contrib.sb-cover" "cover">)))
+5: ((SB-PCL::EMF ASDF/ACTION:PERFORM) #<unused argument> #<unused argument> #<ASDF/LISP-ACTION:COMPILE-OP > #<ASDF/LISP-ACTION:CL-SOURCE-FILE "ahungry-fleece" "af.contrib.sb-cover" "cover">)
+6: ((LAMBDA NIL :IN ASDF/ACTION:CALL-WHILE-VISITING-ACTION))
+7: ((:METHOD ASDF/ACTION:PERFORM-WITH-RESTARTS :AROUND (T T)) #<ASDF/LISP-ACTION:COMPILE-OP > #<ASDF/LISP-ACTION:CL-SOURCE-FILE "ahungry-fleece" "af.contrib.sb-cover" "cover">) [fast-method]
+8: ((:METHOD ASDF/PLAN:PERFORM-PLAN (T)) #<ASDF/PLAN:SEQUENTIAL-PLAN {10065CECC3}>) [fast-method]
+9: ((FLET SB-C::WITH-IT :IN SB-C::%WITH-COMPILATION-UNIT))
+10: ((:METHOD ASDF/PLAN:PERFORM-PLAN :AROUND (T)) #<ASDF/PLAN:SEQUENTIAL-PLAN {10065CECC3}>) [fast-method]
+11: ((:METHOD ASDF/OPERATE:OPERATE (ASDF/OPERATION:OPERATION ASDF/COMPONENT:COMPONENT)) #<ASDF/OPERATE:BUILD-OP > #<ASDF/SYSTEM:SYSTEM "ahungry-fleece"> :PLAN-CLASS NIL :PLAN-OPTIONS NIL) [fast-method]
+12: ((SB-PCL::EMF ASDF/OPERATE:OPERATE) #<unused argument> #<unused argument> #<ASDF/OPERATE:BUILD-OP > #<ASDF/SYSTEM:SYSTEM "ahungry-fleece">)
+13: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+14: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) #<ASDF/OPERATE:BUILD-OP > #<ASDF/SYSTEM:SYSTEM "ahungry-fleece">) [fast-method]
+15: ((SB-PCL::EMF ASDF/OPERATE:OPERATE) #<unused argument> #<unused argument> ASDF/OPERATE:BUILD-OP "ahungry-fleece")
+16: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+17: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) ASDF/OPERATE:BUILD-OP "ahungry-fleece") [fast-method]
+18: (ASDF/SESSION:CALL-WITH-ASDF-SESSION #<CLOSURE (LAMBDA NIL :IN ASDF/OPERATE:OPERATE) {1006471FDB}> :OVERRIDE T :KEY NIL :OVERRIDE-CACHE T :OVERRIDE-FORCING NIL)
+19: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+20: (ASDF/SESSION:CALL-WITH-ASDF-SESSION #<CLOSURE (LAMBDA NIL :IN ASDF/OPERATE:OPERATE) {100629483B}> :OVERRIDE NIL :KEY NIL :OVERRIDE-CACHE NIL :OVERRIDE-FORCING NIL)
+21: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) ASDF/OPERATE:BUILD-OP "ahungry-fleece") [fast-method]
+22: (ASDF/OPERATE:MAKE "ahungry-fleece")
+23: (CALL-WITH-TIMING #<FUNCTION SB-IMPL::PRINT-TIME> #<FUNCTION (LAMBDA NIL :IN #:DROP-THRU-TAG-1) {1006291F1B}>)
+24: ((LAMBDA NIL :IN "/home/didier/share/common-lisp/source/quickref/bin/asdf"))
+25: (SB-INT:SIMPLE-EVAL-IN-LEXENV (WITH-OPEN-FILE (*TRACE-OUTPUT* (MERGE-PATHNAMES (MAKE-PATHNAME :NAME *SYSTEM-NAME* :TYPE "time") *BENCH-DIRECTORY*) :DIRECTION :OUTPUT :IF-EXISTS :SUPERSEDE :IF-DOES-NOT-EXIST :CREATE) (TIME (ASDF/OPERATE:MAKE *SYSTEM-NAME*))) #<NULL-LEXENV>)
+26: (EVAL-TLF (WITH-OPEN-FILE (*TRACE-OUTPUT* (MERGE-PATHNAMES (MAKE-PATHNAME :NAME *SYSTEM-NAME* :TYPE "time") *BENCH-DIRECTORY*) :DIRECTION :OUTPUT :IF-EXISTS :SUPERSEDE :IF-DOES-NOT-EXIST :CREATE) (TIME (ASDF/OPERATE:MAKE *SYSTEM-NAME*))) 11 NIL)
+27: ((LABELS SB-FASL::EVAL-FORM :IN SB-INT:LOAD-AS-SOURCE) (WITH-OPEN-FILE (*TRACE-OUTPUT* (MERGE-PATHNAMES (MAKE-PATHNAME :NAME *SYSTEM-NAME* :TYPE "time") *BENCH-DIRECTORY*) :DIRECTION :OUTPUT :IF-EXISTS :SUPERSEDE :IF-DOES-NOT-EXIST :CREATE) (TIME (ASDF/OPERATE:MAKE *SYSTEM-NAME*))) 11)
+28: ((LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) (WITH-OPEN-FILE (*TRACE-OUTPUT* (MERGE-PATHNAMES (MAKE-PATHNAME :NAME *SYSTEM-NAME* :TYPE "time") *BENCH-DIRECTORY*) :DIRECTION :OUTPUT :IF-EXISTS :SUPERSEDE :IF-DOES-NOT-EXIST :CREATE) (TIME (ASDF/OPERATE:MAKE *SYSTEM-NAME*))) :CURRENT-INDEX 11)
+29: (SB-C::%DO-FORMS-FROM-INFO #<CLOSURE (LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) {1001B8D99B}> #<SB-C::SOURCE-INFO {1001B8D953}> SB-C::INPUT-ERROR-IN-LOAD)
+30: (SB-INT:LOAD-AS-SOURCE #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}> :VERBOSE NIL :PRINT NIL :CONTEXT "loading")
+31: ((FLET SB-FASL::THUNK :IN LOAD))
+32: (SB-FASL::CALL-WITH-LOAD-BINDINGS #<CLOSURE (FLET SB-FASL::THUNK :IN LOAD) {7FFFF6E0F6BB}> #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}>)
+33: ((FLET SB-FASL::LOAD-STREAM :IN LOAD) #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}> NIL)
+34: (LOAD #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}> :VERBOSE NIL :PRINT NIL :IF-DOES-NOT-EXIST T :EXTERNAL-FORMAT :DEFAULT)
+35: ((FLET SB-IMPL::LOAD-SCRIPT :IN SB-IMPL::PROCESS-SCRIPT) #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}>)
+36: ((FLET "WITHOUT-INTERRUPTS-BODY-3" :IN SB-IMPL::PROCESS-SCRIPT))
+37: (SB-IMPL::PROCESS-SCRIPT "/home/didier/share/common-lisp/source/quickref/bin/asdf")
+38: (SB-IMPL::TOPLEVEL-INIT)
+39: ((FLET "WITHOUT-INTERRUPTS-BODY-35" :IN SAVE-LISP-AND-DIE))
+40: ((LABELS SB-IMPL::RESTART-LISP :IN SAVE-LISP-AND-DIE))
+
+unhandled condition in --disable-debugger mode, quitting
+; 
+; compilation unit aborted
+;   caught 2 fatal ERROR conditions
+;   caught 1 ERROR condition
+

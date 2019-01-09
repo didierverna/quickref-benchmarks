@@ -1,0 +1,53 @@
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl-store-20180328-git/cl-store.asd" contains definition for system "cl-store-tests". Please only define "cl-store" and secondary systems with a name starting with "cl-store/" (e.g. "cl-store/test") in that file.
+WARNING: System definition file #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/trivial-garbage-20181018-git/trivial-garbage.asd" contains definition for system "trivial-garbage-tests". Please only define "trivial-garbage" and secondary systems with a name starting with "trivial-garbage/" (e.g. "trivial-garbage/test") in that file.
+Unhandled UIOP/RUN-PROGRAM:SUBPROCESS-ERROR in thread #<SB-THREAD:THREAD "main thread" RUNNING {1001B76DE3}>:
+  Subprocess #<UIOP/LAUNCH-PROGRAM::PROCESS-INFO {100750EB63}>
+ with command ("make" "-C" "/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/trace-db-20181018-git/")
+ exited with error code 2
+
+Backtrace for: #<SB-THREAD:THREAD "main thread" RUNNING {1001B76DE3}>
+0: (SB-DEBUG::DEBUGGER-DISABLED-HOOK #<UIOP/RUN-PROGRAM:SUBPROCESS-ERROR {1007510EE3}> #<unused argument>)
+1: (SB-DEBUG::RUN-HOOK *INVOKE-DEBUGGER-HOOK* #<UIOP/RUN-PROGRAM:SUBPROCESS-ERROR {1007510EE3}>)
+2: (INVOKE-DEBUGGER #<UIOP/RUN-PROGRAM:SUBPROCESS-ERROR {1007510EE3}>)
+3: (CERROR "IGNORE-ERROR-STATUS" UIOP/RUN-PROGRAM:SUBPROCESS-ERROR :COMMAND ("make" "-C" "/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/trace-db-20181018-git/") :CODE 2 :PROCESS #<UIOP/LAUNCH-PROGRAM::PROCESS-INFO {100750EB63}>)
+4: (UIOP/RUN-PROGRAM::%CHECK-RESULT 2 :COMMAND ("make" "-C" "/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/trace-db-20181018-git/") :PROCESS #<UIOP/LAUNCH-PROGRAM::PROCESS-INFO {100750EB63}> :IGNORE-ERROR-STATUS NIL)
+5: (UIOP/RUN-PROGRAM::%USE-LAUNCH-PROGRAM ("make" "-C" "/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/trace-db-20181018-git/"))
+6: ((SB-PCL::EMF ASDF/ACTION:PERFORM) #<unused argument> #<unused argument> #<ASDF/LISP-ACTION:PREPARE-OP > #<ASDF/SYSTEM:SYSTEM "trace-db">)
+7: ((LAMBDA NIL :IN ASDF/ACTION:CALL-WHILE-VISITING-ACTION))
+8: ((:METHOD ASDF/ACTION:PERFORM-WITH-RESTARTS :AROUND (T T)) #<ASDF/LISP-ACTION:PREPARE-OP > #<ASDF/SYSTEM:SYSTEM "trace-db">) [fast-method]
+9: ((:METHOD ASDF/PLAN:PERFORM-PLAN (T)) #<ASDF/PLAN:SEQUENTIAL-PLAN {1006722913}>) [fast-method]
+10: ((FLET SB-C::WITH-IT :IN SB-C::%WITH-COMPILATION-UNIT))
+11: ((:METHOD ASDF/PLAN:PERFORM-PLAN :AROUND (T)) #<ASDF/PLAN:SEQUENTIAL-PLAN {1006722913}>) [fast-method]
+12: ((:METHOD ASDF/OPERATE:OPERATE (ASDF/OPERATION:OPERATION ASDF/COMPONENT:COMPONENT)) #<ASDF/LISP-ACTION:PREPARE-OP > #<ASDF/SYSTEM:SYSTEM "trace-db"> :PLAN-CLASS NIL :PLAN-OPTIONS NIL) [fast-method]
+13: ((SB-PCL::EMF ASDF/OPERATE:OPERATE) #<unused argument> #<unused argument> #<ASDF/LISP-ACTION:PREPARE-OP > #<ASDF/SYSTEM:SYSTEM "trace-db">)
+14: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+15: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) #<ASDF/LISP-ACTION:PREPARE-OP > #<ASDF/SYSTEM:SYSTEM "trace-db">) [fast-method]
+16: ((SB-PCL::EMF ASDF/OPERATE:OPERATE) #<unused argument> #<unused argument> :PREPARE-OP "trace-db")
+17: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+18: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) :PREPARE-OP "trace-db") [fast-method]
+19: (ASDF/SESSION:CALL-WITH-ASDF-SESSION #<CLOSURE (LAMBDA NIL :IN ASDF/OPERATE:OPERATE) {100611E7FB}> :OVERRIDE T :KEY NIL :OVERRIDE-CACHE T :OVERRIDE-FORCING NIL)
+20: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+21: (ASDF/SESSION:CALL-WITH-ASDF-SESSION #<CLOSURE (LAMBDA NIL :IN ASDF/OPERATE:OPERATE) {1003FE786B}> :OVERRIDE NIL :KEY NIL :OVERRIDE-CACHE NIL :OVERRIDE-FORCING NIL)
+22: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) :PREPARE-OP "trace-db") [fast-method]
+23: (SB-INT:SIMPLE-EVAL-IN-LEXENV (ASDF/OPERATE:OPERATE :PREPARE-OP *SYSTEM-NAME*) #<NULL-LEXENV>)
+24: (EVAL-TLF (ASDF/OPERATE:OPERATE :PREPARE-OP *SYSTEM-NAME*) 10 NIL)
+25: ((LABELS SB-FASL::EVAL-FORM :IN SB-INT:LOAD-AS-SOURCE) (ASDF/OPERATE:OPERATE :PREPARE-OP *SYSTEM-NAME*) 10)
+26: ((LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) (ASDF/OPERATE:OPERATE :PREPARE-OP *SYSTEM-NAME*) :CURRENT-INDEX 10)
+27: (SB-C::%DO-FORMS-FROM-INFO #<CLOSURE (LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) {1001B8D99B}> #<SB-C::SOURCE-INFO {1001B8D953}> SB-C::INPUT-ERROR-IN-LOAD)
+28: (SB-INT:LOAD-AS-SOURCE #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}> :VERBOSE NIL :PRINT NIL :CONTEXT "loading")
+29: ((FLET SB-FASL::THUNK :IN LOAD))
+30: (SB-FASL::CALL-WITH-LOAD-BINDINGS #<CLOSURE (FLET SB-FASL::THUNK :IN LOAD) {7FFFF6E0F6BB}> #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}>)
+31: ((FLET SB-FASL::LOAD-STREAM :IN LOAD) #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}> NIL)
+32: (LOAD #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}> :VERBOSE NIL :PRINT NIL :IF-DOES-NOT-EXIST T :EXTERNAL-FORMAT :DEFAULT)
+33: ((FLET SB-IMPL::LOAD-SCRIPT :IN SB-IMPL::PROCESS-SCRIPT) #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}>)
+34: ((FLET "WITHOUT-INTERRUPTS-BODY-3" :IN SB-IMPL::PROCESS-SCRIPT))
+35: (SB-IMPL::PROCESS-SCRIPT "/home/didier/share/common-lisp/source/quickref/bin/asdf")
+36: (SB-IMPL::TOPLEVEL-INIT)
+37: ((FLET "WITHOUT-INTERRUPTS-BODY-35" :IN SAVE-LISP-AND-DIE))
+38: ((LABELS SB-IMPL::RESTART-LISP :IN SAVE-LISP-AND-DIE))
+
+unhandled condition in --disable-debugger mode, quitting
+; 
+; compilation unit aborted
+;   caught 1 fatal ERROR condition
+

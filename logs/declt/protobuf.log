@@ -1,0 +1,828 @@
+Unhandled PRINT-NOT-READABLE in thread #<error printing a SB-THREAD:THREAD: #<PRINT-NOT-READABLE {1001F2E273}>>: #<DOUBLE-FLOAT quiet NaN> cannot be printed readably.
+
+Backtrace for: #<SB-THREAD:THREAD "main thread" RUNNING {1001B76E73}>
+0: (SB-DEBUG::DEBUGGER-DISABLED-HOOK #<PRINT-NOT-READABLE {1001F2C0F3}> #<unused argument>)
+1: (SB-DEBUG::RUN-HOOK *INVOKE-DEBUGGER-HOOK* #<PRINT-NOT-READABLE {1001F2C0F3}>)
+2: (INVOKE-DEBUGGER #<PRINT-NOT-READABLE {1001F2C0F3}>)
+3: (ERROR #<PRINT-NOT-READABLE {1001F2C0F3}>)
+4: (SB-KERNEL:WITH-SIMPLE-CONDITION-RESTARTS ERROR NIL PRINT-NOT-READABLE :OBJECT #<DOUBLE-FLOAT quiet NaN>)
+5: (SB-INT:PRINT-NOT-READABLE-ERROR #<DOUBLE-FLOAT quiet NaN> #<SB-IMPL::STRING-OUTPUT-STREAM {1001F2BC93}>)
+6: (SB-IMPL::%PRINT-UNREADABLE-OBJECT #<DOUBLE-FLOAT quiet NaN> #<SB-IMPL::STRING-OUTPUT-STREAM {1001F2BC93}> NIL NIL #<CLOSURE (FLET "THUNK" :IN SB-IMPL::OUTPUT-FLOAT-NAN) {7FFFF6E0E88B}>)
+7: (SB-IMPL::OUTPUT-FLOAT-NAN #<DOUBLE-FLOAT quiet NaN> #<SB-IMPL::STRING-OUTPUT-STREAM {1001F2BC93}>)
+8: ((LABELS SB-IMPL::HANDLE-IT :IN SB-KERNEL:OUTPUT-OBJECT) #<SB-IMPL::STRING-OUTPUT-STREAM {1001F2BC93}>)
+9: (PRIN1 #<DOUBLE-FLOAT quiet NaN> #<SB-IMPL::STRING-OUTPUT-STREAM {1001F2BC93}>)
+10: ((:METHOD NET.DIDIERVERNA.DECLT::DOCUMENT (NET.DIDIERVERNA.DECLT::SYMBOL-MACRO-DEFINITION T)) #S(NET.DIDIERVERNA.DECLT::SYMBOL-MACRO-DEFINITION :SYMBOL PROTOCOL-BUFFER::+DOUBLE-FLOAT-NAN+ :FOREIGNP NIL) #S(NET.DIDIERVERNA.DECLT::CONTEXT :SYSTEMS (#<ASDF/SYSTEM:SYSTEM "protobuf"> #<ASDF/SYSTEM:SYSTEM "varint">) :PACKAGES (#<PACKAGE "PROTOBUF-SYSTEM"> #<PACKAGE "PROTOBUF-CONFIG"> #<PACKAGE "WIRE-FORMAT"> #<PACKAGE "PROTOCOL-BUFFER"> #<PACKAGE "VARINT">) :EXTERNAL-DEFINITIONS #<HASH-TABLE :TEST EQUAL :COUNT 71 {100A96E203}> :INTERNAL-DEFINITIONS #<HASH-TABLE :TEST EQUAL :COUNT 22 {100A96E2A3}> :HYPERLINKSP NIL)) [fast-method]
+11: (NET.DIDIERVERNA.DECLT::ADD-CATEGORY-NODE #1=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Internal definitions" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME NIL :NEXT NIL :PREVIOUS #2=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Exported definitions" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME NIL :NEXT #1# :PREVIOUS NIL :UP #3=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Definitions" :SYNOPSIS "The symbols documentation" :SECTION-TYPE :NUMBERED :SECTION-NAME NIL :NEXT NIL :PREVIOUS #4=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Packages" :SYNOPSIS "The packages documentation" :SECTION-TYPE :NUMBERED :SECTION-NAME NIL :NEXT #3# :PREVIOUS #S(NET.DIDIERVERNA.DECLT::NODE :NAME "Files" :SYNOPSIS "The files documentation" :SECTION-TYPE :NUMBERED :SECTION-NAME NIL :NEXT #4# :PREVIOUS # :UP #5=# :CHILDREN # :BEFORE-MENU-CONTENTS "Files are sorted by type and then listed depth-first from the systems
+components trees." :AFTER-MENU-CONTENTS NIL) :UP #5# :CHILDREN (# # # # #) :BEFORE-MENU-CONTENTS "Packages are listed by definition order." :AFTER-MENU-CONTENTS NIL) :UP #5# :CHILDREN (#2# #1#) :BEFORE-MENU-CONTENTS "Definitions are sorted by export status, category, package, and then by
+lexicographic order." :AFTER-MENU-CONTENTS NIL) :CHILDREN (#6=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Exported constants" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Constants" :NEXT #7=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Exported special variables" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Special variables" :NEXT #8=# :PREVIOUS #6# :UP #2# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@defvr {Special Variable} *protoc-relative-path*
+@anchor{go to the PROTOBUF-CONFIG<colon><colon>*PROTOC-RELATIVE-PATH* special variable}@c
+@specialsubindex{*protoc-relative-path*}@c
+Supply relative proto file paths to protoc, the protobuf compiler?
+@table @strong
+@item Package
+@ref{go to the PROTOBUF-CONFIG package, , @t{protobuf-config}}
+@item Source
+@t{protobuf.asd}
+@end table
+@end defvr
+" :AFTER-MENU-CONTENTS NIL) :PREVIOUS NIL :UP #2# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@defvr {Constant} +max-octets-32+
+@anchor{go to the VARINT<colon><colon>+MAX-OCTETS-32+ constant}@c
+@constantsubindex{+max-octets-32+}@c
+Maximum number of octets needed to encode a 32-bit integer.
+@table @strong
+@item Package
+@ref{go to the VARINT package, , @t{varint}}
+@item Source
+@ref{go to the varint/varint<dot>lisp file, , @t{varint.lisp}} (file)
+@end table
+@end defvr
+@defvr {Constant} +max-octets-64+
+@anchor{go to the VARINT<colon><colon>+MAX-OCTETS-64+ constant}@c
+@constantsubindex{+max-octets-64+}@c
+Maximum number of octets needed to encode a 64-bit integer.
+@table @strong
+@item Package
+@ref{go to the VARINT package, , @t{varint}}
+@item Source
+@ref{go to the varint/varint<dot>lisp file, , @t{varint.lisp}} (file)
+@end table
+@end defvr
+" :AFTER-MENU-CONTENTS NIL) #7# #8# #9=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Exported generic functions" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Generic functions" :NEXT #10=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Exported conditions" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Conditions" :NEXT #11=# :PREVIOUS #9# :UP #2# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@deftp {Condition} {alignment} ()
+@anchor{go to the WIRE-FORMAT<colon><colon>ALIGNMENT condition}@c
+@conditionsubindex{alignment}@c
+Bad data encountered while skipping a field.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@item Direct superclasses
+@ref{go to the WIRE-FORMAT<colon><colon>PARSING-ERROR condition, , @t{parsing-error}} (condition)
+@end table
+@end deftp
+@deftp {Condition} {alignment} ()
+@anchor{go to the VARINT<colon><colon>ALIGNMENT condition}@c
+@conditionsubindex{alignment}@c
+Data buffer does not contain the type of value we have
+been asked to skip over or parse backwards.
+@table @strong
+@item Package
+@ref{go to the VARINT package, , @t{varint}}
+@item Source
+@ref{go to the varint/varint<dot>lisp file, , @t{varint.lisp}} (file)
+@item Direct superclasses
+@ref{go to the VARINT<colon><colon>PARSING-ERROR condition, , @t{parsing-error}} (condition)
+@end table
+@end deftp
+@deftp {Condition} {buffer-overflow} ()
+@anchor{go to the WIRE-FORMAT<colon><colon>BUFFER-OVERFLOW condition}@c
+@conditionsubindex{buffer-overflow}@c
+Buffer space exhausted while encoding a value.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@item Direct superclasses
+@ref{go to the WIRE-FORMAT<colon><colon>ENCODING-ERROR condition, , @t{encoding-error}} (condition)
+@end table
+@end deftp
+@deftp {Condition} {buffer-overflow} ()
+@anchor{go to the VARINT<colon><colon>BUFFER-OVERFLOW condition}@c
+@conditionsubindex{buffer-overflow}@c
+Buffer space exhausted while encoding a value.
+@table @strong
+@item Package
+@ref{go to the VARINT package, , @t{varint}}
+@item Source
+@ref{go to the varint/varint<dot>lisp file, , @t{varint.lisp}} (file)
+@item Direct superclasses
+@ref{go to the VARINT<colon><colon>ENCODING-ERROR condition, , @t{encoding-error}} (condition)
+@end table
+@end deftp
+@deftp {Condition} {data-exhausted} ()
+@anchor{go to the WIRE-FORMAT<colon><colon>DATA-EXHAUSTED condition}@c
+@conditionsubindex{data-exhausted}@c
+Decoding a value requires more data than is available.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@item Direct superclasses
+@ref{go to the WIRE-FORMAT<colon><colon>PARSING-ERROR condition, , @t{parsing-error}} (condition)
+@end table
+@end deftp
+@deftp {Condition} {data-exhausted} ()
+@anchor{go to the VARINT<colon><colon>DATA-EXHAUSTED condition}@c
+@conditionsubindex{data-exhausted}@c
+Decoding a value requires more data than is available.
+@table @strong
+@item Package
+@ref{go to the VARINT package, , @t{varint}}
+@item Source
+@ref{go to the varint/varint<dot>lisp file, , @t{varint.lisp}} (file)
+@item Direct superclasses
+@ref{go to the VARINT<colon><colon>PARSING-ERROR condition, , @t{parsing-error}} (condition)
+@end table
+@end deftp
+@deftp {Condition} {encoding-error} ()
+@anchor{go to the WIRE-FORMAT<colon><colon>ENCODING-ERROR condition}@c
+@conditionsubindex{encoding-error}@c
+Superclass of conditions signalled while encoding values.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@item Direct superclasses
+@ref{go to the WIRE-FORMAT<colon><colon>PROTOCOL-ERROR condition, , @t{protocol-error}} (condition)
+@item Direct subclasses
+@ref{go to the WIRE-FORMAT<colon><colon>BUFFER-OVERFLOW condition, , @t{buffer-overflow}} (condition)
+@end table
+@end deftp
+@deftp {Condition} {encoding-error} ()
+@anchor{go to the VARINT<colon><colon>ENCODING-ERROR condition}@c
+@conditionsubindex{encoding-error}@c
+Superclass of all VARINT encoding conditions.
+@table @strong
+@item Package
+@ref{go to the VARINT package, , @t{varint}}
+@item Source
+@ref{go to the varint/varint<dot>lisp file, , @t{varint.lisp}} (file)
+@item Direct superclasses
+@ref{go to the VARINT<colon><colon>VARINT-ERROR condition, , @t{varint-error}} (condition)
+@item Direct subclasses
+@ref{go to the VARINT<colon><colon>BUFFER-OVERFLOW condition, , @t{buffer-overflow}} (condition)
+@end table
+@end deftp
+@deftp {Condition} {parsing-error} ()
+@anchor{go to the WIRE-FORMAT<colon><colon>PARSING-ERROR condition}@c
+@conditionsubindex{parsing-error}@c
+Superclass of conditions signalled while decoding values.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@item Direct superclasses
+@ref{go to the WIRE-FORMAT<colon><colon>PROTOCOL-ERROR condition, , @t{protocol-error}} (condition)
+@item Direct subclasses
+@itemize @bullet
+@item
+@ref{go to the WIRE-FORMAT<colon><colon>DATA-EXHAUSTED condition, , @t{data-exhausted}} (condition)
+@item
+@ref{go to the WIRE-FORMAT<colon><colon>VALUE-OUT-OF-RANGE condition, , @t{value-out-of-range}} (condition)
+@item
+@ref{go to the WIRE-FORMAT<colon><colon>ALIGNMENT condition, , @t{alignment}} (condition)
+@end itemize
+@end table
+@end deftp
+@deftp {Condition} {parsing-error} ()
+@anchor{go to the VARINT<colon><colon>PARSING-ERROR condition}@c
+@conditionsubindex{parsing-error}@c
+Superclass of all VARINT decoding conditions.
+@table @strong
+@item Package
+@ref{go to the VARINT package, , @t{varint}}
+@item Source
+@ref{go to the varint/varint<dot>lisp file, , @t{varint.lisp}} (file)
+@item Direct superclasses
+@ref{go to the VARINT<colon><colon>VARINT-ERROR condition, , @t{varint-error}} (condition)
+@item Direct subclasses
+@itemize @bullet
+@item
+@ref{go to the VARINT<colon><colon>DATA-EXHAUSTED condition, , @t{data-exhausted}} (condition)
+@item
+@ref{go to the VARINT<colon><colon>VALUE-OUT-OF-RANGE condition, , @t{value-out-of-range}} (condition)
+@item
+@ref{go to the VARINT<colon><colon>ALIGNMENT condition, , @t{alignment}} (condition)
+@end itemize
+@end table
+@end deftp
+@deftp {Condition} {protocol-error} ()
+@anchor{go to the WIRE-FORMAT<colon><colon>PROTOCOL-ERROR condition}@c
+@conditionsubindex{protocol-error}@c
+Superclass of all PROTOCOL-BUFFER conditions.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@item Direct superclasses
+@t{error} (condition)
+@item Direct subclasses
+@itemize @bullet
+@item
+@ref{go to the WIRE-FORMAT<colon><colon>ENCODING-ERROR condition, , @t{encoding-error}} (condition)
+@item
+@ref{go to the WIRE-FORMAT<colon><colon>PARSING-ERROR condition, , @t{parsing-error}} (condition)
+@end itemize
+@end table
+@end deftp
+@deftp {Condition} {value-out-of-range} ()
+@anchor{go to the WIRE-FORMAT<colon><colon>VALUE-OUT-OF-RANGE condition}@c
+@conditionsubindex{value-out-of-range}@c
+Value decoded is outside the range of the return type.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@item Direct superclasses
+@ref{go to the WIRE-FORMAT<colon><colon>PARSING-ERROR condition, , @t{parsing-error}} (condition)
+@end table
+@end deftp
+@deftp {Condition} {value-out-of-range} ()
+@anchor{go to the VARINT<colon><colon>VALUE-OUT-OF-RANGE condition}@c
+@conditionsubindex{value-out-of-range}@c
+Value decoded is outside the range of the return type.
+@table @strong
+@item Package
+@ref{go to the VARINT package, , @t{varint}}
+@item Source
+@ref{go to the varint/varint<dot>lisp file, , @t{varint.lisp}} (file)
+@item Direct superclasses
+@ref{go to the VARINT<colon><colon>PARSING-ERROR condition, , @t{parsing-error}} (condition)
+@end table
+@end deftp
+@deftp {Condition} {varint-error} ()
+@anchor{go to the VARINT<colon><colon>VARINT-ERROR condition}@c
+@conditionsubindex{varint-error}@c
+Superclass of all VARINT conditions.
+@table @strong
+@item Package
+@ref{go to the VARINT package, , @t{varint}}
+@item Source
+@ref{go to the varint/varint<dot>lisp file, , @t{varint.lisp}} (file)
+@item Direct superclasses
+@t{error} (condition)
+@item Direct subclasses
+@itemize @bullet
+@item
+@ref{go to the VARINT<colon><colon>ENCODING-ERROR condition, , @t{encoding-error}} (condition)
+@item
+@ref{go to the VARINT<colon><colon>PARSING-ERROR condition, , @t{parsing-error}} (condition)
+@end itemize
+@end table
+@end deftp
+" :AFTER-MENU-CONTENTS NIL) :PREVIOUS #8# :UP #2# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@deffn {Generic Function} {clear} PROTOCOL-BUFFER
+@anchor{go to the PROTOCOL-BUFFER<colon><colon>CLEAR generic function}@c
+@genericsubindex{clear}@c
+Sets the slots of PROTOCOL-BUFFER to their default values.
+@table @strong
+@item Package
+@ref{go to the PROTOCOL-BUFFER package, , @t{protocol-buffer}}
+@item Source
+@ref{go to the protobuf/protocol-buffer<dot>lisp file, , @t{protocol-buffer.lisp}} (file)
+@end table
+@end deffn
+@deffn {Generic Function} {is-initialized} PROTOCOL-BUFFER
+@anchor{go to the PROTOCOL-BUFFER<colon><colon>IS-INITIALIZED generic function}@c
+@genericsubindex{is-initialized}@c
+Are all the slots of PROTOCOL-BUFFER initialized?
+@table @strong
+@item Package
+@ref{go to the PROTOCOL-BUFFER package, , @t{protocol-buffer}}
+@item Source
+@ref{go to the protobuf/protocol-buffer<dot>lisp file, , @t{protocol-buffer.lisp}} (file)
+@end table
+@end deffn
+@deffn {Generic Function} {merge-from-array} PROTOCOL-BUFFER BUFFER START LIMIT
+@anchor{go to the PROTOCOL-BUFFER<colon><colon>MERGE-FROM-ARRAY generic function}@c
+@genericsubindex{merge-from-array}@c
+Merges the contents of the encoded protocol buffer stored in BUFFER into
+PROTOCOL-BUFFER.  When reading from BUFFER, begins at position START and does
+not read from position LIMIT or higher.  If deserialization demands reading
+beyond LIMIT, then signals PROTOCOL-BUFFER-READ-ERROR.
+@table @strong
+@item Package
+@ref{go to the PROTOCOL-BUFFER package, , @t{protocol-buffer}}
+@item Source
+@ref{go to the protobuf/protocol-buffer<dot>lisp file, , @t{protocol-buffer.lisp}} (file)
+@end table
+@end deffn
+@deffn {Generic Function} {merge-from-message} PROTOCOL-BUFFER SOURCE-PROTOCOL-BUFFER
+@anchor{go to the PROTOCOL-BUFFER<colon><colon>MERGE-FROM-MESSAGE generic function}@c
+@genericsubindex{merge-from-message}@c
+Merges the contents of SOURCE-PROTOCOL-BUFFER into PROTOCOL-BUFFER.
+@table @strong
+@item Package
+@ref{go to the PROTOCOL-BUFFER package, , @t{protocol-buffer}}
+@item Source
+@ref{go to the protobuf/protocol-buffer<dot>lisp file, , @t{protocol-buffer.lisp}} (file)
+@end table
+@end deffn
+@deffn {Generic Function} {octet-size} PROTOCOL-BUFFER
+@anchor{go to the PROTOCOL-BUFFER<colon><colon>OCTET-SIZE generic function}@c
+@genericsubindex{octet-size}@c
+Returns the number of octets required to represent PROTOCOL-BUFFER when it
+is encoded.
+@table @strong
+@item Package
+@ref{go to the PROTOCOL-BUFFER package, , @t{protocol-buffer}}
+@item Source
+@ref{go to the protobuf/protocol-buffer<dot>lisp file, , @t{protocol-buffer.lisp}} (file)
+@end table
+@end deffn
+@deffn {Generic Function} {serialize} PROTOCOL-BUFFER BUFFER INDEX LIMIT
+@anchor{go to the PROTOCOL-BUFFER<colon><colon>SERIALIZE generic function}@c
+@genericsubindex{serialize}@c
+Serializes PROTOCOL-BUFFER into BUFFER.  Starts writing at position INDEX of
+BUFFER, but does not write into position LIMIT or higher.  If serialization
+demands writing past LIMIT, then signals PROTOCOL-BUFFER-WRITE-ERROR.@*
+
+OCTET-SIZE must be called immediately before SERIALIZE because PROTOCOL-BUFFER
+instances cache size information.
+@table @strong
+@item Package
+@ref{go to the PROTOCOL-BUFFER package, , @t{protocol-buffer}}
+@item Source
+@ref{go to the protobuf/protocol-buffer<dot>lisp file, , @t{protocol-buffer.lisp}} (file)
+@end table
+@end deffn
+" :AFTER-MENU-CONTENTS NIL) #10# #11#) :BEFORE-MENU-CONTENTS NIL :AFTER-MENU-CONTENTS NIL) :UP #3# :CHILDREN (#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Internal constants" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Constants" :NEXT NIL :PREVIOUS NIL :UP #1# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@defvr {Constant} +end-group+
+@anchor{go to the WIRE-FORMAT<colon><colon>+END-GROUP+ constant}@c
+@constantsubindex{+end-group+}@c
+Wire type marking the end of a group.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@end table
+@end defvr
+@defvr {Constant} +fixed32+
+@anchor{go to the WIRE-FORMAT<colon><colon>+FIXED32+ constant}@c
+@constantsubindex{+fixed32+}@c
+Wire type used for 4-byte integers or single precision floats.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@end table
+@end defvr
+@defvr {Constant} +fixed64+
+@anchor{go to the WIRE-FORMAT<colon><colon>+FIXED64+ constant}@c
+@constantsubindex{+fixed64+}@c
+Wire type used for 8-byte integers or double precision floats.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@end table
+@end defvr
+@defvr {Constant} +length-delimited+
+@anchor{go to the WIRE-FORMAT<colon><colon>+LENGTH-DELIMITED+ constant}@c
+@constantsubindex{+length-delimited+}@c
+Wire type used for length delimited values, such as character strings.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@end table
+@end defvr
+@defvr {Constant} +start-group+
+@anchor{go to the WIRE-FORMAT<colon><colon>+START-GROUP+ constant}@c
+@constantsubindex{+start-group+}@c
+Wire type marking the start of a group.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@end table
+@end defvr
+@defvr {Constant} +varint+
+@anchor{go to the WIRE-FORMAT<colon><colon>+VARINT+ constant}@c
+@constantsubindex{+varint+}@c
+Wire type used for variable length integers.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@end table
+@end defvr
+" :AFTER-MENU-CONTENTS NIL)) :BEFORE-MENU-CONTENTS NIL :AFTER-MENU-CONTENTS NIL) #S(NET.DIDIERVERNA.DECLT::CONTEXT :SYSTEMS (#<ASDF/SYSTEM:SYSTEM "protobuf"> #<ASDF/SYSTEM:SYSTEM "varint">) :PACKAGES (#<PACKAGE "PROTOBUF-SYSTEM"> #<PACKAGE "PROTOBUF-CONFIG"> #<PACKAGE "WIRE-FORMAT"> #<PACKAGE "PROTOCOL-BUFFER"> #<PACKAGE "VARINT">) :EXTERNAL-DEFINITIONS #<HASH-TABLE :TEST EQUAL :COUNT 71 {100A96E203}> :INTERNAL-DEFINITIONS #<HASH-TABLE :TEST EQUAL :COUNT 22 {100A96E2A3}> :HYPERLINKSP NIL) "internal" "symbol macros" (#S(NET.DIDIERVERNA.DECLT::SYMBOL-MACRO-DEFINITION :SYMBOL PROTOCOL-BUFFER::+DOUBLE-FLOAT-NEGATIVE-INFINITY+ :FOREIGNP NIL) #S(NET.DIDIERVERNA.DECLT::SYMBOL-MACRO-DEFINITION :SYMBOL PROTOCOL-BUFFER::+DOUBLE-FLOAT-POSITIVE-INFINITY+ :FOREIGNP NIL) #S(NET.DIDIERVERNA.DECLT::SYMBOL-MACRO-DEFINITION :SYMBOL PROTOCOL-BUFFER::+SINGLE-FLOAT-NAN+ :FOREIGNP NIL) #S(NET.DIDIERVERNA.DECLT::SYMBOL-MACRO-DEFINITION :SYMBOL PROTOCOL-BUFFER::+SINGLE-FLOAT-NEGATIVE-INFINITY+ :FOREIGNP NIL) #S(NET.DIDIERVERNA.DECLT::SYMBOL-MACRO-DEFINITION :SYMBOL PROTOCOL-BUFFER::+SINGLE-FLOAT-POSITIVE-INFINITY+ :FOREIGNP NIL)))
+12: (NET.DIDIERVERNA.DECLT::ADD-CATEGORIES-NODE #1=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Internal definitions" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME NIL :NEXT NIL :PREVIOUS #2=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Exported definitions" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME NIL :NEXT #1# :PREVIOUS NIL :UP #3=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Definitions" :SYNOPSIS "The symbols documentation" :SECTION-TYPE :NUMBERED :SECTION-NAME NIL :NEXT NIL :PREVIOUS #4=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Packages" :SYNOPSIS "The packages documentation" :SECTION-TYPE :NUMBERED :SECTION-NAME NIL :NEXT #3# :PREVIOUS #S(NET.DIDIERVERNA.DECLT::NODE :NAME "Files" :SYNOPSIS "The files documentation" :SECTION-TYPE :NUMBERED :SECTION-NAME NIL :NEXT #4# :PREVIOUS # :UP #5=# :CHILDREN # :BEFORE-MENU-CONTENTS "Files are sorted by type and then listed depth-first from the systems
+components trees." :AFTER-MENU-CONTENTS NIL) :UP #5# :CHILDREN (# # # # #) :BEFORE-MENU-CONTENTS "Packages are listed by definition order." :AFTER-MENU-CONTENTS NIL) :UP #5# :CHILDREN (#2# #1#) :BEFORE-MENU-CONTENTS "Definitions are sorted by export status, category, package, and then by
+lexicographic order." :AFTER-MENU-CONTENTS NIL) :CHILDREN (#6=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Exported constants" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Constants" :NEXT #7=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Exported special variables" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Special variables" :NEXT #8=# :PREVIOUS #6# :UP #2# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@defvr {Special Variable} *protoc-relative-path*
+@anchor{go to the PROTOBUF-CONFIG<colon><colon>*PROTOC-RELATIVE-PATH* special variable}@c
+@specialsubindex{*protoc-relative-path*}@c
+Supply relative proto file paths to protoc, the protobuf compiler?
+@table @strong
+@item Package
+@ref{go to the PROTOBUF-CONFIG package, , @t{protobuf-config}}
+@item Source
+@t{protobuf.asd}
+@end table
+@end defvr
+" :AFTER-MENU-CONTENTS NIL) :PREVIOUS NIL :UP #2# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@defvr {Constant} +max-octets-32+
+@anchor{go to the VARINT<colon><colon>+MAX-OCTETS-32+ constant}@c
+@constantsubindex{+max-octets-32+}@c
+Maximum number of octets needed to encode a 32-bit integer.
+@table @strong
+@item Package
+@ref{go to the VARINT package, , @t{varint}}
+@item Source
+@ref{go to the varint/varint<dot>lisp file, , @t{varint.lisp}} (file)
+@end table
+@end defvr
+@defvr {Constant} +max-octets-64+
+@anchor{go to the VARINT<colon><colon>+MAX-OCTETS-64+ constant}@c
+@constantsubindex{+max-octets-64+}@c
+Maximum number of octets needed to encode a 64-bit integer.
+@table @strong
+@item Package
+@ref{go to the VARINT package, , @t{varint}}
+@item Source
+@ref{go to the varint/varint<dot>lisp file, , @t{varint.lisp}} (file)
+@end table
+@end defvr
+" :AFTER-MENU-CONTENTS NIL) #7# #8# #9=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Exported generic functions" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Generic functions" :NEXT #10=#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Exported conditions" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Conditions" :NEXT #11=# :PREVIOUS #9# :UP #2# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@deftp {Condition} {alignment} ()
+@anchor{go to the WIRE-FORMAT<colon><colon>ALIGNMENT condition}@c
+@conditionsubindex{alignment}@c
+Bad data encountered while skipping a field.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@item Direct superclasses
+@ref{go to the WIRE-FORMAT<colon><colon>PARSING-ERROR condition, , @t{parsing-error}} (condition)
+@end table
+@end deftp
+@deftp {Condition} {alignment} ()
+@anchor{go to the VARINT<colon><colon>ALIGNMENT condition}@c
+@conditionsubindex{alignment}@c
+Data buffer does not contain the type of value we have
+been asked to skip over or parse backwards.
+@table @strong
+@item Package
+@ref{go to the VARINT package, , @t{varint}}
+@item Source
+@ref{go to the varint/varint<dot>lisp file, , @t{varint.lisp}} (file)
+@item Direct superclasses
+@ref{go to the VARINT<colon><colon>PARSING-ERROR condition, , @t{parsing-error}} (condition)
+@end table
+@end deftp
+@deftp {Condition} {buffer-overflow} ()
+@anchor{go to the WIRE-FORMAT<colon><colon>BUFFER-OVERFLOW condition}@c
+@conditionsubindex{buffer-overflow}@c
+Buffer space exhausted while encoding a value.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@item Direct superclasses
+@ref{go to the WIRE-FORMAT<colon><colon>ENCODING-ERROR condition, , @t{encoding-error}} (condition)
+@end table
+@end deftp
+@deftp {Condition} {buffer-overflow} ()
+@anchor{go to the VARINT<colon><colon>BUFFER-OVERFLOW condition}@c
+@conditionsubindex{buffer-overflow}@c
+Buffer space exhausted while encoding a value.
+@table @strong
+@item Package
+@ref{go to the VARINT package, , @t{varint}}
+@item Source
+@ref{go to the varint/varint<dot>lisp file, , @t{varint.lisp}} (file)
+@item Direct superclasses
+@ref{go to the VARINT<colon><colon>ENCODING-ERROR condition, , @t{encoding-error}} (condition)
+@end table
+@end deftp
+@deftp {Condition} {data-exhausted} ()
+@anchor{go to the WIRE-FORMAT<colon><colon>DATA-EXHAUSTED condition}@c
+@conditionsubindex{data-exhausted}@c
+Decoding a value requires more data than is available.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@item Direct superclasses
+@ref{go to the WIRE-FORMAT<colon><colon>PARSING-ERROR condition, , @t{parsing-error}} (condition)
+@end table
+@end deftp
+@deftp {Condition} {data-exhausted} ()
+@anchor{go to the VARINT<colon><colon>DATA-EXHAUSTED condition}@c
+@conditionsubindex{data-exhausted}@c
+Decoding a value requires more data than is available.
+@table @strong
+@item Package
+@ref{go to the VARINT package, , @t{varint}}
+@item Source
+@ref{go to the varint/varint<dot>lisp file, , @t{varint.lisp}} (file)
+@item Direct superclasses
+@ref{go to the VARINT<colon><colon>PARSING-ERROR condition, , @t{parsing-error}} (condition)
+@end table
+@end deftp
+@deftp {Condition} {encoding-error} ()
+@anchor{go to the WIRE-FORMAT<colon><colon>ENCODING-ERROR condition}@c
+@conditionsubindex{encoding-error}@c
+Superclass of conditions signalled while encoding values.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@item Direct superclasses
+@ref{go to the WIRE-FORMAT<colon><colon>PROTOCOL-ERROR condition, , @t{protocol-error}} (condition)
+@item Direct subclasses
+@ref{go to the WIRE-FORMAT<colon><colon>BUFFER-OVERFLOW condition, , @t{buffer-overflow}} (condition)
+@end table
+@end deftp
+@deftp {Condition} {encoding-error} ()
+@anchor{go to the VARINT<colon><colon>ENCODING-ERROR condition}@c
+@conditionsubindex{encoding-error}@c
+Superclass of all VARINT encoding conditions.
+@table @strong
+@item Package
+@ref{go to the VARINT package, , @t{varint}}
+@item Source
+@ref{go to the varint/varint<dot>lisp file, , @t{varint.lisp}} (file)
+@item Direct superclasses
+@ref{go to the VARINT<colon><colon>VARINT-ERROR condition, , @t{varint-error}} (condition)
+@item Direct subclasses
+@ref{go to the VARINT<colon><colon>BUFFER-OVERFLOW condition, , @t{buffer-overflow}} (condition)
+@end table
+@end deftp
+@deftp {Condition} {parsing-error} ()
+@anchor{go to the WIRE-FORMAT<colon><colon>PARSING-ERROR condition}@c
+@conditionsubindex{parsing-error}@c
+Superclass of conditions signalled while decoding values.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@item Direct superclasses
+@ref{go to the WIRE-FORMAT<colon><colon>PROTOCOL-ERROR condition, , @t{protocol-error}} (condition)
+@item Direct subclasses
+@itemize @bullet
+@item
+@ref{go to the WIRE-FORMAT<colon><colon>DATA-EXHAUSTED condition, , @t{data-exhausted}} (condition)
+@item
+@ref{go to the WIRE-FORMAT<colon><colon>VALUE-OUT-OF-RANGE condition, , @t{value-out-of-range}} (condition)
+@item
+@ref{go to the WIRE-FORMAT<colon><colon>ALIGNMENT condition, , @t{alignment}} (condition)
+@end itemize
+@end table
+@end deftp
+@deftp {Condition} {parsing-error} ()
+@anchor{go to the VARINT<colon><colon>PARSING-ERROR condition}@c
+@conditionsubindex{parsing-error}@c
+Superclass of all VARINT decoding conditions.
+@table @strong
+@item Package
+@ref{go to the VARINT package, , @t{varint}}
+@item Source
+@ref{go to the varint/varint<dot>lisp file, , @t{varint.lisp}} (file)
+@item Direct superclasses
+@ref{go to the VARINT<colon><colon>VARINT-ERROR condition, , @t{varint-error}} (condition)
+@item Direct subclasses
+@itemize @bullet
+@item
+@ref{go to the VARINT<colon><colon>DATA-EXHAUSTED condition, , @t{data-exhausted}} (condition)
+@item
+@ref{go to the VARINT<colon><colon>VALUE-OUT-OF-RANGE condition, , @t{value-out-of-range}} (condition)
+@item
+@ref{go to the VARINT<colon><colon>ALIGNMENT condition, , @t{alignment}} (condition)
+@end itemize
+@end table
+@end deftp
+@deftp {Condition} {protocol-error} ()
+@anchor{go to the WIRE-FORMAT<colon><colon>PROTOCOL-ERROR condition}@c
+@conditionsubindex{protocol-error}@c
+Superclass of all PROTOCOL-BUFFER conditions.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@item Direct superclasses
+@t{error} (condition)
+@item Direct subclasses
+@itemize @bullet
+@item
+@ref{go to the WIRE-FORMAT<colon><colon>ENCODING-ERROR condition, , @t{encoding-error}} (condition)
+@item
+@ref{go to the WIRE-FORMAT<colon><colon>PARSING-ERROR condition, , @t{parsing-error}} (condition)
+@end itemize
+@end table
+@end deftp
+@deftp {Condition} {value-out-of-range} ()
+@anchor{go to the WIRE-FORMAT<colon><colon>VALUE-OUT-OF-RANGE condition}@c
+@conditionsubindex{value-out-of-range}@c
+Value decoded is outside the range of the return type.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@item Direct superclasses
+@ref{go to the WIRE-FORMAT<colon><colon>PARSING-ERROR condition, , @t{parsing-error}} (condition)
+@end table
+@end deftp
+@deftp {Condition} {value-out-of-range} ()
+@anchor{go to the VARINT<colon><colon>VALUE-OUT-OF-RANGE condition}@c
+@conditionsubindex{value-out-of-range}@c
+Value decoded is outside the range of the return type.
+@table @strong
+@item Package
+@ref{go to the VARINT package, , @t{varint}}
+@item Source
+@ref{go to the varint/varint<dot>lisp file, , @t{varint.lisp}} (file)
+@item Direct superclasses
+@ref{go to the VARINT<colon><colon>PARSING-ERROR condition, , @t{parsing-error}} (condition)
+@end table
+@end deftp
+@deftp {Condition} {varint-error} ()
+@anchor{go to the VARINT<colon><colon>VARINT-ERROR condition}@c
+@conditionsubindex{varint-error}@c
+Superclass of all VARINT conditions.
+@table @strong
+@item Package
+@ref{go to the VARINT package, , @t{varint}}
+@item Source
+@ref{go to the varint/varint<dot>lisp file, , @t{varint.lisp}} (file)
+@item Direct superclasses
+@t{error} (condition)
+@item Direct subclasses
+@itemize @bullet
+@item
+@ref{go to the VARINT<colon><colon>ENCODING-ERROR condition, , @t{encoding-error}} (condition)
+@item
+@ref{go to the VARINT<colon><colon>PARSING-ERROR condition, , @t{parsing-error}} (condition)
+@end itemize
+@end table
+@end deftp
+" :AFTER-MENU-CONTENTS NIL) :PREVIOUS #8# :UP #2# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@deffn {Generic Function} {clear} PROTOCOL-BUFFER
+@anchor{go to the PROTOCOL-BUFFER<colon><colon>CLEAR generic function}@c
+@genericsubindex{clear}@c
+Sets the slots of PROTOCOL-BUFFER to their default values.
+@table @strong
+@item Package
+@ref{go to the PROTOCOL-BUFFER package, , @t{protocol-buffer}}
+@item Source
+@ref{go to the protobuf/protocol-buffer<dot>lisp file, , @t{protocol-buffer.lisp}} (file)
+@end table
+@end deffn
+@deffn {Generic Function} {is-initialized} PROTOCOL-BUFFER
+@anchor{go to the PROTOCOL-BUFFER<colon><colon>IS-INITIALIZED generic function}@c
+@genericsubindex{is-initialized}@c
+Are all the slots of PROTOCOL-BUFFER initialized?
+@table @strong
+@item Package
+@ref{go to the PROTOCOL-BUFFER package, , @t{protocol-buffer}}
+@item Source
+@ref{go to the protobuf/protocol-buffer<dot>lisp file, , @t{protocol-buffer.lisp}} (file)
+@end table
+@end deffn
+@deffn {Generic Function} {merge-from-array} PROTOCOL-BUFFER BUFFER START LIMIT
+@anchor{go to the PROTOCOL-BUFFER<colon><colon>MERGE-FROM-ARRAY generic function}@c
+@genericsubindex{merge-from-array}@c
+Merges the contents of the encoded protocol buffer stored in BUFFER into
+PROTOCOL-BUFFER.  When reading from BUFFER, begins at position START and does
+not read from position LIMIT or higher.  If deserialization demands reading
+beyond LIMIT, then signals PROTOCOL-BUFFER-READ-ERROR.
+@table @strong
+@item Package
+@ref{go to the PROTOCOL-BUFFER package, , @t{protocol-buffer}}
+@item Source
+@ref{go to the protobuf/protocol-buffer<dot>lisp file, , @t{protocol-buffer.lisp}} (file)
+@end table
+@end deffn
+@deffn {Generic Function} {merge-from-message} PROTOCOL-BUFFER SOURCE-PROTOCOL-BUFFER
+@anchor{go to the PROTOCOL-BUFFER<colon><colon>MERGE-FROM-MESSAGE generic function}@c
+@genericsubindex{merge-from-message}@c
+Merges the contents of SOURCE-PROTOCOL-BUFFER into PROTOCOL-BUFFER.
+@table @strong
+@item Package
+@ref{go to the PROTOCOL-BUFFER package, , @t{protocol-buffer}}
+@item Source
+@ref{go to the protobuf/protocol-buffer<dot>lisp file, , @t{protocol-buffer.lisp}} (file)
+@end table
+@end deffn
+@deffn {Generic Function} {octet-size} PROTOCOL-BUFFER
+@anchor{go to the PROTOCOL-BUFFER<colon><colon>OCTET-SIZE generic function}@c
+@genericsubindex{octet-size}@c
+Returns the number of octets required to represent PROTOCOL-BUFFER when it
+is encoded.
+@table @strong
+@item Package
+@ref{go to the PROTOCOL-BUFFER package, , @t{protocol-buffer}}
+@item Source
+@ref{go to the protobuf/protocol-buffer<dot>lisp file, , @t{protocol-buffer.lisp}} (file)
+@end table
+@end deffn
+@deffn {Generic Function} {serialize} PROTOCOL-BUFFER BUFFER INDEX LIMIT
+@anchor{go to the PROTOCOL-BUFFER<colon><colon>SERIALIZE generic function}@c
+@genericsubindex{serialize}@c
+Serializes PROTOCOL-BUFFER into BUFFER.  Starts writing at position INDEX of
+BUFFER, but does not write into position LIMIT or higher.  If serialization
+demands writing past LIMIT, then signals PROTOCOL-BUFFER-WRITE-ERROR.@*
+
+OCTET-SIZE must be called immediately before SERIALIZE because PROTOCOL-BUFFER
+instances cache size information.
+@table @strong
+@item Package
+@ref{go to the PROTOCOL-BUFFER package, , @t{protocol-buffer}}
+@item Source
+@ref{go to the protobuf/protocol-buffer<dot>lisp file, , @t{protocol-buffer.lisp}} (file)
+@end table
+@end deffn
+" :AFTER-MENU-CONTENTS NIL) #10# #11#) :BEFORE-MENU-CONTENTS NIL :AFTER-MENU-CONTENTS NIL) :UP #3# :CHILDREN (#S(NET.DIDIERVERNA.DECLT::NODE :NAME "Internal constants" :SYNOPSIS NIL :SECTION-TYPE :NUMBERED :SECTION-NAME "Constants" :NEXT NIL :PREVIOUS NIL :UP #1# :CHILDREN NIL :BEFORE-MENU-CONTENTS "@defvr {Constant} +end-group+
+@anchor{go to the WIRE-FORMAT<colon><colon>+END-GROUP+ constant}@c
+@constantsubindex{+end-group+}@c
+Wire type marking the end of a group.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@end table
+@end defvr
+@defvr {Constant} +fixed32+
+@anchor{go to the WIRE-FORMAT<colon><colon>+FIXED32+ constant}@c
+@constantsubindex{+fixed32+}@c
+Wire type used for 4-byte integers or single precision floats.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@end table
+@end defvr
+@defvr {Constant} +fixed64+
+@anchor{go to the WIRE-FORMAT<colon><colon>+FIXED64+ constant}@c
+@constantsubindex{+fixed64+}@c
+Wire type used for 8-byte integers or double precision floats.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@end table
+@end defvr
+@defvr {Constant} +length-delimited+
+@anchor{go to the WIRE-FORMAT<colon><colon>+LENGTH-DELIMITED+ constant}@c
+@constantsubindex{+length-delimited+}@c
+Wire type used for length delimited values, such as character strings.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@end table
+@end defvr
+@defvr {Constant} +start-group+
+@anchor{go to the WIRE-FORMAT<colon><colon>+START-GROUP+ constant}@c
+@constantsubindex{+start-group+}@c
+Wire type marking the start of a group.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@end table
+@end defvr
+@defvr {Constant} +varint+
+@anchor{go to the WIRE-FORMAT<colon><colon>+VARINT+ constant}@c
+@constantsubindex{+varint+}@c
+Wire type used for variable length integers.
+@table @strong
+@item Package
+@ref{go to the WIRE-FORMAT package, , @t{wire-format}}
+@item Source
+@ref{go to the protobuf/wire-format<dot>lisp file, , @t{wire-format.lisp}} (file)
+@end table
+@end defvr
+" :AFTER-MENU-CONTENTS NIL)) :BEFORE-MENU-CONTENTS NIL :AFTER-MENU-CONTENTS NIL) #S(NET.DIDIERVERNA.DECLT::CONTEXT :SYSTEMS (#<ASDF/SYSTEM:SYSTEM "protobuf"> #<ASDF/SYSTEM:SYSTEM "varint">) :PACKAGES (#<PACKAGE "PROTOBUF-SYSTEM"> #<PACKAGE "PROTOBUF-CONFIG"> #<PACKAGE "WIRE-FORMAT"> #<PACKAGE "PROTOCOL-BUFFER"> #<PACKAGE "VARINT">) :EXTERNAL-DEFINITIONS #<HASH-TABLE :TEST EQUAL :COUNT 71 {100A96E203}> :INTERNAL-DEFINITIONS #<HASH-TABLE :TEST EQUAL :COUNT 22 {100A96E2A3}> :HYPERLINKSP NIL) "internal" #<HASH-TABLE :TEST EQUAL :COUNT 22 {100A96E2A3}>)
+13: ((FLET "THUNK" :IN NET.DIDIERVERNA.DECLT:DECLT))
+14: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN NET.DIDIERVERNA.DECLT:DECLT) {7FFFF6E0EC0B}>)
+15: (NET.DIDIERVERNA.DECLT:DECLT "protobuf" :LIBRARY-NAME NIL :TAGLINE NIL :VERSION NIL :CONTACT NIL :COPYRIGHT-YEARS NIL :LICENSE NIL :INTRODUCTION "" :CONCLUSION NIL :TEXI-NAME NIL :TEXI-DIRECTORY "/home/didier/quickref/texinfo/" :INFO-NAME NIL :HYPERLINKS NIL :DECLT-NOTICE :LONG)
+16: (SB-INT:SIMPLE-EVAL-IN-LEXENV (NET.DIDIERVERNA.DECLT:DECLT *SYSTEM-NAME* :INTRODUCTION (WHEN *INTRODUCTION* "") :TEXI-DIRECTORY *TEXINFO-DIRECTORY*) #<NULL-LEXENV>)
+17: (EVAL-TLF (NET.DIDIERVERNA.DECLT:DECLT *SYSTEM-NAME* :INTRODUCTION (WHEN *INTRODUCTION* "") :TEXI-DIRECTORY *TEXINFO-DIRECTORY*) 13 NIL)
+18: ((LABELS SB-FASL::EVAL-FORM :IN SB-INT:LOAD-AS-SOURCE) (NET.DIDIERVERNA.DECLT:DECLT *SYSTEM-NAME* :INTRODUCTION (WHEN *INTRODUCTION* "") :TEXI-DIRECTORY *TEXINFO-DIRECTORY*) 13)
+19: ((LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) (NET.DIDIERVERNA.DECLT:DECLT *SYSTEM-NAME* :INTRODUCTION (WHEN *INTRODUCTION* "") :TEXI-DIRECTORY *TEXINFO-DIRECTORY*) :CURRENT-INDEX 13)
+20: (SB-C::%DO-FORMS-FROM-INFO #<CLOSURE (LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) {1001B8D9BB}> #<SB-C::SOURCE-INFO {1001B8D973}> SB-C::INPUT-ERROR-IN-LOAD)
+21: (SB-INT:LOAD-AS-SOURCE #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/declt" {1001B7EA03}> :VERBOSE NIL :PRINT NIL :CONTEXT "loading")
+22: ((FLET SB-FASL::THUNK :IN LOAD))
+23: (SB-FASL::CALL-WITH-LOAD-BINDINGS #<CLOSURE (FLET SB-FASL::THUNK :IN LOAD) {7FFFF6E0F6BB}> #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/declt" {1001B7EA03}>)
+24: ((FLET SB-FASL::LOAD-STREAM :IN LOAD) #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/declt" {1001B7EA03}> NIL)
+25: (LOAD #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/declt" {1001B7EA03}> :VERBOSE NIL :PRINT NIL :IF-DOES-NOT-EXIST T :EXTERNAL-FORMAT :DEFAULT)
+26: ((FLET SB-IMPL::LOAD-SCRIPT :IN SB-IMPL::PROCESS-SCRIPT) #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/declt" {1001B7EA03}>)
+27: ((FLET "WITHOUT-INTERRUPTS-BODY-3" :IN SB-IMPL::PROCESS-SCRIPT))
+28: (SB-IMPL::PROCESS-SCRIPT "/home/didier/share/common-lisp/source/quickref/bin/declt")
+29: (SB-IMPL::TOPLEVEL-INIT)
+30: ((FLET "WITHOUT-INTERRUPTS-BODY-35" :IN SAVE-LISP-AND-DIE))
+31: ((LABELS SB-IMPL::RESTART-LISP :IN SAVE-LISP-AND-DIE))
+
+unhandled condition in --disable-debugger mode, quitting
+

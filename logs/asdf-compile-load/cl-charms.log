@@ -1,0 +1,62 @@
+; cc -o /home/didier/quickref/cache/cl-charms/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl-charms-20181210-git/src/low-level/curses-grovel__grovel-tmpCDM7YXYI.o -c -g -Wall -Wsign-compare -Wpointer-arith -O3 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -fno-omit-frame-pointer -momit-leaf-frame-pointer -fno-pie -fPIC -I/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cffi_0.20.0/ /home/didier/quickref/cache/cl-charms/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl-charms-20181210-git/src/low-level/curses-grovel__grovel.c
+/home/didier/quickref/cache/cl-charms/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl-charms-20181210-git/src/low-level/curses-grovel__grovel.c:6:21: fatal error: ncurses.h: Aucun fichier ou dossier de ce type
+ #include <ncurses.h>
+                     ^
+compilation terminated.
+Unhandled CFFI-GROVEL:GROVEL-ERROR in thread #<error printing a SB-THREAD:THREAD: #<PRINT-NOT-READABLE {1007143483}>>: Subprocess #<UIOP/LAUNCH-PROGRAM::PROCESS-INFO {100713E323}>
+ with command ("cc" "-o" "/home/didier/quickref/cache/cl-charms/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl-charms-20181210-git/src/low-level/curses-grovel__grovel-tmpCDM7YXYI.o" "-c" "-g" "-Wall" "-Wsign-compare" "-Wpointer-arith" "-O3" "-D_LARGEFILE_SOURCE" "-D_LARGEFILE64_SOURCE" "-D_FILE_OFFSET_BITS=64" "-fno-omit-frame-pointer" "-momit-leaf-frame-pointer" "-fno-pie" "-fPIC" "-I/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cffi_0.20.0/" "/home/didier/quickref/cache/cl-charms/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl-charms-20181210-git/src/low-level/curses-grovel__grovel.c")
+ exited with error code 1
+
+Backtrace for: #<SB-THREAD:THREAD "main thread" RUNNING {1001B76DE3}>
+0: (SB-DEBUG::DEBUGGER-DISABLED-HOOK #<CFFI-GROVEL:GROVEL-ERROR "~a" {1007141353}> #<unused argument>)
+1: (SB-DEBUG::RUN-HOOK *INVOKE-DEBUGGER-HOOK* #<CFFI-GROVEL:GROVEL-ERROR "~a" {1007141353}>)
+2: (INVOKE-DEBUGGER #<CFFI-GROVEL:GROVEL-ERROR "~a" {1007141353}>)
+3: (ERROR CFFI-GROVEL:GROVEL-ERROR :FORMAT-CONTROL "~a" :FORMAT-ARGUMENTS (#<UIOP/RUN-PROGRAM:SUBPROCESS-ERROR {1007140D43}>))
+4: (CFFI-GROVEL:GROVEL-ERROR "~a" #<UIOP/RUN-PROGRAM:SUBPROCESS-ERROR {1007140D43}>)
+5: ((FLET "THUNK" :IN CFFI-GROVEL:PROCESS-GROVEL-FILE))
+6: (SB-IMPL::%WITH-STANDARD-IO-SYNTAX #<CLOSURE (FLET "THUNK" :IN CFFI-GROVEL:PROCESS-GROVEL-FILE) {7FFFF6E0DCEB}>)
+7: (CFFI-GROVEL:PROCESS-GROVEL-FILE #P"/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl-charms-20181210-git/src/low-level/curses-grovel.lisp" #P"/home/didier/quickref/cache/cl-charms/usr/local/share/common-lisp/quicklisp/dists/quicklisp/software/cl-charms-20181210-git/src/low-level/curses-grovel.processed-grovel-file")
+8: ((:METHOD ASDF/ACTION:PERFORM (CFFI-GROVEL::PROCESS-OP CFFI-GROVEL:GROVEL-FILE)) #<CFFI-GROVEL::PROCESS-OP > #<CFFI-GROVEL:GROVEL-FILE "cl-charms" "low-level" "curses-grovel">) [fast-method]
+9: ((SB-PCL::EMF ASDF/ACTION:PERFORM) #<unused argument> #<unused argument> #<CFFI-GROVEL::PROCESS-OP > #<CFFI-GROVEL:GROVEL-FILE "cl-charms" "low-level" "curses-grovel">)
+10: ((LAMBDA NIL :IN ASDF/ACTION:CALL-WHILE-VISITING-ACTION))
+11: ((:METHOD ASDF/ACTION:PERFORM :AROUND (CFFI-GROVEL::PROCESS-OP CFFI-GROVEL::CC-FLAGS-MIXIN)) #<CFFI-GROVEL::PROCESS-OP > #<CFFI-GROVEL:GROVEL-FILE "cl-charms" "low-level" "curses-grovel">) [fast-method]
+12: ((:METHOD ASDF/ACTION:PERFORM-WITH-RESTARTS :AROUND (T T)) #<CFFI-GROVEL::PROCESS-OP > #<CFFI-GROVEL:GROVEL-FILE "cl-charms" "low-level" "curses-grovel">) [fast-method]
+13: ((:METHOD ASDF/PLAN:PERFORM-PLAN (T)) #<ASDF/PLAN:SEQUENTIAL-PLAN {1006C8EB53}>) [fast-method]
+14: ((FLET SB-C::WITH-IT :IN SB-C::%WITH-COMPILATION-UNIT))
+15: ((:METHOD ASDF/PLAN:PERFORM-PLAN :AROUND (T)) #<ASDF/PLAN:SEQUENTIAL-PLAN {1006C8EB53}>) [fast-method]
+16: ((:METHOD ASDF/OPERATE:OPERATE (ASDF/OPERATION:OPERATION ASDF/COMPONENT:COMPONENT)) #<ASDF/OPERATE:BUILD-OP > #<ASDF/SYSTEM:SYSTEM "cl-charms"> :PLAN-CLASS NIL :PLAN-OPTIONS NIL) [fast-method]
+17: ((SB-PCL::EMF ASDF/OPERATE:OPERATE) #<unused argument> #<unused argument> #<ASDF/OPERATE:BUILD-OP > #<ASDF/SYSTEM:SYSTEM "cl-charms">)
+18: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+19: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) #<ASDF/OPERATE:BUILD-OP > #<ASDF/SYSTEM:SYSTEM "cl-charms">) [fast-method]
+20: ((SB-PCL::EMF ASDF/OPERATE:OPERATE) #<unused argument> #<unused argument> ASDF/OPERATE:BUILD-OP "cl-charms")
+21: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+22: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) ASDF/OPERATE:BUILD-OP "cl-charms") [fast-method]
+23: (ASDF/SESSION:CALL-WITH-ASDF-SESSION #<CLOSURE (LAMBDA NIL :IN ASDF/OPERATE:OPERATE) {100693F54B}> :OVERRIDE T :KEY NIL :OVERRIDE-CACHE T :OVERRIDE-FORCING NIL)
+24: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+25: (ASDF/SESSION:CALL-WITH-ASDF-SESSION #<CLOSURE (LAMBDA NIL :IN ASDF/OPERATE:OPERATE) {10068281EB}> :OVERRIDE NIL :KEY NIL :OVERRIDE-CACHE NIL :OVERRIDE-FORCING NIL)
+26: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) ASDF/OPERATE:BUILD-OP "cl-charms") [fast-method]
+27: (ASDF/OPERATE:MAKE "cl-charms")
+28: (CALL-WITH-TIMING #<FUNCTION SB-IMPL::PRINT-TIME> #<FUNCTION (LAMBDA NIL :IN #:DROP-THRU-TAG-1) {100682402B}>)
+29: ((LAMBDA NIL :IN "/home/didier/share/common-lisp/source/quickref/bin/asdf"))
+30: (SB-INT:SIMPLE-EVAL-IN-LEXENV (WITH-OPEN-FILE (*TRACE-OUTPUT* (MERGE-PATHNAMES (MAKE-PATHNAME :NAME *SYSTEM-NAME* :TYPE "time") *BENCH-DIRECTORY*) :DIRECTION :OUTPUT :IF-EXISTS :SUPERSEDE :IF-DOES-NOT-EXIST :CREATE) (TIME (ASDF/OPERATE:MAKE *SYSTEM-NAME*))) #<NULL-LEXENV>)
+31: (EVAL-TLF (WITH-OPEN-FILE (*TRACE-OUTPUT* (MERGE-PATHNAMES (MAKE-PATHNAME :NAME *SYSTEM-NAME* :TYPE "time") *BENCH-DIRECTORY*) :DIRECTION :OUTPUT :IF-EXISTS :SUPERSEDE :IF-DOES-NOT-EXIST :CREATE) (TIME (ASDF/OPERATE:MAKE *SYSTEM-NAME*))) 11 NIL)
+32: ((LABELS SB-FASL::EVAL-FORM :IN SB-INT:LOAD-AS-SOURCE) (WITH-OPEN-FILE (*TRACE-OUTPUT* (MERGE-PATHNAMES (MAKE-PATHNAME :NAME *SYSTEM-NAME* :TYPE "time") *BENCH-DIRECTORY*) :DIRECTION :OUTPUT :IF-EXISTS :SUPERSEDE :IF-DOES-NOT-EXIST :CREATE) (TIME (ASDF/OPERATE:MAKE *SYSTEM-NAME*))) 11)
+33: ((LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) (WITH-OPEN-FILE (*TRACE-OUTPUT* (MERGE-PATHNAMES (MAKE-PATHNAME :NAME *SYSTEM-NAME* :TYPE "time") *BENCH-DIRECTORY*) :DIRECTION :OUTPUT :IF-EXISTS :SUPERSEDE :IF-DOES-NOT-EXIST :CREATE) (TIME (ASDF/OPERATE:MAKE *SYSTEM-NAME*))) :CURRENT-INDEX 11)
+34: (SB-C::%DO-FORMS-FROM-INFO #<CLOSURE (LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) {1001B8D99B}> #<SB-C::SOURCE-INFO {1001B8D953}> SB-C::INPUT-ERROR-IN-LOAD)
+35: (SB-INT:LOAD-AS-SOURCE #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}> :VERBOSE NIL :PRINT NIL :CONTEXT "loading")
+36: ((FLET SB-FASL::THUNK :IN LOAD))
+37: (SB-FASL::CALL-WITH-LOAD-BINDINGS #<CLOSURE (FLET SB-FASL::THUNK :IN LOAD) {7FFFF6E0F6BB}> #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}>)
+38: ((FLET SB-FASL::LOAD-STREAM :IN LOAD) #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}> NIL)
+39: (LOAD #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}> :VERBOSE NIL :PRINT NIL :IF-DOES-NOT-EXIST T :EXTERNAL-FORMAT :DEFAULT)
+40: ((FLET SB-IMPL::LOAD-SCRIPT :IN SB-IMPL::PROCESS-SCRIPT) #<SB-SYS:FD-STREAM for "file /home/didier/share/common-lisp/source/quickref/bin/asdf" {1001B7E9E3}>)
+41: ((FLET "WITHOUT-INTERRUPTS-BODY-3" :IN SB-IMPL::PROCESS-SCRIPT))
+42: (SB-IMPL::PROCESS-SCRIPT "/home/didier/share/common-lisp/source/quickref/bin/asdf")
+43: (SB-IMPL::TOPLEVEL-INIT)
+44: ((FLET "WITHOUT-INTERRUPTS-BODY-35" :IN SAVE-LISP-AND-DIE))
+45: ((LABELS SB-IMPL::RESTART-LISP :IN SAVE-LISP-AND-DIE))
+
+unhandled condition in --disable-debugger mode, quitting
+; 
+; compilation unit aborted
+;   caught 1 fatal ERROR condition
+
