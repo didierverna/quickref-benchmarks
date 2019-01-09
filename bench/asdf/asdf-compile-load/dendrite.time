@@ -1,9 +1,9 @@
 Evaluation took:
   0.045 seconds of real time
-  0.044000 seconds of total run time (0.028000 user, 0.016000 system)
+  0.044000 seconds of total run time (0.032000 user, 0.012000 system)
   97.78% CPU
   31 forms interpreted
-  81 lambdas converted
-  146,834,340 processor cycles
-  10,069,984 bytes consed
+  82 lambdas converted
+  149,478,951 processor cycles
+  9,946,320 bytes consed
   

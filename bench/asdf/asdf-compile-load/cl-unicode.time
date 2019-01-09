@@ -1,10 +1,10 @@
 Evaluation took:
-  0.793 seconds of real time
-  0.792000 seconds of total run time (0.764000 user, 0.028000 system)
-  [ Run times consist of 0.044 seconds GC time, and 0.748 seconds non-GC time. ]
-  99.87% CPU
-  342 forms interpreted
-  532 lambdas converted
-  2,611,354,935 processor cycles
-  175,381,616 bytes consed
+  0.774 seconds of real time
+  0.772000 seconds of total run time (0.756000 user, 0.016000 system)
+  [ Run times consist of 0.040 seconds GC time, and 0.732 seconds non-GC time. ]
+  99.74% CPU
+  313 forms interpreted
+  679 lambdas converted
+  2,547,681,621 processor cycles
+  179,106,832 bytes consed
   
