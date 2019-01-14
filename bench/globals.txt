@@ -21,7 +21,7 @@ Parallel-2 build of 1680/1719 libraries, already compiled, local cache:
 1284.724 seconds of real time.
 81.620 seconds of total run time (45.108 user, 36.512 system).
 
-Parallel-2 build of 1677/1706 libraries, already compiled, local cache:
+Parallel-2 build of 1680/1719 libraries, already compiled, local cache:
 4 Declt threads, 4 Makeinfo threads.
-1128.273 seconds of real time.
-88.12 seconds of total run time (46.564 user, 41.556 system).
+1242.445 seconds of real time.
+89.568 seconds of total run time (48.892 user, 40.676 system).
