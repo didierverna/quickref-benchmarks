@@ -6,6 +6,7 @@
 	hours minutes seconds)
       (values))))
 
+
 (defun data (filename)
   "Return a list of numerical values from DATA-FILE."
   (with-open-file (stream filename :direction :input)
@@ -26,6 +27,20 @@
   (:method ((filename1 pathname) (filename2 pathname))
     "Return the ratios of lists of numbers from FILENAME1 / FILENAME2."
     (ratios (data filename1) (data filename2))))
+
+(defgeneric median (data)
+  (:documentation "Return the median of DATA.")
+  (:method ((numbers list)
+	    &aux (length (length numbers))
+		 (middle (floor (/ length 2)))
+		 (numbers (sort numbers #'<)))
+    "Return the median of list of NUMBERS."
+    (if (zerop (mod length 2))
+      (/ (+ (nth (1- middle) numbers) (nth middle numbers)) 2)
+      (nth middle numbers)))
+  (:method ((filename pathname))
+    "Return the median of numbers from FILENAME."
+    (median (data filename))))
 
 (defgeneric average (data)
   (:documentation "Return the average of DATA.")
