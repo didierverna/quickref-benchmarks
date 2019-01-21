@@ -1,3 +1,11 @@
+(defun pretty-time (time)
+  "Format TIME seconds in a human readable fashion, with a 1s precision."
+  (multiple-value-bind (hours remainder) (floor (floor time) 3600)
+    (multiple-value-bind (minutes seconds) (floor remainder 60)
+      (format t "~D hour~:P, ~D minute~:P, ~D second~:P.~%"
+	hours minutes seconds)
+      (values))))
+
 (defun data (filename)
   "Return a list of numerical values from DATA-FILE."
   (with-open-file (stream filename :direction :input)
