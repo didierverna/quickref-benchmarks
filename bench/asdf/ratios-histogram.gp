@@ -20,7 +20,7 @@ set boxwidth width*0.8
 set style fill solid 0.5
 set tics out
 set xtics nomirror
-set xlabel "ASDF compile/load time ratio"
+set xlabel "ASDF load/compile time ratio"
 set ylabel "Number of libraries per 1/2 range"
 
 plot "ratios.dat" \
