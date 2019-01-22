@@ -1,11 +1,12 @@
-# Real time histogram for values between 0.000 and 78.000.
-# We use 0.25s wide intervals, that is, 312 intervals.
+# ASDF compile/load time histogram.
+# Values between 0.000s and 96.000s.
+# Intervals of 0.25s, that is, 384 intervals.
 
 reset
 
-n=312
+n=384
 min=0.0
-max=78.0
+max=96.0
 
 width=(max-min)/n
 hist(x,width)=width*floor(x/width)+width/2.0
@@ -19,8 +20,8 @@ set style fill solid 0.5
 set tics out
 set xtics nomirror
 set mxtics 10
-set xlabel "ASDF load/compile time in seconds"
-set ylabel "Number of libraries per 0.25 seconds interval"
+set xlabel "ASDF compile/load time (seconds)"
+set ylabel "Number of libraries per 1/4 secondsq interval"
 
 plot "real-time.dat" \
      using (hist($2,width)):(1.0) \
