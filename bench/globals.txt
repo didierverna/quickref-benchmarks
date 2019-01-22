@@ -44,3 +44,33 @@ Parallel-2 build of 1677/1719 libraries, uncompiled, local cache:
 3 Declt threads, 1 Makeinfo thread.
 8893.322 seconds of real time.
 80.920 seconds of total run time (43.204 user, 37.716 system).
+
+Parallel-2 build of 1680/1719 libraries, uncompiled, local cache:
+4 Declt threads, 1 Makeinfo thread.
+7558.765 seconds of real time.
+88.264 seconds of total run time (49.080 user, 39.184 system).
+
+Parallel-2 build of 1679/1719 libraries, uncompiled, local cache:
+4 Declt threads, 2 Makeinfo thread.
+7547.981 seconds of real time.
+91.508 seconds of total run time (50.460 user, 41.048 system).
+
+Parallel-2 build of 1678/1719 libraries, uncompiled, local cache:
+5 Declt threads, 2 Makeinfo thread.
+7188.780 seconds of real time.
+91.416 seconds of total run time (50.980 user, 40.436 system).
+
+Parallel-2 build of 1678/1719 libraries, uncompiled, local cache:
+6 Declt threads, 2 Makeinfo thread.
+6881.382 seconds of real time.
+95.568 seconds of total run time (53.716 user, 41.852 system).
+
+Parallel-2 build of 1678/1719 libraries, uncompiled, local cache:
+7 Declt threads, 2 Makeinfo thread.
+6699.298 seconds of real time.
+102.808 seconds of total run time (56.656 user, 46.152 system).
+
+Parallel-2 build of 1680/1719 libraries, uncompiled, local cache:
+8 Declt threads, 2 Makeinfo thread.
+6644.940 seconds of real time.
+106.440 seconds of total run time (56.072 user, 50.372 system).
