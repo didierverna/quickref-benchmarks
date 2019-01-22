@@ -10,7 +10,6 @@ Standard deviation: 3.799101
 1507 libraries < 1.00s (89%)
 1655 libraries < 5.00s (98%)
 
-
 Only 14 libraries with compile/load-time > 10s:
 ((GAMEBOX-MATH 12.698) (3B-SWF 14.296) (CL-CFFI-GTK 14.323) (GSLL 15.806)
  (NINEVEH 18.255) (STMX 19.483) (CLEM 27.87) (CL-VHDL 30.877)
