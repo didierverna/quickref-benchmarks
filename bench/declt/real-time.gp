@@ -1,25 +1,26 @@
-# Real time histogram for values between 0.000 and 313.000.
-# We use .5s wide intervals, that is, 626 intervals.
+# Declt time histogram.
+# Values between 0 and 320.
+# Intervals of .5s, that is, 640 intervals.
 
 reset
 
-n=626
+n=640
 min=0.0
-max=313.0
+max=320.0
 
 width=(max-min)/n
 hist(x,width)=width*floor(x/width)+width/2.0
+
 set xrange [min:max]
+set logscale y
 
-#set logscale y
-#set mxtics 10
-
+set mxtics 5
 set boxwidth width*0.8
 set style fill solid 0.5
 set tics out
 set xtics nomirror
-set xlabel "Declt run (Texinfo generation) time (seconds)"
-set ylabel "Number of libraries (.5 seconds interval)"
+set xlabel "Texinfo generation / Declt run time (seconds)"
+set ylabel "Number of libraries per 1/2 seconds intervals"
 
 plot "real-time.dat" \
      using (hist($2,width)):(1.0) \
