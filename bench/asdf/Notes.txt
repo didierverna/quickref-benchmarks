@@ -4,3 +4,5 @@ Median: 2.781746
 Standard deviation: 11.743332
 
 210 libraries (12%) take longer to load than to compile (against 1471).
+No correlation between load and compile times (as demonstrated by the
+ratios-per-library plot).
