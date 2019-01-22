@@ -103,7 +103,7 @@ calispel 0.091
 cambl 1.049
 can 0.053
 caramel 0.110
-cari3scarrier 0.156
+carrier 0.156
 cartesian-product-switch 0.087
 caveman 0.414
 caveman2-widgets-bootstrap 0.159
@@ -147,7 +147,7 @@ cl-6502 0.761
 cl-acronyms 0.266
 cl-actors 0.041
 cl-algebraic-data-type 0.079
-cl-allcl-amqp 0.823
+cl-amqp 0.823
 cl-ana 0.258
 cl-android 0.023
 cl-annot-prove 0.161
@@ -325,7 +325,7 @@ cl-l10n 1.547
 cl-las 0.339
 cl-lastfm 0.299
 cl-launch 0.160
-cl-ledgercl-lex 0.090
+cl-lex 0.090
 cl-liballegro 2.884
 cl-libevent2 1.276
 cl-libfarmhash 0.567
@@ -345,7 +345,7 @@ cl-ltsv 0.049
 cl-lzma 1.542
 cl-m4 0.810
 cl-markdown 0.743
-cl-marklesscl-marklogic 0.304
+cl-marklogic 0.304
 cl-markup 0.068
 cl-match 0.293
 cl-mathstats 1.765
@@ -998,7 +998,7 @@ json-streams 0.242
 json-template 0.091
 jsonrpc 0.034
 jsown 0.305
-jwacskanren-trs 0.207
+kanren-trs 0.207
 kebab 0.046
 kenzo 2.521
 kl-verify 0.052
@@ -1343,7 +1343,7 @@ redirect-stream 0.076
 regex 0.659
 remote-js 0.118
 repl-utilities 0.212
-replicrestas-directory-publisher 0.145
+restas-directory-publisher 0.145
 restas.file-publisher 0.073
 restas 0.376
 restful 0.210
