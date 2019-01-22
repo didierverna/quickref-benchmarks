@@ -77,3 +77,15 @@
   (:method ((filename pathname))
     "Return the standard deviation of numbers from FILENAME."
     (standard-deviation (data filename))))
+
+(defgeneric libraries-slower-than (limit data)
+  (:documentation "Filter and sort libraries slower than LIMIT from DATA.")
+  (:method (limit (libraries list))
+    "Filter and sort LIBRARIES slower than LIMIT."
+    (sort (loop :for (library time) :on libraries :by #'cddr
+		:when (> time limit)
+		  :collect (list library time))
+	  #'< :key #'cadr))
+  (:method (limit (filename pathname))
+    "Filter and sort libraries slower than limit from FILENAME."
+    (libraries-faster-than limit (data filename))))
