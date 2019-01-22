@@ -1,10 +1,16 @@
 #!/bin/bash
 
+# Filter empty *.time files and collect real time results in real-time.dat.
+
 rm -f real-time.dat
 
 for i in *.time; do
-  echo -n $i | sed 's/.time//' >> real-time.dat && \
-  egrep -o " [0-9.]+ seconds of real time" $i \
-  | sed 's/ seconds of real time//' \
-  >> real-time.dat
+  if test -s $i; then
+    echo -n $i | sed 's/.time//' >> real-time.dat && \
+      egrep -o " [0-9.]+ seconds of real time" $i \
+	| sed 's/ seconds of real time//' \
+	      >> real-time.dat
+  else
+    rm $i
+  fi
 done
