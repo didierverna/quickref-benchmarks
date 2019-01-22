@@ -1,10 +1,13 @@
-0.007 <= 1688 libraries <= 17.056
-Average: 0.07437632
-Standard deviation: 0.47083098
+0.009 <= 1696 libraries <= 17.514
+Average: 0.12681209
+Median: 0.059
+Standard deviation: 0.5956767
 
-Only 11 libraries with load time > 1s:
-(FEMLISP 1.09 HEMLOCK.QT 2.528 HU.DWIM.BLUEZ 1.082 HU.DWIM.PRESENTATION 5.708
- HU.DWIM.SDL 1.791 HU.DWIM.WEB-SERVER 1.653 NINEVEH 17.056 REPAIR 4.016 SCRIPTL
- 2.977 THE-COST-OF-NOTHING 2.223 VARJO 1.301)
+1178 libraries < .10s (69%)
+1539 libraries < .20s (91%)
+1622 libraries < .30s (96%)
 
-The weirdos are reproducible (nineveh notably).
+Only 10 libraries with load time > 1.8s:
+((VARJO 1.874) (THE-COST-OF-NOTHING 2.07) (HU.DWIM.WEB-SERVER 2.149)
+ (HU.DWIM.SDL 2.841) (HEMLOCK.QT 2.907) (SCRIPTL 4.14) (CLFSWM 4.88)
+ (WEBLOCKS 5.348) (HU.DWIM.PRESENTATION 6.323) (NINEVEH 17.514))
