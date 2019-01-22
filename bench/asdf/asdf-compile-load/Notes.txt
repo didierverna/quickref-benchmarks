@@ -3,12 +3,12 @@ Average: 0.734143
 Median: 0.159
 Standard deviation: 3.799101
 
-1077 libraries < .25s (64%)
-1321 libraries < .50s (78%)
-1445 libraries < .75s (85%)
-1445 libraries < .75s (85%)
-1507 libraries <   1s (89%)
-1655 libraries <   5s (98%)
+1077 libraries <  .25s (64%)
+1321 libraries <  .50s (78%)
+1445 libraries <  .75s (85%)
+1445 libraries <  .75s (85%)
+1507 libraries < 1.00s (89%)
+1655 libraries < 5.00s (98%)
 
 
 Only 14 libraries with compile/load-time > 10s:

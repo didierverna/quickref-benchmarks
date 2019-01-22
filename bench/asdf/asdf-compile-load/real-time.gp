@@ -21,7 +21,7 @@ set tics out
 set xtics nomirror
 set mxtics 10
 set xlabel "ASDF compile/load time (seconds)"
-set ylabel "Number of libraries per 1/4 secondsq interval"
+set ylabel "Number of libraries per 1/4 seconds intervals"
 
 plot "real-time.dat" \
      using (hist($2,width)):(1.0) \
