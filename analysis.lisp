@@ -88,4 +88,4 @@
 	  #'< :key #'cadr))
   (:method (limit (filename pathname))
     "Filter and sort libraries slower than limit from FILENAME."
-    (libraries-faster-than limit (data filename))))
+    (libraries-slower-than limit (data filename))))
