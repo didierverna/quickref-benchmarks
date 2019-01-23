@@ -47,6 +47,13 @@
 6644.940 seconds of real time.
 106.440 seconds of total run time (56.072 user, 50.372 system).
 
+** Global cache
+*** Sequential build
+1688/1719 libraries.
+6529.226 seconds or real time.
+91.704 seconds of total run time (49.996 user, 41.708 system).
+
+
 * Without compilation
 Indifferent caching policy.
 
