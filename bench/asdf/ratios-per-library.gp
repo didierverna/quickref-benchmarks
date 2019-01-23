@@ -13,7 +13,7 @@ set xtics nomirror
 set xlabel "Libraries"
 set ylabel "ASDF log (compile/load) times"
 
-plot "ratios.dat" \
-     using (column(0)):(log($3/$2)) \
+plot "compile-load.dat" \
+     using (column(0)):(log($2/$3)) \
      with boxes lc rgb"green" \
      notitle

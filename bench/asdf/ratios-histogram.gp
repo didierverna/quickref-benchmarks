@@ -23,8 +23,8 @@ set xtics nomirror
 set xlabel "ASDF load/compile time ratio"
 set ylabel "Number of libraries per 1/2 range"
 
-plot "ratios.dat" \
-     using (hist($2/$3,width)):(1.0) \
+plot "compile-load.dat" \
+     using (hist($3/$2,width)):(1.0) \
      smooth freq \
      with boxes lc rgb"green" \
      notitle
