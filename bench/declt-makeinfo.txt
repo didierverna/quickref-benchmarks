@@ -1,0 +1,11 @@
+0.11148064 <= 1690 ratios <= 30.472652
+
+Average: 2.0009794.
+Median: 1.8785055
+Standard Deviation: 1.5119883.
+
+1280 libraries with a ratio > 1 (76%).
+ 410 libraries with a ratio < 1 (24%).
+
+The histogram has a very different shape (more homogeneousness, as
+demosntrated by the indicators above).
