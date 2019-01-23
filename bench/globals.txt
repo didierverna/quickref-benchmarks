@@ -6,30 +6,30 @@ Parallel-1 build of 1682/1719 libraries, already compiled, local cache:
 2910.096 seconds of real time.
 59.952 seconds of total run time (29.264 user, 30.688 system).
 
-Parallel-2 build of 1674/1719 libraries, already compiled, local cache:
+Parallel-2 build of 1681/1719 libraries, already compiled, local cache:
 3 Declt threads, 1 Makeinfo threads.
-2686.673 seconds of real time.
-79.032 seconds of total run time (42.164 user, 36.868 system).
+2641.407 seconds of real time.
+81.624 seconds of total run time (44.460 user, 37.164 system).
 
-Parallel-2 build of 1680/1719 libraries, already compiled, local cache:
+Parallel-2 build of 1681/1719 libraries, already compiled, local cache:
 2 Declt threads, 2 Makeinfo threads.
-1401.308 seconds of real time.
-73.056 seconds of total run time (38.632 user, 34.424 system).
+1546.649 seconds of real time.
+71.756 seconds of total run time (37.968 user, 33.788 system).
 
-Parallel-2 build of 1680/1719 libraries, already compiled, local cache:
+Parallel-2 build of 1681/1719 libraries, already compiled, local cache:
 3 Declt threads, 3 Makeinfo threads.
-1284.724 seconds of real time.
-81.620 seconds of total run time (45.108 user, 36.512 system).
+1379.368 seconds of real time.
+83.056 seconds of total run time (44.788 user, 38.268 system).
 
 Parallel-2 build of 1680/1719 libraries, already compiled, local cache:
 4 Declt threads, 4 Makeinfo threads.
-1242.445 seconds of real time.
-89.568 seconds of total run time (48.892 user, 40.676 system).
+1307.469 seconds of real time.
+93.644 seconds of total run time (48.644 user, 45.000 system).
 
-Parallel-2 build of 1680/1719 libraries, already compiled, local cache:
+Parallel-2 build of 1681/1719 libraries, already compiled, local cache:
 5 Declt threads, 5 Makeinfo threads.
-1281.589 seconds of real time.
-88.040 seconds of total run time (49.076 user, 38.964 system).
+1351.800 seconds of real time.
+88.400 seconds of total run time (49.236 user, 39.164 system).
 
 ---
 Sequential build of 1687/1719 libraries, uncompiled, local cache:
