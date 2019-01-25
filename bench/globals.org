@@ -58,6 +58,10 @@
 3888.185 seconds of real time.
 61.904 seconds of total run time (29.848 user, 32.560 system).
 
+*** Parallel-1 build with dependency-sorted libraries
+1686/1719 libraries.
+4003.298 seconds of real time.
+54.172 seconds of total run time (30.488 user, 23.684 system)
 
 * Without compilation
 Indifferent caching policy.
