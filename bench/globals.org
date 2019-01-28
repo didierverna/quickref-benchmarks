@@ -63,6 +63,37 @@
 4003.298 seconds of real time.
 54.172 seconds of total run time (30.488 user, 23.684 system)
 
+*** Parallel-3 build
+**** 3 Declt threads, 1 Makeinfo thread
+1684/1719 libraries.
+2742.853 seconds of real time.
+77.296 seconds of total run time (42.904 user, 34.392 system).
+
+**** 2 Declt threads, 2 Makeinfo thread
+1686/1719 libraries.
+2110.294 seconds of real time.
+66.888 seconds of total run time (36.688 user, 30.200 system).
+
+**** 3 Declt threads, 3 Makeinfo thread
+1683/1719 libraries.
+1802.290 seconds of real time.
+81.824 seconds of total run time (42.960 user, 38.864 system).
+
+**** 4 Declt threads, 4 Makeinfo thread
+1682/1719 libraries.
+1761.415 seconds of real time.
+82.892 seconds of total run time (45.284 user, 37.608 system).
+
+**** 5 Declt threads, 4 Makeinfo thread
+1681/1719 libraries.
+1769.736 seconds of real time.
+85.248 seconds of total run time (46.416 user, 38.832 system).
+
+**** 5 Declt threads, 5 Makeinfo thread
+1681/1719 libraries.
+1787.778 seconds of real time.
+86.312 seconds of total run time (46.336 user, 39.967 system).
+
 * Without compilation
 Indifferent caching policy.
 
