@@ -8,4 +8,4 @@ Standard Deviation: 1.5119883.
  410 libraries with a ratio < 1 (24%).
 
 The histogram has a very different shape (more homogeneousness, as
-demosntrated by the indicators above).
+demonstrated by the indicators above).
