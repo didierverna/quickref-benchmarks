@@ -1,4 +1,4 @@
-# Declt time histogram.
+# Declt real time histogram.
 # Values between 0 and 320.
 # Intervals of .5s, that is, 640 intervals.
 
@@ -12,6 +12,7 @@ width=(max-min)/n
 hist(x,width)=width*floor(x/width)+width/2.0
 
 set xrange [min:max]
+set yrange [0:*]
 set logscale y
 
 set mxtics 5
