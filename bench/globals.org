@@ -49,9 +49,9 @@
 
 ** Global cache
 *** Sequential build
-1688/1719 libraries.
-6529.226 seconds or real time.
-91.704 seconds of total run time (49.996 user, 41.708 system).
+1686/1719 libraries.
+6689.644 seconds or real time.
+80.876 seconds of total run time (49.956 user, 30.920 system).
 
 *** Parallel-1 build
 1680/1719 libraries.
@@ -98,9 +98,9 @@
 Indifferent caching policy.
 
 ** Sequential build
-1690/1719 libraries.
-6043.780 seconds of real time.
-85.268 seconds of total run time (53.000 user, 33.268 system).
+1686/1719 libraries.
+5223.210 seconds of real time.
+79.192 seconds of total run time (48.712 user, 30.480 system).
 
 ** Parallel-1 build
 1682/1719 libraries.
