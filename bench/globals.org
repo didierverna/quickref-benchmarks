@@ -1,5 +1,24 @@
-* With compilation
+* Time Distribution
+** Collected
+These are the sums of individual library timings.
+*** ASDF compile & load
+1212.4408 (20:12 minutes)
+*** ASDF load
+202.7823 (03:22 minutes)
+*** Declt (includes ASDF load)
+2801.8372 (46:41 minutes)
+*** Makeinfo
+2586.36 (43:06 minutes)
+** Deduced
+*** ASDF Compile
+1009.6585 (16:49 minutes)
+*** Declt (without ASDF load time)
+2599.055 (43:19 minutes)
+*** ASDF Redundant compilation
+Based on the 25283.417 seconds of total run time below.
+19895.22 (5 hours, 31 minutes, 35 seconds)
 
+* With compilation
 ** Local cache
 *** Sequential build
 1687/1719 libraries.
@@ -96,7 +115,6 @@
 
 * Without compilation
 Indifferent caching policy.
-
 ** Sequential build
 1686/1719 libraries.
 5223.210 seconds of real time.
