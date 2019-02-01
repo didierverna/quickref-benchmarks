@@ -1,3 +1,4 @@
+* Real Times
 0.265 <= 1690 libraries <= 98.601
 Average: 1.548112
 Median: 0.66550004
@@ -16,3 +17,9 @@ Only 28 libraries > 10s:
  (PROJECTURED.SDL 20.921) (HEMLOCK.QT 20.976) (MAGICL 21.95) (SNARK 23.677)
  (3B-SWF 24.12) (CLML 29.097) (CL-CFFI-GTK 39.406) (MCCLIM 63.795)
  (GENDL 98.601))
+
+* Run Times
+0.004 <= 1690 libraries <= 1.316
+Average: 0.036804628
+Median: 0.02
+Standard deviation: 0.058754828

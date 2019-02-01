@@ -1,12 +1,12 @@
-# Makeinfo time histogram.
-# Values between 0.000 and 100.000.
-# Intervals of .25s, that is, 400 intervals.
+# ASDF compile/load real time histogram.
+# Values between 0.000s and 96.000s.
+# Intervals of 0.25s, that is, 384 intervals.
 
 reset
 
-n=400
+n=384
 min=0.0
-max=100.0
+max=96.0
 
 width=(max-min)/n
 hist(x,width)=width*floor(x/width)+width/2.0
@@ -14,16 +14,16 @@ hist(x,width)=width*floor(x/width)+width/2.0
 set xrange [min:max]
 set logscale y
 
-set xtics 5
 set mxtics 5
-set boxwidth width*0.8
+set boxwidth width*.8
 set style fill solid 0.5
 set tics out
 set xtics nomirror
-set xlabel "HTML generation / Makeinfo run time (seconds)"
+set mxtics 10
+set xlabel "ASDF compile/load real time (seconds)"
 set ylabel "Number of libraries per 1/4 seconds intervals"
 
-plot "real-time.dat" \
+plot "timings.dat" \
      using (hist($2,width)):(1.0) \
      smooth freq \
      with boxes lc rgb"green" \

@@ -1,4 +1,4 @@
-# Declt real time per library.
+# ASDF load real time per library.
 
 reset
 
@@ -12,7 +12,7 @@ set style fill solid 0.5
 set tics out
 set xtics nomirror
 set xlabel "Libraries"
-set ylabel "Texinfo generation / Declt real time (seconds)"
+set ylabel "ASDF load real time (seconds)"
 
 plot "timings.dat" \
      using (column(0)):($2) \
