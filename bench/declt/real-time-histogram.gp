@@ -14,6 +14,7 @@ hist(x,width)=width*floor(x/width)+width/2.0
 set xrange [min:max]
 set yrange [0:*]
 set logscale y
+set logscale x
 
 set mxtics 5
 set boxwidth width*0.8

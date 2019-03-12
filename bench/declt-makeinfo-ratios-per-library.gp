@@ -2,8 +2,8 @@
 
 reset
 
-#set logscale y
 
+set log y
 #set xtics 5
 #set mxtics 5
 set boxwidth 0.8
